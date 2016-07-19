@@ -1,0 +1,7 @@
+<h1>Videos
+</h1>
+
+<h1>Texts</h1>
+<% @videos.each do |video| %>
+  <%= video.video %> | <%= video.user.name %><br>
+<% end %>

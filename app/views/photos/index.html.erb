@@ -1,0 +1,4 @@
+<h1>Photos</h1>
+<% @photos.each do |photo| %>
+  <%= photo.photo %> | <%= photo.user.name %><br>
+<% end %>
