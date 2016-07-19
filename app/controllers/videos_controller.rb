@@ -9,6 +9,7 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.new(video_params)
+    @video.user = current_user
     if @video.save
       redirect_to videos_url
     else
@@ -23,6 +24,6 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:video, :caption)
+    params.require(:video).permit(:video, :caption, :user_id)
   end
 end

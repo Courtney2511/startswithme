@@ -1,4 +1,4 @@
 <h1>Texts</h1>
 <% @texts.each do |text| %>
-  <%= text.text %>
+  <%= text.text %> | <%= text.user.name %><br><br>
 <% end %>
