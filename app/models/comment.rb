@@ -1,6 +1,7 @@
 class Comment < ApplicationRecord
-  belongs_to :users
-  belongs_to :texts
-  belongs_to :photos
-  belongs_to :videos
+  belongs_to :user
+
+  belongs_to :text
+  belongs_to :photo
+  belongs_to :video
 end
