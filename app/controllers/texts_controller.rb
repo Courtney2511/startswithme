@@ -9,6 +9,7 @@ class TextsController < ApplicationController
 
   def create
     @text = Text.new(text_params)
+    @text.user = current_user
     if @text.save
       redirect_to texts_url
     else
@@ -23,7 +24,7 @@ class TextsController < ApplicationController
   private
 
   def text_params
-    params.require(:text).permit(:text)
+    params.require(:text).permit(:text, :user_id)
   end
-  
+
 end
