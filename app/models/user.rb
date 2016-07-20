@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-  has_many :comments
-  has_many :texts
-  has_many :photos
-  has_many :videos
-
   has_many :posts
+
+  has_many :comments
+
+  has_many :photos, through: :posts
+
 
   has_secure_password
 
