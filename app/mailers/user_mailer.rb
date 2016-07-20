@@ -6,5 +6,14 @@ class UserMailer < ApplicationMailer
     mail(to: user.email, subject: "Welcome!")
   end
 
+  def post_notifcation(user)
+
+  end
+
+  def comment_notification(user)
+
+  end 
+
+
 
 end
