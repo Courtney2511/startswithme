@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720165043) do
+ActiveRecord::Schema.define(version: 20160720185729) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
@@ -30,11 +30,13 @@ ActiveRecord::Schema.define(version: 20160720165043) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "texts", force: :cascade do |t|
-    t.text     "text"
+  create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
+    t.string   "category"
+    t.string   "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,14 +48,6 @@ ActiveRecord::Schema.define(version: 20160720165043) do
     t.string   "password"
     t.string   "password_confirmation"
     t.string   "password_digest"
-  end
-
-  create_table "videos", force: :cascade do |t|
-    t.string   "video"
-    t.string   "caption"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
