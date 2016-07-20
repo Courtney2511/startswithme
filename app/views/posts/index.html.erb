@@ -1,0 +1,6 @@
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+  <%= post.body %> | <%= post.user.name %><br>
+<% end %>
+
+<%= link_to 'Create Post', new_post_path %>
