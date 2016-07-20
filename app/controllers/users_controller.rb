@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_path, notice: "Signed in!"
       # send the user a welcome email
-      UserMailer.welcome_email(@user).deliver_now
+      UserMailer.welcome_email(@user).deliver_later
     else
       render :new
     end
