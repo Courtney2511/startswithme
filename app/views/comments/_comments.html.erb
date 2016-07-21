@@ -1,0 +1,9 @@
+<% my_comments.each do |comment| %>
+  <p>
+    <%= comment.comment %><br>
+    <% if comment.user != nil %>
+      <em> by <%= comment.user.name %></em>
+      Added on: <%= comment.created_at %>
+    <% end %>
+  </p>
+<% end %>
