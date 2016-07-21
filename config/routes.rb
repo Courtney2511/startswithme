@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :photos, only: [:show, :create, :destroy]
-    resources :comments, only: [:show, :create, :destroy]
+    resources :comments, only: [:show, :create, :edit, :destroy]
   end
 
   resources :sessions, only: [:new, :create, :destroy]
