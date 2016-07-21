@@ -3,6 +3,4 @@ class Photo < ApplicationRecord
 
   # belongs_to :user
   
-  #mounting the iamge uploader to be used with the photo model
-  mount_uploader :image, ImageUploader
 end

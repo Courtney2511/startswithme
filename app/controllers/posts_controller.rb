@@ -9,12 +9,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.image = params[:file]
     @post.user = current_user
     if @post.save
       redirect_to posts_url
     else
       render :new
     end
+    # binding.pry
   end
 
   def show
@@ -45,6 +47,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:post, :body, :user_id)
+    params.require(:post).permit(:post, :body, :user_id, :image)
   end
 end

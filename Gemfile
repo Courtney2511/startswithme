@@ -29,6 +29,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Carrierwave for photo uploads
 gem 'carrierwave'
+# gem 'carrierwave', github: 'carrierwaveuploader/carrierwave', branch: '0.11-stable'
+# gem for image resizing (Dependent on carrierwave)
+gem "mini_magick"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -44,6 +48,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
