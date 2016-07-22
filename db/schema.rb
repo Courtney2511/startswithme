@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160721175054) do
     t.integer  "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "integer"
     t.integer  "post_id"
   end
 
