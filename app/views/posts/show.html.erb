@@ -3,7 +3,7 @@
   <%= @post.body %><br>
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
   <%= image_tag(@post.image) %>
-  Posted by: <%= @post.user.name %>
+  Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
 </p>
 
 <% if @post.user == current_user %>
