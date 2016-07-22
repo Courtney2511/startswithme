@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:index, :new, :create]
+  layout false
 
-  def index
-    @users = User.all
-  end
+  # def index
+  #   @users = User.all
+  # end
 
   def show
     @user = User.find(current_user)
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to(:users, notice: 'Profile created!') #root_path is protected to logged in users only.  
+      redirect_to(user_path(@user), notice: 'Profile created!') #root_path is protected to logged in users only.
       # send the user a welcome email
       UserMailer.welcome_email(@user).deliver_later
     else

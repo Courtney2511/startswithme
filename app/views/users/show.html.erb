@@ -1,3 +1,9 @@
 
 <h1>Hey <%= @user.name %>, welcome to your profile!</h1>
 <h3><%= @user.email %></h3>
+
+<h1>Posts by you</h1>
+<% @user.posts.each do |post| %>
+  "<%= post.body %>"<br>
+  posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
+<% end %>
