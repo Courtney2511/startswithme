@@ -1,8 +1,19 @@
+<% if @user == current_user %>
+  <h1>Hey <%= @user.name %>, welcome to your profile!</h1>
+<% else %>
+  <h1><%= @user.name %>'s Profile</h1>
+<% end %>
+  <h3><%= @user.email %></h3>
 
-<h1>Hey <%= @user.name %>, welcome to your profile!</h1>
-<h3><%= @user.email %></h3>
+<h1>Posts by
+  <% if @user == current_user %>
+    you
+  <% else %>
+    <%= @user.name %>
+  <% end %>
+</h1>
 
-<h1>Posts by you</h1>
+
 <% @user.posts.each do |post| %>
   "<%= post.body %>"<br>
   posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
