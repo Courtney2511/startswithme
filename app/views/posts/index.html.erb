@@ -1,25 +1,14 @@
-
-<% @posts.each do |post| %>
-  "<%= link_to post.body, post_path(post) %>" by <%= link_to post.user.name, user_path(post.user) %>
-  <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-  <% end %>
-  <br>
-<% end %>
-<br>
-<%= link_to 'Create Post', new_post_path %>
-
-
-<!-- Nav -->
+  <!-- Nav -->
 
 <div class="top-screen">
   <header class="clearix">
     <div class="nav-stick">
       <div class="nav-left">
-        <div class="logo"><h1><a href="index.html">State Of Our Mind</a></h1></div>
+        <div class="logo"><h1><a href="#">State Of Our Mind</a></h1></div>
       </div>
       <nav class="nav-right">
-        <a href="index.html"><p>HOME</p></a>
-        <a href="about.html"><p>ABOUT</p></a>
+        <a href="#"><p>HOME</p></a>
+        <a href="#"><p>ABOUT</p></a>
         <p>|</p>
         <a href="#"><p>SIGN IN</p></a>
         <a href="#"><p><span class="button">SIGN UP</p></a>
@@ -41,11 +30,11 @@
   <!-- Latest Photos -->
   <section class="clearfix">
     <div class="sect-title">
-      <a href="latest_photos.html">LATEST PHOTOS</a>
+      <a href="#">LATEST PHOTOS</a>
     </div>
     <!-- photo 1 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -53,7 +42,7 @@
     </div>
     <!-- photo 2 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -61,7 +50,7 @@
     </div>
     <!-- photo 3  -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -69,7 +58,7 @@
     </div>
     <!-- photo 4 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -84,7 +73,7 @@
     </div>
     <!-- photo 1 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -92,7 +81,7 @@
     </div>
     <!-- photo 2 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -100,7 +89,7 @@
     </div>
     <!-- photo 3  -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -108,7 +97,7 @@
     </div>
     <!-- photo 4 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -123,7 +112,7 @@
     </div>
     <!-- photo 1 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -131,7 +120,7 @@
     </div>
     <!-- photo 2 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -139,7 +128,7 @@
     </div>
     <!-- photo 3  -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -147,7 +136,7 @@
     </div>
     <!-- photo 4 -->
     <div class="sect-photos">
-      <img src="friends.jpeg" alt="friends" class="banner-img">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
       <div class="sect-text">
         <p><span class="img-title">Title</span><br>caption gibberish content</p>
       </div>
@@ -190,3 +179,12 @@
       })
     })
   </script>
+
+  <% @posts.each do |post| %>
+    "<%= link_to post.body, post_path(post) %>" by <%= link_to post.user.name, user_path(post.user) %>
+    <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
+    <br>
+  <% end %>
+  <br>
+  <%= link_to 'Create Post', new_post_path %>
