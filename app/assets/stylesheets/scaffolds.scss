@@ -1,3 +1,7 @@
+*{
+  box-sizing: content-box;
+}
+
 body {
   background-color: #fff;
   // color: #333;
@@ -95,4 +99,18 @@ div {
 
 label {
   display: block;
+}
+
+.clearfix{
+  clear:both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
 }

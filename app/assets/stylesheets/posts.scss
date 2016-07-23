@@ -2,38 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*******************/
-/*   GLOBAL        */
-/*******************/
-*{
-  box-sizing: content-box;
-}
-
-// html, body{
-//   width:100%;
-//   margin:0;
-// }
-
-// h1, h2, h3, p, a{
-//   font-family: helvetica, arial, cursive;
-//   color:#7F7F7F;
-// }
-
-.clearfix{
-  clear:both;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-.clearfix:after {
-  clear: both;
-}
-
-
-/*******************/
 /*   NAVIGATION    */
 /*******************/
 
