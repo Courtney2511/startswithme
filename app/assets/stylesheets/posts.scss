@@ -1,3 +1,307 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*******************/
+/*   GLOBAL        */
+/*******************/
+*{
+  box-sizing: content-box;
+}
+
+html, body{
+  width:100%;
+  margin:0;
+}
+
+h1, h2, h3, p, a{
+  font-family: helvetica, arial, cursive;
+  color:#7F7F7F;
+}
+
+.clearfix{
+  clear:both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+
+/*******************/
+/*   NAVIGATION    */
+/*******************/
+
+header{
+  width:100%;
+  height:auto;
+  overflow:auto;
+}
+
+.nav-stick{
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  z-index:1;
+}
+
+.nav-stick-scroll {
+    background:white;
+    width: 100%;
+    z-index:1;
+}
+
+
+/* Nav-Left Styles */
+
+.nav-left{
+  position: relative;
+  float:left;
+  width:15%;
+  padding-left:5%;
+}
+
+.nav-left .logo{
+ width: 100%;
+}
+
+.nav-left h1{
+  border: 2px solid #00B1CB;
+  padding: 5px;
+  text-align:center;
+  font-size:100%;
+}
+
+.nav-left h1 a{
+  text-decoration: none;
+  color: #00B1CB;
+}
+
+/* nav-right Styles */
+
+.nav-right {
+  float:left;
+  position: relative;
+  text-align:right;
+  width:75%;
+  padding-right: 5%;
+}
+
+.nav-right p{
+  position:relative;
+  display:inline-block;
+  padding-right: 30px;
+  color:#7f7f7f;
+}
+
+
+.nav-right span.button{
+  background-color:#00B1CB;
+  overflow:auto;
+  padding:10px;
+  color:white;
+}
+
+
+/*******************/
+/*   Banner        */
+/*******************/
+.top-screen{
+  background-image: url('friends.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  width:100%;
+  height:1000px;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-bottom: 60px;
+}
+
+
+.banner.banner-text{
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner-text p{
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Marck Script', cursive;
+  font-size: 300%;
+  text-align: center;
+  padding-top:75%;
+}
+
+/*******************/
+/*   Sections      */
+/*******************/
+
+section{
+  width:100%;
+}
+
+/* Section Title */
+.sect-title{
+  border-bottom: 1px solid #c2c2c2;
+  margin: 5% 10%;
+  text-align: center;
+  padding:15px;
+}
+
+.sect-title a{
+  text-decoration:none;
+  padding: 10px;
+  font-size: 30px;
+  font-weight:lighter;
+}
+.sect-title a:hover{
+  border: 2px solid  #00B1CB;
+  color:  #00B1CB;
+}
+
+
+/* sections */
+
+.sect-photos{
+  position: relative;
+  width:25%;
+  float:left;
+  margin-bottom: 60px;
+}
+
+.sect-photos img{
+  width:100%;
+  float: left;
+}
+
+.sect-text,
+.sect-photos a{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  width:100%;
+  visibility: hidden;
+  opacity: 0;
+  margin:0;
+}
+
+.sect-text{
+  background-color: rgba(126,151,200,0.5);
+}
+
+.sect-photos:hover .sect-text,
+.sect-photos:hover a {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sect-text p{
+  position: absolute;
+  color:white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width:100%;
+}
+
+.img-title{
+  font-size:30px;
+}
+
+.sect-photos a{
+  text-decoration: none;
+  color: white;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.sect-photos span.button{
+  background-color: #00B1CB;
+  border: none;
+  color:white;
+  padding:5px 15px;
+  font-size: 14px;
+}
+
+
+/*******************/
+/*   Footer        */
+/*******************/
+footer{
+  background-color: #7F7F7F;
+  width:100%;
+  height:200px;
+}
+
+.footer-info{
+  float:left;
+  width: 23.3333%;
+}
+
+.expressions,
+.help,
+.information{
+  padding-left: 5%;
+  padding-right:5%;
+}
+
+/*.help,
+.information{
+  background-color: red;
+}
+
+.expressions{
+  background-color: blue;
+}*/
+
+footer h3,
+footer p,
+footer a{
+  display:block;
+  text-align: center;
+  text-decoration: none;
+  line-height:25px;
+  font-weight: lighter;
+}
+
+
+footer h3{
+  margin-top:40px;
+  margin-bottom:0;
+  color:white;
+}
+
+footer p,
+footer a{
+  color:#c2c2c2;
+}
+
+footer a:hover{
+  color:#00B1CB;
+}
+
+
+/*******************/
+/*  Media Queries  */
+/*******************/
