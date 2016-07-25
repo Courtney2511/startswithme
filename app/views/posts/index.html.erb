@@ -160,9 +160,9 @@
   </script>
 
   <% @posts.each do |post| %>
-    "<%= link_to post.body, post_path(post) %>" by <%= link_to post.user.name, user_path(post.user) %>
-    <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-    <% end %>
-    <br>
+    <div class="text-cont">
+      "<%= link_to post.body, post_path(post) %>"<br>by <%= link_to post.user.name, user_path(post.user) %>
+      <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+      <% end %>
+    </div>
   <% end %>
-  <br>
