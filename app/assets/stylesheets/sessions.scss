@@ -43,3 +43,40 @@
   text-align: center;
   padding-top:75%;
 }
+
+/*******************/
+/*   login       */
+/*******************/
+.login-container{
+  max-width: 600px;
+  /* overflow: auto; */
+  /* float: left; */
+  /* background-color: red; */
+  margin: auto;
+  top: 100px;
+  position: relative;
+}
+
+.login{
+  width:100%;
+  background-color:white;
+  float:left;
+}
+
+.login-title{
+  background-color: #00B1CB;
+  width: 100%;
+  /* padding-top: 1px; */
+  padding-bottom: 1px;
+  /* border-radius: 20px; */
+  overflow: hidden;
+}
+
+.login-title h1{
+  color: white;
+  background-color: red;
+  height: 100px;
+  margin: 0px;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
