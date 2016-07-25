@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   </head>
 
   <body>
@@ -17,13 +20,13 @@
 
     <%= yield %>
 
-    <p class="user-info">
+    <!-- <p class="user-info">
       <% if current_user %>
         Welcome <%=link_to current_user.name, user_path(current_user)  %>! <%= link_to "Log Out", session_path("current"), :method => :delete %>
       <% else %>
         <%= link_to "Log In", new_session_path %> or <%=link_to "Sign Up", new_user_path %>
       <% end %>
-    </p>
+    </p> -->
 
   </body>
 </html>
