@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
 
+
+  resources :password_resets
+
   resources :users, only: [:new, :show, :create]
 
   resources :posts do
