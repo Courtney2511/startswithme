@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:index, :new, :create]
-  layout false
+  # layout false
 
   # def index
   #   @users = User.all
