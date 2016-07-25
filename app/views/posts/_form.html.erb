@@ -1,7 +1,11 @@
 <%= form_for @post do |f| %>
   <div class="field">
-    <!-- <%= f.label :body  %> -->
+    <%= f.label :body  %>
     <%= f.text_field :body %>
+  </div>
+  <div class="field">
+    <%= f.label :image  %>
+    <%= f.file_field :image %>
   </div>
   <div class="action">
     <%= f.submit %>

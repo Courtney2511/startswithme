@@ -1,8 +1,0 @@
-<h1> ALL USERS </h1>
-<div>
-      <ul>
-        <% @users.each do |user| %>
-          <%= link_to user.name, users_path(user) %>  <%= user.email %> <br>
-        <% end %>
-      </ul>
-</div>

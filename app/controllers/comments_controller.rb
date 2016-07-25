@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :load_post
-  before_action :ensure_logged_in, only: [:create, :destroy]
+  before_action :ensure_logged_in, only: [:create, :edit, :destroy]
 
   def show
     @comment = Comment.find(params[:id])
@@ -16,10 +16,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
 
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
+    redirect_to post_path(@post)
   end
 
   private

@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  #Module that lets us delete redundant folders. (Scroll down to "destory" method for more information)
+  require 'fileutils'
+
   def index
     @posts = Post.all
   end
@@ -9,12 +12,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.image = params[:file]
     @post.user = current_user
     if @post.save
       redirect_to posts_url
     else
       render :new
     end
+    # binding.pry
   end
 
   def show
@@ -42,6 +47,8 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    ## Automatically deletes the folder with the name of the post ID being deleted, in the "/public/uploads/post/image/" directory
+    FileUtils.remove_dir "#{Rails.root}/public/uploads/post/image/#{@post.id}", true
     @post.destroy
     redirect_to posts_path
   end
@@ -49,6 +56,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:post, :body, :user_id)
+    params.require(:post).permit(:post, :body, :user_id, :image)
   end
 end

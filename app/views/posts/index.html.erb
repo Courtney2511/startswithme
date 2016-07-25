@@ -1,12 +1,192 @@
-<h1>All Posts</h1>
-<% @posts.each do |post| %>
-  "<%= link_to post.body, post_path(post) %>" by <%= post.user.name %>
-  <% if post.user == current_user %>
-     | <%= link_to 'Edit', edit_post_path(post) %> |
-    <%= link_to 'Delete', post, method: :delete,
-    data: {confirm: 'Are you sure?'} %>
+  <!-- Nav -->
+
+<div class="top-screen">
+  <header class="clearix">
+    <div class="nav-stick">
+      <div class="nav-left">
+        <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
+      </div>
+      <nav class="nav-right">
+        <p><%=link_to current_user.name, user_path(current_user)  %></p>
+        <p><%= link_to 'CREATE POST', new_post_path %></p>
+        <p>|</p>
+        <p><%= link_to "Log Out", session_path("current"), :method => :delete %></p>
+        <!-- <p><a href="#">ABOUT</a></p> -->
+        <!-- <a href="#"><p>HOME</p></a> -->
+        <!-- <a href="#"><p>SIGN IN</p></a> -->
+        <!-- <a href="#"><p><span class="button">SIGN UP</p></a> -->
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Banner -->
+  <div class="clearfix">
+    <div class="banner">
+      <div class="banner-text">
+        <p>An online community aimed at fostering youth empowerment and support</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Latest Photos -->
+  <section class="clearfix">
+    <div class="sect-title">
+      <a href="#">LATEST PHOTOS</a>
+    </div>
+    <!-- photo 1 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 2 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 3  -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 4 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+  </section>
+
+  <!-- Latest Blogs -->
+  <section class="clearfix">
+    <div class="sect-title">
+      <a href="#">LATEST BLOGS</a>
+    </div>
+    <!-- photo 1 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 2 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 3  -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 4 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+  </section>
+
+  <!-- Latest Videos -->
+  <section class="clearfix">
+    <div class="sect-title">
+      <a href="#">LATEST VIDEOS</a>
+    </div>
+    <!-- photo 1 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 2 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 3  -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+    <!-- photo 4 -->
+    <div class="sect-photos">
+      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
+      <div class="sect-text">
+        <p><span class="img-title">Title</span><br>caption gibberish content</p>
+      </div>
+      <a href="#"><p><span class="button">VIEW</p></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info expressions">
+      <h3>EXPRESSIONS</h3>
+      <a href="latest_photos.html">Photos</a>
+      <a href="latest_photos.html">Blogs</a>
+      <a href="latest_photos.html">Videos</a>
+    </div>
+    <div class="footer-info help">
+      <h3>HELP & SUPPORT</h3>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    <div class="footer-info information">
+      <h3>ABOUT</h3>
+      <a href="#">About</a>
+      <a href="#">Privacy Policies</a>
+      <a href="#">Terms and Conditions</a>
+    </div>
+  </footer>
+
+
+  <script>
+    $(document).ready (function () {
+      $(window).scroll (function () {
+        var scroll = $(this).scrollTop();
+          if (scroll >= 1100) {
+              $('.nav-stick').addClass('nav-stick-scroll')
+          }else {
+              $('.nav-stick').removeClass('nav-stick-scroll')
+          }
+      })
+    })
+  </script>
+
+  <% @posts.each do |post| %>
+    "<%= link_to post.body, post_path(post) %>" by <%= link_to post.user.name, user_path(post.user) %>
+    <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
+    <br>
   <% end %>
   <br>
-<% end %>
-<br>
-<%= link_to 'Create Post', new_post_path %>
