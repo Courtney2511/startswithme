@@ -174,6 +174,8 @@ Rails.application.config.sorcery.configure do |config|
 
   # --- user config ---
   config.user_config do |user|
+    user.reset_password_mailer = UserMailer
+  end
     # -- core --
     # specify username attributes, for example: [:username, :email].
     # Default: `[:email]`
@@ -317,9 +319,8 @@ Rails.application.config.sorcery.configure do |config|
     # Default: `:reset_password_token`
     #
     # user.reset_password_token_attribute_name =
-    config.user_config do |user|
-    user.reset_password_mailer = UserMailer
-  end
+
+
 
 
     # expires at attribute name.
