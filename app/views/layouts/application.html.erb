@@ -12,6 +12,23 @@
   </head>
 
   <body>
+    <header class="clearix">
+      <div class="nav-stick">
+        <div class="nav-left">
+          <% if current_user %>
+          <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
+        </div>
+        <nav class="nav-right">
+          <p><%=link_to current_user.name, user_path(current_user)  %></p>
+          <p><%= link_to 'CREATE POST', new_post_path %></p>
+          <p>|</p>
+          <p><%= link_to "Log Out", session_path("current"), :method => :delete %></p>
+          <% else %>
+          <%= link_to "Log In", new_session_path %> or <%=link_to "Sign Up", new_user_path %>
+          <% end %>
+        </nav>
+      </div>
+    </header>
     <% if flash[:notice] %>
         <p id="notice">
           <%= flash[:notice] %>
@@ -29,4 +46,25 @@
     </p> -->
 
   </body>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info expressions">
+      <h3>EXPRESSIONS</h3>
+      <a href="latest_photos.html">Photos</a>
+      <a href="latest_photos.html">Blogs</a>
+      <a href="latest_photos.html">Videos</a>
+    </div>
+    <div class="footer-info help">
+      <h3>HELP & SUPPORT</h3>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    <div class="footer-info information">
+      <h3>ABOUT</h3>
+      <a href="#">About</a>
+      <a href="#">Privacy Policies</a>
+      <a href="#">Terms and Conditions</a>
+    </div>
+  </footer>
 </html>
