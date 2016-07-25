@@ -49,9 +49,6 @@
 /*******************/
 .login-container{
   max-width: 600px;
-  /* overflow: auto; */
-  /* float: left; */
-  /* background-color: red; */
   margin: auto;
   top: 100px;
   position: relative;
@@ -61,22 +58,44 @@
   width:100%;
   background-color:white;
   float:left;
+  overflow: auto;
+  border-radius:20px;
+  text-align:center;
+  max-height:600px;
+  position:relative;
 }
 
-.login-title{
+.close-button{
   background-color: #00B1CB;
-  width: 100%;
-  /* padding-top: 1px; */
-  padding-bottom: 1px;
-  /* border-radius: 20px; */
-  overflow: hidden;
+  // float:right;
+  // max-width:100px;
+  // max-height:10px;
+  position:absolute;
+  width:100%;
 }
 
-.login-title h1{
+.close-button h1{
+  width: 95%;
   color: white;
-  background-color: red;
-  height: 100px;
+  height: 50px;
+  padding-top: 25px;
   margin: 0px;
-  overflow: hidden;
   border-radius: 20px 20px 0px 0px;
+  float: left;
+}
+
+
+
+.close-button p{
+  color:white;
+  /* float: right; */
+  float: left;
+  width: 5%;
+  text-align: right;
+  // background-color: red;
+}
+
+form{
+  position:relative;
+  padding-top:100px;
 }

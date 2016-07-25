@@ -2,17 +2,19 @@
 
 <div class="login-container">
   <div class="login">
-    <div class="login-title">
+
+    <div class="close-button">
       <h1>Log In</h1>
+      <p>x</p>
     </div>
     <%= form_tag sessions_path do %>
       <div class="field">
-        <%= label_tag :email %><br>
+        <%= label_tag :email %>
         <%= text_field_tag :email %><br>
       </div>
 
       <div class="field">
-        <%= label_tag :password %><br>
+        <%= label_tag :password %>
         <%= password_field_tag :password %>
       </div>
 
