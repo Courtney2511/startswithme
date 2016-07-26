@@ -167,20 +167,42 @@ footer a:hover{
 
 
 /*******************/
-/*    Posts        */
+/*   Posts-index   */
 /*******************/
-.text-wrapper{
+.posts-wrapper{
   margin: 0 auto;
   width: 960px;
 }
-
-.text-cont{
-  font-size: 20px;
-  padding: 5px 5px;
-  margin: 10px 0px;
+.post-cont{
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .author-cont{
   font-size: 15px;
-  margin: 10px 0;
+}
+
+.title-cont{
+  font-size: 22px;
+}
+
+.img-cont{
+  margin-right: 10px;
+}
+.img-cont
+{
+  display: inline-block;
+  float: left;
+}
+
+.text-cont{
+  float: left;
+  width: 750px;
+}
+
+.text-cont p{
+  margin: 0 0 5px 0;
+
 }
