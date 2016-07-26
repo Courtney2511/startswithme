@@ -162,6 +162,11 @@
 <div class="text-wrapper">
   <% @posts.each do |post| %>
   <div class="text-cont">
+    <% if post.image %>
+      <div class="img-cont">
+        <%= image_tag(post.image.thumb) %>
+      </div>
+    <% end %>
     "<%= link_to post.title, post_path(post) %>"<br>
     <div class="author-cont">
       by <%= link_to post.user.name, user_path(post.user) %>
