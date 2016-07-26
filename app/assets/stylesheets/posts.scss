@@ -173,36 +173,34 @@ footer a:hover{
   margin: 0 auto;
   width: 960px;
 }
+
 .post-cont{
   overflow: hidden;
   width: 100%;
   margin-bottom: 10px;
   display: block;
-}
 
-.author-cont{
-  font-size: 15px;
-}
+  .img-cont{
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+  }
 
-.title-cont{
-  font-size: 22px;
-}
+  .text-cont{
+    float: left;
+    width: 750px;
 
-.img-cont{
-  margin-right: 10px;
-}
-.img-cont
-{
-  display: inline-block;
-  float: left;
-}
+    p {
+      margin: 0 0 5px 0;
 
-.text-cont{
-  float: left;
-  width: 750px;
-}
+    }
 
-.text-cont p{
-  margin: 0 0 5px 0;
+    .author-cont{
+      font-size: 15px;
+    }
 
+    .title-cont{
+      font-size: 22px;
+    }
+  }
 }
