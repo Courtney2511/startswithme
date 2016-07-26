@@ -2,7 +2,7 @@
 <p>
   <%= @post.body %><br>
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
-  <%= image_tag(@post.image) %>
+  <%= image_tag(@post.image) %><br>
   Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
 </p>
 
