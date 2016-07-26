@@ -12,4 +12,7 @@ class User < ApplicationRecord
 
 
   validates :name, :email, presence: true
+
+  #mounting the iamge uploader to be used with the post model
+  mount_uploader :profile_picture, ProfilePictureUploader
 end
