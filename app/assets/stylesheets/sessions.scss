@@ -112,7 +112,7 @@
   line-height: 0;
 }
 
-button.submit {
+button.actions {
     display: block;
     border: none;
     outline: none;
@@ -124,7 +124,7 @@ button.submit {
     color: white;
 }
 
-.getstarted>input.error {
+input.error {
     outline: 2px solid #bc2a39;
 }
 

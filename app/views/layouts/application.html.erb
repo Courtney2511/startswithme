@@ -17,6 +17,8 @@
           <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
         </div>
         <% if current_user %>
+
+        <!-- navigation -->
         <nav class="nav-right">
           <p><%=link_to current_user.name, user_path(current_user)  %></p>
           <p><%= link_to 'CREATE POST', new_post_path %></p>
@@ -25,7 +27,7 @@
           <% else %>
 
           <div class="nav-right">
-            <p class="signin"><%= link_to "Log In", new_session_path %> </p>
+            <p class="signin"><%= link_to "Log In", '#' %> </p>
             <p> | </p>
             <p> <%=link_to "Sign Up", new_user_path %><p>
           </div>

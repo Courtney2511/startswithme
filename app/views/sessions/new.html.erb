@@ -11,15 +11,15 @@
   <!-- Login fields -->
   <div class="field">
     <%= label_tag :email %>
-    <%= text_field_tag :email %><br>
+    <%= text_field_tag :email %><br> <!--input tag-->
   </div>
   <div class="field">
     <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password %> <!--input tag-->
   </div>
   <!-- Login Button -->
   <div>
-    <%= submit_tag "Log in", class:"submit" %>
+    <%= submit_tag "Log in", class:"actions" %>
   </div>
     <!-- Forgot Password & Sign Up Button -->
     <%= link_to 'Forgot Password?', new_password_reset_path %>
@@ -27,7 +27,7 @@
   <% end %>
 </div>
 
-
+<!-- Banner -->
 <div class="top-screen">
   <div class="clearfix">
     <div class="banner">
@@ -40,17 +40,22 @@
 
 <script>
 $( document ).ready(function() {
-  $('.signin').on('click', function(){
+  $('.signin').on('click', function(event){
+    event.preventDefault();
+    // modal will display on click
     $('.modal')
       .css("display","block");
     });
-
+    // modal will close when 'x' is clicked
   $('.close').on('click', function(){
     $('.modal')
       .css("display","none");
     });
-
-  $('.submit').on('click', function(){
+  // an error class will be added if no field in entered
+  $('.actions').on('click', function(event){
+    if($(input).val() == ''){
+       event.preventDefault();
+    }
     $('input').addClass("error");
     });
 
@@ -59,3 +64,14 @@ $( document ).ready(function() {
     });
 });
 </script>
+
+
+<!--
+$('#submit').click(function(){
+   if($(input).val() == ''){
+      event.preventDefault();
+   }
+});
+
+
+ -->
