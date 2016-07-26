@@ -32,30 +32,49 @@
 </div>
 
 <section class="container">
+
+  <!-- <#% if @user == current_user %>
+    <h1>Hey <%#= @user.name %>, welcome to your profile!</h1>
+    <h3><%#= @user.email %></h3>
+  <#% end %> -->
+
     <div class="profile_pic">
-      <img src="app/assets/images/user.jpg">
+      <%= image_tag(@user.profile_picture) %>
     </div>
 
     <div class="description">
-      <% if @user == current_user %>
-        <h2> <%= @user.name %></h2>
-      <% else %>
-        <h2><%= @user.name %>'s Profile</h2>
+      <h2> <%= @user.name %></h2>
+      <%= form_for @user do |f| %>
+        <% if @user == current_user %>
+          <div class="field">
+            <%= f.label :change_your_profile_picture %>
+            <%= f.file_field :profile_picture %>
+          </div>
+          <div class="action">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+      <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
       <% end %>
-        <h3><%= @user.email %></h3>
-    </div>
+    <% end %>
+
+        </div>
 </section>
 
 <section class="expression_container">
 
-  <h3 class="expression_title">Posts by
-    <% if @user == current_user %>
-      you
-    <% else %>
-      <%= @user.name %>
-    <% end %>
-  </h3>
-
+  <h3 class="expression_title">Posts by <%= @user.name %></h3>
 
   <article class="blog-entry">
     <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
@@ -67,35 +86,4 @@
   </article>
 </section>
 
-
 </html>
-
-<% if @user == current_user %>
-  <h1>Hey <%= @user.name %>, welcome to your profile!</h1>
-  <h2>Profile Picture</h2>
-  <%= image_tag(@user.profile_picture) %>
-<% end %>
-  <h3><%= @user.email %></h3>
-
-  <%= form_for @user do |f| %>
-    <div class="field">
-      <%= f.label :profile_picture  %>
-      <%= f.file_field :profile_picture %>
-    </div>
-    <div class="action">
-      <%= f.submit %>
-    </div>
-  <% end %>
-
-  <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-  <% end %>

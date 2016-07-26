@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725202144) do
+ActiveRecord::Schema.define(version: 20160726213529) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20160725202144) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
-    t.string   "role"
+    t.boolean  "admin"
     t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end

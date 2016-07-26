@@ -11,7 +11,12 @@
 <% if @post.image %>
 <p>Image:  
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
+<<<<<<< HEAD
+  <%= image_tag(@post.image) %><br>
+  Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+=======
   <%= image_tag(@post.image) %>
+>>>>>>> 0d950a16095eabce300427e3609190fb21adfb2a
 </p>
 <% end %>
 

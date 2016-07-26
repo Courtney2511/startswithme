@@ -27,9 +27,9 @@ class ProfilePictureUploader < CarrierWave::Uploader::Base
   ## Automatically resize(scale) each image that's been uploaded to fit these specified dimentions
   process :resize_to_fit => [300, 400]
   ## Automatically generate a thumbnail image for each uploaded image, with these specified dimentions
-  #  version :thumb do
-  #    process :resize_to_fill => [200, 200]
-  #  end
+   version :thumb do
+     process :resize_to_fill => [100, 100]
+   end
 
 
   # Process files as they are uploaded:

@@ -1,7 +1,10 @@
 <% my_comments.each do |comment| %>
   <p>
-    <%= comment.comment %><br>
+<%= comment.comment %><br>
+
     <% if comment.user != nil %>
+    <%= image_tag(comment.user.profile_picture.thumb) %>
+
       <em> by <%= link_to comment.user.name, user_path(comment.user) %></em>
       Added on: <%= comment.created_at %><br>
       <% if comment.user == current_user %>
