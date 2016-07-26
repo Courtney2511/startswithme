@@ -174,24 +174,18 @@ footer a:hover{
   width: 960px;
 }
 .post-cont{
-  // height: 200px;
   overflow: hidden;
   width: 100%;
   margin-bottom: 10px;
-  // line-height: 200px;
+  display: block;
 }
+
 .author-cont{
   font-size: 15px;
 }
-.text-cont{
-  // height: 100%;
-  // padding: 0 0 0 220px;
-}
-// .text-wrapper{
-//   line-height: 200px;
-// }
+
 .title-cont{
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .img-cont{
@@ -201,4 +195,14 @@ footer a:hover{
 {
   display: inline-block;
   float: left;
+}
+
+.text-cont{
+  float: left;
+  width: 750px;
+}
+
+.text-cont p{
+  margin: 0 0 5px 0;
+
 }

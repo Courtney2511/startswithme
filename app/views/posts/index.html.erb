@@ -169,13 +169,23 @@
     <% end %>
     <div class="text-cont">
       <div class="title-cont">
-        <%= link_to post.title, post_path(post) %>
+        <p>
+          <%= link_to post.title, post_path(post) %>
+        </p>
       </div>
       <div class="author-cont">
-        by <%= link_to post.user.name, user_path(post.user) %>
-       <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-       <% end %>
+        <p>
+          by <%= link_to post.user.name, user_path(post.user) %>
+         <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+         <% end %>
+        </p>
+
       </div>
+        <div class="comment-cont">
+          <p>
+            <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+          </p>
+        </div>
     </div>
 
 
