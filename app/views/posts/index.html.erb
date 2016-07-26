@@ -159,20 +159,26 @@
     })
   </script>
 
-<div class="text-wrapper">
+<div class="posts-wrapper">
   <% @posts.each do |post| %>
-  <div class="text-cont">
-    <% if post.image %>
+  <div class="post-cont">
+    <% if post.image? %>
       <div class="img-cont">
         <%= image_tag(post.image.thumb) %>
       </div>
     <% end %>
-    "<%= link_to post.title, post_path(post) %>"<br>
-    <div class="author-cont">
-      by <%= link_to post.user.name, user_path(post.user) %>
-     <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-     <% end %>
+    <div class="text-cont">
+      <div class="title-cont">
+        <%= link_to post.title, post_path(post) %>
+      </div>
+      <div class="author-cont">
+        by <%= link_to post.user.name, user_path(post.user) %>
+       <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+       <% end %>
+      </div>
     </div>
+
+
 
   </div>
 
