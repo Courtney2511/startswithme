@@ -11,11 +11,11 @@
   <!-- Login fields -->
   <div class="field">
     <%= label_tag :email %>
-    <%= text_field_tag :email %><br> <!--input tag-->
+    <%= text_field_tag :email, nil, class:"session-input" %><br> <!--input tag-->
   </div>
   <div class="field">
     <%= label_tag :password %>
-    <%= password_field_tag :password %> <!--input tag-->
+    <%= password_field_tag :password, nil, class:"session-input" %> <!--input tag-->
   </div>
   <!-- Login Button -->
   <div>
@@ -51,27 +51,16 @@ $( document ).ready(function() {
     $('.modal')
       .css("display","none");
     });
-  // an error class will be added if no field in entered
-  $('.actions').on('click', function(event){
-    if($(input).val() == ''){
-       event.preventDefault();
+  // prevent default if user doesn't input anything into fields
+  $('.actions').on('click', function(){
+    // if there's no value in <input>, then prevent default on login
+    if($("#email").val() == "" || $("#password").val() == ""){
+      event.preventDefault();
+      $('.session-input').addClass("error");
     }
-    $('input').addClass("error");
-    });
-
-  $('input').on('click',function(){
+    $('.session-input').on('click',function(){
     $(this).removeClass('error');
     });
+  });
 });
 </script>
-
-
-<!--
-$('#submit').click(function(){
-   if($(input).val() == ''){
-      event.preventDefault();
-   }
-});
-
-
- -->
