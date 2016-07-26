@@ -1,15 +1,15 @@
-<h1><%= @post.title %></h1>
+<h1>Title: <%= @post.title %></h1>
 
 <!-- Displays body if it exists -->
 <% if @post.body %>
-<p>
+<p>Body:
   <%= @post.body %><br>
 </p>
 <% end %>
 
 <!-- Displays image if it exists -->
 <% if @post.image %>
-<p>
+<p>Image:  
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
   <%= image_tag(@post.image) %>
 </p>
@@ -17,7 +17,7 @@
 
 <!-- Displays link if it exists -->
 <% if @post.link %>
-<p>
+<p>Link:
   <%= @post.link %>
 </p>
 <% end %>
