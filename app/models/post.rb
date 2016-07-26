@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   #mounting the iamge uploader to be used with the post model
   mount_uploader :image, ImageUploader
 
-  validates :title_or_link_or_image
+  validate :title_or_link_or_image
 
   private
 
