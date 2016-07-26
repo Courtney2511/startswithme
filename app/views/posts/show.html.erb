@@ -1,11 +1,35 @@
-<h1>Post #<%= @post.id %></h1>
-<p>
+<h1>Title: <%= @post.title %></h1>
+
+<!-- Displays body if it exists -->
+<% if @post.body %>
+<p>Body:
   <%= @post.body %><br>
+</p>
+<% end %>
+
+<!-- Displays image if it exists -->
+<% if @post.image %>
+<p>Image:  
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
+<<<<<<< HEAD
   <%= image_tag(@post.image) %><br>
   Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+=======
+  <%= image_tag(@post.image) %>
+>>>>>>> 0d950a16095eabce300427e3609190fb21adfb2a
 </p>
+<% end %>
 
+<!-- Displays link if it exists -->
+<% if @post.link %>
+<p>Link:
+  <%= @post.link %>
+</p>
+<% end %>
+
+Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+
+<!-- if you're the owner of the post, you can delete or edit -->
 <% if @post.user == current_user %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
   <%= link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
