@@ -16,11 +16,11 @@ header{
   background-color:white;
 }
 
-.nav-stick-scroll {
-    background:white;
-    width: 100%;
-    z-index:1;
-}
+// .nav-stick-scroll {
+//     background:white;
+//     width: 100%;
+//     z-index:1;
+// }
 
 
 /* Nav-Left Styles */
@@ -67,4 +67,61 @@ header{
   overflow:auto;
   padding:10px;
   color:white;
+}
+
+
+/*******************/
+/*   Footer        */
+/*******************/
+footer{
+  background-color: #7F7F7F;
+  width:100%;
+  height:200px;
+}
+
+.footer-info{
+  float:left;
+  width: 23.3333%;
+}
+
+.expressions,
+.help,
+.information{
+  padding-left: 5%;
+  padding-right:5%;
+}
+
+/*.help,
+.information{
+  background-color: red;
+}
+
+.expressions{
+  background-color: blue;
+}*/
+
+footer h3,
+footer p,
+footer a{
+  display:block;
+  text-align: center;
+  text-decoration: none;
+  line-height:25px;
+  font-weight: lighter;
+}
+
+
+footer h3{
+  margin-top:40px;
+  margin-bottom:0;
+  color:white;
+}
+
+footer p,
+footer a{
+  color:#c2c2c2;
+}
+
+footer a:hover{
+  color:#00B1CB;
 }
