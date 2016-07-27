@@ -2,18 +2,19 @@
 /*   NAVIGATION    */
 /*******************/
 
-header{
-  width:100%;
-  height:auto;
-  overflow:auto;
-}
+// header{
+//   width:100%;
+//   height:auto;
+//   overflow:auto;
+// }
 
 .nav-stick{
-  margin: 0 auto;
-  width: 100%;
-  position: fixed;
-  z-index:1;
+  overflow: auto; /* <<<< Clearing the floats */
   background-color:white;
+  height: 60px;
+  color: white;
+  padding: 0 30px;
+
 }
 
 // .nav-stick-scroll {

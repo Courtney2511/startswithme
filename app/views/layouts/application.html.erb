@@ -12,10 +12,10 @@
 
   <body>
     <header class="clearix">
-      <div class="nav-stick">
-        <div class="nav-left">
-          <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
-        </div>
+
+
+          <h1 class='logo'><%= link_to 'State of Our Mind', posts_path %></h1>
+
         <% if current_user %>
 
         <!-- navigation -->
@@ -33,7 +33,7 @@
           </div>
           <% end %>
         </nav>
-      </div>
+
     </header>
     <% if flash[:notice] %>
         <p id="notice">
