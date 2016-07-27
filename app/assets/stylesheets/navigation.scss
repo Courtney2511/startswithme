@@ -13,13 +13,14 @@ header{
   width: 100%;
   position: fixed;
   z-index:1;
+  background-color:white;
 }
 
-.nav-stick-scroll {
-    background:white;
-    width: 100%;
-    z-index:1;
-}
+// .nav-stick-scroll {
+//     background:white;
+//     width: 100%;
+//     z-index:1;
+// }
 
 
 /* Nav-Left Styles */
@@ -67,6 +68,10 @@ header{
   padding:10px;
   color:white;
 }
+
+/*******************/
+/*   Footer        */
+/*******************/
 
 footer{
   background-color: #7F7F7F;
