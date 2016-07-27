@@ -1,5 +1,5 @@
 
-  <!-- Latest Photos -->
+  <!-- Latest Posts -->
   <section class="clearfix">
     <div class="sect-title">
       <%= link_to "LATEST PHOTOS", posts_path %>
@@ -134,14 +134,13 @@
 
 <div class="text-wrapper">
   <% @posts.each do |post| %>
-  <div class="text-cont">
+    <div class="text-cont">
     "<%= link_to post.body, post_path(post) %>"<br>
     <div class="author-cont">
       by <%= link_to post.user.name, user_path(post.user) %>
      <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
      <% end %>
     </div>
-
   </div>
 
   <% end %>

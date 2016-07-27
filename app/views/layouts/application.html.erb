@@ -27,9 +27,9 @@
           <% else %>
 
           <div class="nav-right">
-            <p class="signin"><%= link_to "Log In", '#' %> </p>
+            <p class="signin"><%= link_to "Log In", new_session_path %></p>
             <p> | </p>
-            <p> <%=link_to "Sign Up", new_user_path %><p>
+            <p class="signup"> <%=link_to "Sign Up", new_user_path %></p>
           </div>
           <% end %>
         </nav>
