@@ -5,25 +5,26 @@
   <%= form_tag sessions_path, class: "getstarted" do %>
   <!-- login Header -->
   <div class="login-header">
-    <h1>Log In</h1>
     <button class="close">x</button>
+    <h1>Log In</h1>
   </div>
   <!-- Login fields -->
   <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, nil, class:"session-input" %><br> <!--input tag-->
+    <%= text_field_tag :email, nil, class:"session-input", :placeholder => "email"%><br> <!--input tag-->
+
   </div>
   <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, nil, class:"session-input" %> <!--input tag-->
+    <%= password_field_tag :password, nil, class:"session-input", :placeholder => ".........." %> <!--input tag-->
   </div>
   <!-- Login Button -->
   <div>
     <%= submit_tag "Log in", class:"actions" %>
   </div>
     <!-- Forgot Password & Sign Up Button -->
+  <div class="extra-login-stuff">
     <%= link_to 'Forgot Password?', new_password_reset_path %>
     <%= link_to 'Sign Up', new_user_path %>
+  </div>
   <% end %>
 </div>
 

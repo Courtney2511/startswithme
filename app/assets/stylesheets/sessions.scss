@@ -63,9 +63,9 @@
 
 .getstarted {
     display: block;
-    width: 400px;
+    width: 300px;
     height: 18em;
-    background-color: white;
+    background-color: rgba(77, 76, 91, 0.8);
     position: absolute;
     margin: auto;
     top: 0;
@@ -91,34 +91,42 @@
 // }
 
 .login-header{
-  background-color:#00B1CB;
-  width:100%;
-  position:relative;
-  overflow:auto;
-  padding: 10px 0 10px 10px;
+  /* background-color: #00B1CB; */
+  width: 100%;
+  position: relative;
+  /* overflow: auto; */
+  /* padding: 10px 0 10px 10px; */
 }
 
 .login-header h1{
-   margin:0;
-   padding:0;
-   float:left;
-   width:87%;
-   color:white;
+  margin: 0;
+  padding: 0;
+  /* float: left; */
+  /* width: 87%; */
+  color: #c1c1c1;
+  text-align: center;
+  font-weight: lighter;
+  display: block;
 }
 
 .login-header .close{
-  // border: 1px solid #7F7F7F;
-  border:none;
+  border: none;
   border-radius: none;
   outline: none;
   height: 1em;
-  // font: 1.5em Arial;
-  background-color: rgba(87, 87, 87, 0.5);
   position: relative;
   top: 0.25em;
-  float: left;
-  color: white;
+  background-color: rgba(77, 76, 91, 0.8);
+  color: #c1c1c1;
   line-height: 0;
+  display: block;
+  margin-left: auto;
+  font-size:15px;
+}
+
+.login-header .close:hover{
+  // background-color: rgba(87, 87, 87, 0.8);
+  color: #00B1CB;
 }
 
 /********************/
@@ -129,6 +137,16 @@ div .field{
   width: 50%;
   display: block;
   margin: 10px auto;
+  text-align: center;
+}
+
+input#email,
+input#password{
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -153,8 +171,19 @@ div .field{
     outline: 2px solid #bc2a39;
 }
 
+/********************/
+/* forgot & signup  */
+/********************/
+.extra-login-stuff{
+  width:100%;
+  text-align:center;
+  margin-top:10px;
+}
 
-
+.extra-login-stuff a{
+  text-transform: lowercase;
+  font-size:12px;
+}
 
 
 
