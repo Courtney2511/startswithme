@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   <!-- Latest Posts -->
   <section class="clearfix">
@@ -41,6 +42,20 @@
 
 
 
+=======
+  <script>
+    $(document).ready (function () {
+      $(window).scroll (function () {
+        var scroll = $(this).scrollTop();
+          if (scroll >= 1100) {
+              $('.nav-stick').addClass('nav-stick-scroll')
+          }else {
+              $('.nav-stick').removeClass('nav-stick-scroll')
+          }
+      })
+    })
+  </script>
+>>>>>>> index-styling
 
 <div class="posts-wrapper">
   <% @posts.each do |post| %>
