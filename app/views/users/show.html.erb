@@ -1,20 +1,89 @@
-<% if @user == current_user %>
-  <h1>Hey <%= @user.name %>, welcome to your profile!</h1>
-<% else %>
-  <h1><%= @user.name %>'s Profile</h1>
-<% end %>
-  <h3><%= @user.email %></h3>
-
-<h1>Posts by
-  <% if @user == current_user %>
-    you
-  <% else %>
-    <%= @user.name %>
-  <% end %>
-</h1>
+<!-- Nav -->
 
 
-<% @user.posts.each do |post| %>
-  "<%= post.body %>"<br>
-  posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
-<% end %>
+<div class="profile-top-screen">
+<header class="clearix">
+  <div class="nav-stick">
+    <div class="nav-left">
+      <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
+    </div>
+    <nav class="nav-right">
+      <p><%=link_to current_user.name, user_path(current_user)  %></p>
+      <p><%= link_to 'CREATE POST', new_post_path %></p>
+      <p>|</p>
+      <p><%= link_to "Log Out", session_path("current"), :method => :delete %></p>
+      <!-- <p><a href="#">ABOUT</a></p> -->
+      <!-- <a href="#"><p>HOME</p></a> -->
+      <!-- <a href="#"><p>SIGN IN</p></a> -->
+      <!-- <a href="#"><p><span class="button">SIGN UP</p></a> -->
+    </nav>
+  </div>
+</header>
+
+
+<!-- Banner -->
+<div class="clearfix">
+  <div class="banner">
+    <div class="profile-banner-text">
+      <p>My Profile Page</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="container">
+
+  <!-- <#% if @user == current_user %>
+    <h1>Hey <%#= @user.name %>, welcome to your profile!</h1>
+    <h3><%#= @user.email %></h3>
+  <#% end %> -->
+
+    <div class="profile_pic">
+      <%= image_tag(@user.profile_picture) %>
+    </div>
+
+    <div class="description">
+      <h2> <%= @user.name %></h2>
+      <%= form_for @user do |f| %>
+        <% if @user == current_user %>
+          <div class="field">
+            <%= f.label :change_your_profile_picture %>
+            <%= f.file_field :profile_picture %>
+          </div>
+          <div class="action">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+      <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+        </div>
+</section>
+
+<section class="expression_container">
+
+  <h3 class="expression_title">Posts by <%= @user.name %></h3>
+
+  <article class="blog-entry">
+    <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
+    <% @user.posts.each do |post| %>
+      "<%= link_to post.body, post_path(post) %>"<br>
+       <%= image_tag(post.image.thumb) %><br>
+      posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
+    <% end %>
+  </article>
+</section>
+
+</html>

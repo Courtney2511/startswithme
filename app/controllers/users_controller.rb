@@ -23,12 +23,25 @@ class UsersController < ApplicationController
     else
       render :new
     end
+
   end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:notice] = 'Your profile picture has been updated'
+      redirect_to user_path
+    else
+      flash[:notice] = 'Your profile picture was not updated successfully.'
+      redirect_to user_path
+    end
+  end
+
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :crypted_password, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :crypted_password, :password, :password_confirmation, :profile_picture)
   end
 
 end

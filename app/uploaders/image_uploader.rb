@@ -29,7 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :resize_to_fit => [300, 400]
   ## Automatically generate a thumbnail image for each uploaded image, with these specified dimentions
    version :thumb do
-     process :resize_to_fill => [200, 200]
+     process :resize_to_fill => [75, 75]
    end
 
 
