@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user #&& user.authenticate(params[:password]) - can only use this method when using bycrypt.
+    user = login(params[:email], params[:password])
+    if user #- can only use this method when using bycrypt.
       session[:user_id] = user.id
       redirect_to root_path, notice: "Logged in!!"
     else

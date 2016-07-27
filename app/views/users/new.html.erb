@@ -12,25 +12,57 @@
     </div>
   <%end%>
 
-<div class="signup-container">
+<div class="modal">
+  <!-- Sign Up Header -->
+  <div class="login-header">
+    <button class="close">x</button>
+    <h1>SIGN UP</h1>
+  </div>
+  <!-- Sign Up Fields -->
   <div class="field">
     <%= f.label :username %><br/>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br/>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
   </div>
   <div class="field">
-    <%= f.label :password %><br/>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br/>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "password confirmation" %>
   </div>
+  <!-- Sign Up Button -->
   <div class="button">
     <%= f.submit 'Sign up', :class => 'actions' %>
   </div>
 </div>
 <% end %>
+
+<script>
+$( document ).ready(function() {
+  $('.signup').on('click', function(event){
+    event.preventDefault();
+    // modal will display on click
+    $('.modal')
+      .css("display","block");
+    });
+    // modal will close when 'x' is clicked
+  $('.close').on('click', function(){
+    $('.modal')
+      .css("display","none");
+    });
+  // prevent default if user doesn't input anything into fields
+  $('.actions').on('click', function(){
+    // if there's no value in <input>, then prevent default on login
+    if($("#email").val() == "" || $("#password").val() == ""){
+      event.preventDefault();
+      $('.session-input').addClass("error");
+
+    }
+    $('.session-input').on('click',function(){
+    $(this).removeClass('error');
+    });
+  });
+});
+</script>
