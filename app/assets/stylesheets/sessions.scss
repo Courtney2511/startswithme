@@ -65,7 +65,7 @@
     display: block;
     width: 300px;
     height: 20em;
-    background-color: rgba(77, 76, 91, 0.8);
+    background-color: rgba(53, 52, 67, 0.8);
     position: absolute;
     margin: auto;
     top: 0;
@@ -122,7 +122,7 @@
 
 input#email,
 input#password{
-  width: 50%;
+  width: 49%;
   border: none;
   border-radius: 20px;
   padding-top: 10px;
@@ -135,7 +135,7 @@ input#password{
 /********************/
 
 .actions{
-  width: 50%;
+  width: 46%;
   border: none;
   background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   color: white;
@@ -145,6 +145,7 @@ input#password{
   margin-right: auto;
   display: block;
   border-radius:20px;
+  font-weight:lighter;
 }
 
 .session-input.error {
