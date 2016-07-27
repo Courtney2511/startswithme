@@ -46,17 +46,12 @@
     <% @posts.each do |post| %>
         <div class ="sect-post">
           <%= link_to post.body, post_path(post), class:"post_title_link" %><br>
-            <%= link_to post.user.name, user_path(post.user), class:"post_author_link" %>
-           <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-           <% end %>
+            <div class="post_author_link">
+            <%= link_to post.user.name, user_path(post.user) %>
+             <% if post.user == current_user %> <p>|<p> <%= link_to 'Edit', edit_post_path(post) %> <p>|</p> <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+             <% end %>
+           </div>
         </div>
     <% end %>
   </div>
 </section>
-
-.tiles
-	a.tile(href="#")
-		img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/1.jpg")
-		.details
-			span.title Lorem Ipsum Dolor
-			span.info Quisque vel felis lectus donec vitae dapibus magna

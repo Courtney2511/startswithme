@@ -65,17 +65,32 @@ a.post_title_link{
   padding-top:50px;
 }
 
-a.post_author_link{
+.post_author_link{
+  text-align: center;
+}
+
+.post_author_link a,
+.post_author_link p{
   color:white;
   font-size:10px;
-  display:block;
-  text-align:center;
+  // text-align:center;
   text-transform: none;
   font-weight:lighter;
   padding-left:10px;
   padding-right:10px;
+  display:inline-block;
+  margin: 0 auto;
 }
 
+.post_author_link p{
+  color:white;
+  padding:0;
+}
+
+a.post_title_link:hover,
+.post_author_link a:hover{
+  color:#0a3b4e;
+}
 
 
 

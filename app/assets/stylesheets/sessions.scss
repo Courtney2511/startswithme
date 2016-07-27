@@ -130,6 +130,8 @@ input#password{
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  outline:none;
+  border:none;
 }
 
 /********************/
@@ -148,10 +150,18 @@ input#password{
   display: block;
   border-radius:20px;
   font-weight:lighter;
+  outline:none;
 }
 
+.actions:active,
+.actions:focus
+{
+  box-shadow: 0 0 0 2px #bc2a39;
+ }
+
+
 .session-input.error {
-    outline: 2px solid #bc2a39;
+    box-shadow: 0 0 0 2px #bc2a39;
 }
 
 /********************/
