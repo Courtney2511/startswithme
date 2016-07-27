@@ -45,7 +45,7 @@
 }
 
 /*******************/
-/*   login       */
+/* login container */
 /*******************/
 .modal {
     display: none;
@@ -56,6 +56,10 @@
     height: 100%;
     background-color: rgba(30,30,30,0.8);
 }
+
+/*******************/
+/* form container  */
+/*******************/
 
 .getstarted {
     display: block;
@@ -70,18 +74,21 @@
     right: 0;
     overflow:hidden;
 }
+/********************/
+/* form header part */
+/********************/
 
-.getstarted>input {
-    display: block;
-    border: none;
-    outline: none;
-    padding: 0.5em;
-    font: 1.5em "Bebas Neue";
-    width: 100%;
-    margin: 1em 0;
-    color: #7F7F7F;
-    border: 1px solid #7F7F7F;
-}
+// .getstarted>input {
+//     display: block;
+//     border: none;
+//     outline: none;
+//     padding: 0.5em;
+//     font: 1.5em "Bebas Neue";
+//     width: 100%;
+//     margin: 1em 0;
+//     color: #7F7F7F;
+//     border: 1px solid #7F7F7F;
+// }
 
 .login-header{
   background-color:#00B1CB;
@@ -96,15 +103,17 @@
    padding:0;
    float:left;
    width:87%;
+   color:white;
 }
 
-.login-header button{
-  border: 1px solid #7F7F7F;
+.login-header .close{
+  // border: 1px solid #7F7F7F;
+  border:none;
   border-radius: none;
   outline: none;
   height: 1em;
-  font: 1.5em Arial;
-  background-color: #7F7F7F;
+  // font: 1.5em Arial;
+  background-color: rgba(87, 87, 87, 0.5);
   position: relative;
   top: 0.25em;
   float: left;
@@ -112,21 +121,39 @@
   line-height: 0;
 }
 
-button.actions {
-    display: block;
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 0.5em;
-    font: 1.5em "Bebas Neue";
-    margin: 1em 0;
-    background-color: #00B1CB;
-    color: white;
+/********************/
+/* login fields     */
+/********************/
+div .field{
+  margin-bottom: 10px;
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/********************/
+/* login button     */
+/********************/
+
+.actions{
+  width: 50%;
+  border: none;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius:20px;
 }
 
 .session-input.error {
     outline: 2px solid #bc2a39;
 }
+
+
 
 
 

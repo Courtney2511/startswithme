@@ -57,6 +57,7 @@ $( document ).ready(function() {
     if($("#email").val() == "" || $("#password").val() == ""){
       event.preventDefault();
       $('.session-input').addClass("error");
+
     }
     $('.session-input').on('click',function(){
     $(this).removeClass('error');
