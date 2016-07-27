@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
   end
 
   def reset_password_email(user)
-    @user = User.find user.id
+    @user = User.find(params[:id])
     @url = edit_password_reset_url(@user.reset_password_token)
     mail(to: user.email, subject: "Your Password Has Been Reset")
   end
