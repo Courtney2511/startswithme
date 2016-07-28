@@ -27,10 +27,10 @@
               <%= link_to "Log Out", session_path("current"), :method => :delete %>
             </li>
           <% else %>
-            <li class='nav-item'>
+            <li class='nav-item' id='signin'>
               <%= link_to "Log In", new_session_path %>
             </li>
-            <li class='nav-item'>
+            <li class='nav-item' id='signup'>
               <%=link_to "Sign Up", new_user_path %>
             </li>
           <% end %>
