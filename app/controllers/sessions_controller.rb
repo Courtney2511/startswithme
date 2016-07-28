@@ -15,11 +15,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = login(params[:email], params[:password])
-    if user #- can only use this method when using bycrypt.
-      session[:user_id] = user.id
+    @user = login(params[:email], params[:password])
+    if @user
+      session[:user_id] = @user.id
       redirect_to root_path, notice: "Logged in!!"
     else
+      @user = User.new
+      flash.now[:alert] = "Invalid email or apssword"
       render "new"
     end
   end
