@@ -5,4 +5,8 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.welcome_email(User.first)
   end
 
+  def reset_password_email_preview
+    UserMailer.reset_password_email(User.first)
+  end
+
 end

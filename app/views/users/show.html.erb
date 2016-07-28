@@ -43,33 +43,10 @@
     </div>
 
     <div class="description">
-      <h2> <%= @user.name %></h2>
-      <%= form_for @user do |f| %>
-        <% if @user == current_user %>
-          <div class="field">
-            <%= f.label :change_your_profile_picture %>
-            <%= f.file_field :profile_picture %>
-          </div>
-          <div class="action">
-            <%= f.submit %>
-          </div>
-        <% end %>
-
-      <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
-          <ul>
-            <% @user.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-        <% end %>
-      <% end %>
-    <% end %>
-
-        </div>
+      <h2> <%= @user.name %></h2><br>
+      <h4><%= @user.description %></h4>
+      <%= link_to 'Edit Your Profile', edit_user_path(@user) %> |
+    </div>
 </section>
 
 <section class="expression_container">
@@ -79,7 +56,7 @@
   <article class="blog-entry">
     <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
     <% @user.posts.each do |post| %>
-      "<%= link_to post.body, post_path(post) %>"<br>
+      "<%= link_to post.title, post_path(post) %>"<br>
        <%= image_tag(post.image.thumb) %><br>
       posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
     <% end %>
