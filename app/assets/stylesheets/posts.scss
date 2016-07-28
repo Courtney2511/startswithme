@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
 /*******************/
 /*   Sections      */
 /*******************/
@@ -12,7 +14,37 @@ section{
 }
 
 .sect-title{
+  width:70%;
+  float:left;
+  // background-color:pink;
   margin-top:100px;
+  margin-bottom:0;
+  padding-left: 5%;
+}
+
+.sect-title h1{
+  font-weight:normal;
+}
+
+.new-post-link{
+  margin-top: 100px;
+  width: 20%;
+  float: left;
+  /* background-color: red; */
+  padding-top: 25px;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.new-post-link a{
+  padding: 10px;
+  background-color: #00B1CB;
+  color:white;
+  border-radius:15px;
+}
+
+.new-post-link a:active{
+  box-shadow: 0 0 0px 2px #bdf6f2;
 }
 
 /*******************/
@@ -98,7 +130,3 @@ section{
   font-size: 15px;
   font-weight:normal;
 }
-
-/*******************/
-/*   Create Post   */
-/*******************/
