@@ -1,20 +1,18 @@
-
-  <script>
-    $(document).ready (function () {
-      $(window).scroll (function () {
-        var scroll = $(this).scrollTop();
-          if (scroll >= 1100) {
-              $('.nav-stick').addClass('nav-stick-scroll')
-          }else {
-              $('.nav-stick').removeClass('nav-stick-scroll')
-          }
-      })
+<script>
+  $(document).ready (function () {
+    $(window).scroll (function () {
+      var scroll = $(this).scrollTop();
+        if (scroll >= 1100) {
+            $('.nav-stick').addClass('nav-stick-scroll')
+        }else {
+            $('.nav-stick').removeClass('nav-stick-scroll')
+        }
     })
-  </script>
+  })
+</script>
 
-
-  <div class="posts-wrapper">
-    <% @posts.each do |post| %>
+<div class="posts-wrapper">
+  <% @posts.each do |post| %>
     <div class="post-cont">
       <% if post.image? %>
         <div class="img-cont">
@@ -27,24 +25,19 @@
             <%= link_to post.title, post_path(post) %>
           </p>
         </div>
-        <div class="author-cont">
-          <p>
-            by <%= link_to post.user.name, user_path(post.user) %>
-           <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-           <% end %>
-          </p>
-
-        </div>
-          <div class="comment-cont">
-            <p>
-              <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
-            </p>
-          </div>
+      <div class="author-cont">
+        <p>
+          by <%= link_to post.user.name, user_path(post.user) %>
+         <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+         <% end %>
+        </p>
       </div>
-
-
-
+        <div class="comment-cont">
+          <p>
+            <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+          </p>
+        </div>
+      </div>
     </div>
-
-    <% end %>
-  </div>
+  <% end %>
+</div>
