@@ -9,22 +9,16 @@
 // }
 
 .nav-stick{
-<<<<<<< HEAD
+
   overflow: auto; /* <<<< Clearing the floats */
   background-color:white;
   height: 60px;
   color: white;
   padding: 0 30px;
-=======
-  margin: 0 auto;
-  width: 100%;
-  position: fixed;
-  z-index:1;
-  background-color:#f3f3f3;
 }
->>>>>>> master
 
-}
+
+
 .nav-list{
   float: right;
   margin: 0;
