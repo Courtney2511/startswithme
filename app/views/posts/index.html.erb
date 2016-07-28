@@ -33,7 +33,7 @@
           </p>
           <!-- Post Author -->
           <p>
-            <span class ="by">by</span> <%= link_to post.user.name, user_path(post.user) %>
+            <span class ="by">by</span> <%= link_to post.user.name, user_path(post.user), class:'post-author' %>
            <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
            <% end %>
           </p>
