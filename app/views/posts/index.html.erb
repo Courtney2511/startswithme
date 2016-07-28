@@ -1,18 +1,10 @@
 
   <!-- Latest Posts -->
-  <section class="clearfix">
+  <!-- <section class="clearfix">
     <div class="sect-title">
       <%= link_to "LATEST PHOTOS", posts_path %>
     </div>
-    <!-- photo 4 -->
-    <div class="sect-photos">
-      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
-      <div class="sect-text">
-        <p><span class="img-title">Title</span><br>caption gibberish content</p>
-      </div>
-      <a href="#"><p><span class="button">VIEW</p></a>
-    </div>
-  </section>
+  </section> -->
 
 
 
@@ -34,7 +26,7 @@
         </div>
         <div class="author-cont">
           <p>
-            by <%= link_to post.user.name, user_path(post.user) %>
+            <span class ="by">by</span> <%= link_to post.user.name, user_path(post.user) %>
            <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
            <% end %>
           </p>

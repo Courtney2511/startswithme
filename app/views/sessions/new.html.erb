@@ -33,9 +33,9 @@
 <!------------------>
 <!-- signup modal -->
 <!------------------>
-<div class="modal-signup">
+<!-- <div class="modal-signup">
 <%= form_for @user do |f| %>
-  <!-- notice if failure to input valid data -->
+
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -47,12 +47,11 @@
     </div>
   <%end%>
 
-  <!-- Sign Up Header -->
   <div class="login-header">
     <p class="close">x</p>
     <h1>SIGN UP</h1>
   </div>
-  <!-- Sign Up Fields -->
+
   <div class="field">
     <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
   </div>
@@ -65,12 +64,12 @@
   <div class="field">
     <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
   </div>
-  <!-- Sign Up Button -->
+
   <div class="button">
     <%= f.submit 'SIGN UP', :class => 'actions' %>
   </div>
 </div>
-<% end %>
+<% end %> -->
 
 <!-- Banner -->
 <div class="top-screen">
