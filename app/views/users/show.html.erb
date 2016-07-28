@@ -2,22 +2,7 @@
 
 
 <div class="profile-top-screen">
-<header class="clearix">
-  <div class="nav-stick">
-    <div class="nav-left">
-      <div class="logo"><h1><%= link_to 'State of Our Mind', posts_path %></h1></div>
-    </div>
-    <nav class="nav-right">
-      <p><%=link_to current_user.name, user_path(current_user)  %></p>
-      <p><%= link_to 'CREATE POST', new_post_path %></p>
-      <p>|</p>
-      <p><%= link_to "Log Out", session_path("current"), :method => :delete %></p>
-      <!-- <p><a href="#">ABOUT</a></p> -->
-      <!-- <a href="#"><p>HOME</p></a> -->
-      <!-- <a href="#"><p>SIGN IN</p></a> -->
-      <!-- <a href="#"><p><span class="button">SIGN UP</p></a> -->
-    </nav>
-  </div>
+
 </header>
 
 
@@ -45,7 +30,7 @@
     <div class="description">
       <h2> <%= @user.name %></h2><br>
       <h4><%= @user.description %></h4>
-      <%= link_to 'Edit Your Profile', edit_user_path(@user) %> |
+      <div class="edit-button"><%= link_to 'Edit Your Profile', edit_user_path(@user) %></div>
     </div>
 </section>
 
