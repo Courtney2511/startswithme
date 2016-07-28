@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def create
-
+# commented this out and redid aa new @user = User.new below
     # @user = User.new(user_params)
     # if @user.save
     #   redirect_to(user_path(@user), notice: 'Profile created!') #root_path is protected to logged in users only.

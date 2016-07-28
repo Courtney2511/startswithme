@@ -39,27 +39,31 @@ $( document ).ready(function() {
     $('.modal-signup').css("display","none");
   });
 
+  // checks to make sure if user signs up properly
+  // Success: will redirect user to post#index page
+  // Fail: will display errors messages taken from the user#new page
   $('#new_user').on('submit', function(event){
     event.preventDefault();
     var data=$(this).serialize();
-
-
-    console.log($(this).serialize());
     $.ajax({
       url: "/users",
       method:"POST",
       data:data,
       dataType:"json"
-    }).done(function(data) {
+    }).done(function(data) { // SUCCESS
       if (data.redirect){
         window.location.href = data.redirect;
       }
-    }).fail(function(data) {
+    }).fail(function(data) { // FAIL
       var inputs = $('.session-input');
       var errors = JSON.parse(data.responseText).errors;
+
+      // error messages will be displayed based on which fields are blank
       for (var i = 0; i < errors.length; i++ ){
         $('<p>' + errors[i] + '</p>').appendTo($('.error_messages'));
       }
+
+      // where fields are blank, add class "error", else delete class "error"
       for (var i = 0; i<inputs.length; i++){
         if ($(inputs[i]).val()==""){
           $(inputs[i]).addClass("error");
@@ -67,11 +71,16 @@ $( document ).ready(function() {
           $(inputs[i]).removeClass('error');
         }
       }
+      // remove the 'error' class on fields that are clicked on
       $('.session-input').on('click',function(){
          $(this).removeClass('error');
        });
+
+       // removes the attribute "disabled" to make the "signup" button clickable
        $('.actions-signup').removeAttr('disabled');
+
+       //
+
     });
   });
-
 });
