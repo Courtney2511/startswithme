@@ -1,27 +1,19 @@
-<h1>Title: <%= @post.title %></h1>
+<h1> <%= @post.title %></h1>
 
 <!-- Displays body if it exists -->
 <% if @post.body %>
-<p>Body:
-  <%= @post.body %><br>
-</p>
+<p><%= @post.body %></p><br>
 <% end %>
 
 <!-- Displays image if it exists -->
 <% if @post.image %>
-<p>Image:
   <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
-  <%= image_tag(@post.image) %><br>
-  Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
-
-</p>
+<p><%= image_tag(@post.image) %></p><br>
 <% end %>
 
 <!-- Displays link if it exists -->
 <% if @post.link %>
-<p>Link:
-  <%= @post.link %>
-</p>
+<p><%= @post.link %></p>
 <% end %>
 
 Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
