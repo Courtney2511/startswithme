@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
       redirect_to posts_path
     else
       render "new"
-
     end
 
   end

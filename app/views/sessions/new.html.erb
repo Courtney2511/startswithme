@@ -31,46 +31,7 @@
   <% end %>
 </div>
 
-<!------------------>
-<!-- signup modal -->
-<!------------------>
-<!-- <div class="modal-signup">
-<%= form_for @user do |f| %>
 
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-       <ul>
-        <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-     <% end %>
-      </ul>
-    </div>
-  <%end%>
-
-  <div class="login-header">
-    <p class="close">x</p>
-    <h1>SIGN UP</h1>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
-  </div>
-
-  <div class="button">
-    <%= f.submit 'SIGN UP', :class => 'actions' %>
-  </div>
-</div>
-<% end %> -->
 
 <!-- Banner -->
 <div class="top-screen">
