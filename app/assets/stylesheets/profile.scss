@@ -140,10 +140,15 @@ footer{
 .description h2 {
   color: #00B1CB;
   float: left;
+  padding-top: 0px;
+  width: 100%;
+}
+
+.description {
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 0px;
-  width: 390px;
+  padding: none;
+  float: left;
 }
 
 .profile_pic img {
@@ -153,15 +158,21 @@ footer{
   padding-bottom: 20px;
 }
 
+.edit-button {
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
 .container {
   float: left;
-  width: 50%;
+  width: 48%;
   overflow: auto;
 }
 
 .expression_container {
   float: right;
-  width: 50%;
+  width: 48%;
   overflow: auto;
   padding-right: 20px;
 }

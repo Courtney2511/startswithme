@@ -17,11 +17,11 @@
 
         <ul class='nav-list'>
           <% if current_user %>
-            <li class='nav-item'>
-              <%=link_to current_user.name, user_path(current_user)  %>
+            <li class='nav-item' id='create-post'>
+              <%= link_to 'CREATE POST', new_post_path %>
             </li>
             <li class='nav-item'>
-              <%= link_to 'CREATE POST', new_post_path %>
+              <%=link_to current_user.name, user_path(current_user)  %>
             </li>
             <li class='nav-item'>
               <%= link_to "Log Out", session_path("current"), :method => :delete %>
