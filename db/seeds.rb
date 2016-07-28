@@ -9,11 +9,6 @@
 require 'faker'
 
 
-<<<<<<< HEAD
-=======
-#
-#
->>>>>>> 329e3dceeab9b7f2ffa2a3a2e62934d02831d161
 30.times do
   user_name = Faker::Name.name
   user_email = Faker::Internet.email
