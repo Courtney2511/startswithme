@@ -15,13 +15,31 @@ class UsersController < ApplicationController
   end
 
   def create
+
+    # @user = User.new(user_params)
+    # if @user.save
+    #   redirect_to(user_path(@user), notice: 'Profile created!') #root_path is protected to logged in users only.
+    #   # send the user a welcome email
+    #   UserMailer.welcome_email(@user).deliver_later
+    # else
+    #   render :new
+    # end
+
     @user = User.new(user_params)
-    if @user.save
-      redirect_to(user_path(@user), notice: 'Profile created!') #root_path is protected to logged in users only.
-      # send the user a welcome email
-      UserMailer.welcome_email(@user).deliver_later
-    else
-      render :new
+    respond_to do |format|
+      if @user.save
+        auto_login(@user)
+        format.html { redirect_to user_path(@user), notice: 'Profile created!' }
+        format.json {
+          render json: {redirect: user_path(@user)}, status: 200
+        }
+      else
+        format.html { render :new }
+        format.json {
+          # render json: @user.errors, status: :unprocessable_entity
+          render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+        }
+      end
     end
 
   end
