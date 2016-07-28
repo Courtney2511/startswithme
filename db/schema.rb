@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20160728141503) do
     t.text     "body"
     t.string   "image"
     t.text     "title"
-    t.string   "link"
+    t.text     "link"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
