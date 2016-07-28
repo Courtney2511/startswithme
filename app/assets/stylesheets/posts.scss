@@ -54,79 +54,122 @@ section{
 // CONTAINER
 
 .posts-wrapper{
-  width: 90%;
-  overflow: auto;
-  margin-top: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
+  width: 960px;
+  margin: 0 auto;
   // background-color: yellow;
 }
 
 .post-cont{
-  overflow: auto;
-  // width: 100%;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 10px;
   display: block;
-  margin-top: 10px;
-  padding: 30px;
+  background-color: white;
   border: 1px solid #e4e4e4;
-  border-radius: 5px;
   box-shadow: 1px 1px 1px #cdcdcd;
-  background-color:white;
-}
 
-// POST PICTURE
-.post-cont .img-cont {
-  float: left;
-  width: 10%;
-}
+  // overflow: auto;
+  // width: 100%;
+  //
+  // display: block;
+  // padding: 30px;
+  // border: 1px solid #e4e4e4;
+  // border-radius: 5px;
+  // box-shadow: 1px 1px 1px #cdcdcd;
+  // background-color:white;
+  .img-cont{
 
-// Text-Content & Author Content & Comment Content
-.text-cont{
-  float:left;
-  width: 87%;
-  margin-left:3%;
-}
+    display: inline-block;
+    float: left;
+    width: 75px;
+    height: 75px;
+  }
 
-// Title & Author
-.title-cont{
-  float:left;
-  clear:right;
-  width:70%;
-}
+  .text-cont{
+    float: left;
+    width: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-.title-cont .post-title{
-  font-size:20px;
-  font-weight:normal;
-  text-transform:none;
-}
 
-.title-cont .post-title:hover,
-.title-cont .post-author:hover{
-  color:#62769c;
-}
 
-.title-cont .post-author{
-  font-size:15px;
-  font-weight:normal;
-  text-transform:none;
-}
+    p {
 
-// this only styles the 'by' in 'by Author name'
-.title-cont p{
-  font-size:15px;
-  font-weight:normal;
-  text-transform:none;
-  color:#7F7F7F;
-}
+      margin: 0;
 
-// Comment
-.comment-cont{
-  float: right;
-  width:20%;
-  text-align:right;
-}
+    }
 
-.comment-cont p{
-  font-size: 15px;
-  font-weight:normal;
+    .author-cont{
+      font-size: 13px;
+      margin-bottom: 2.5px;
+    }
+
+    .title-cont{
+      margin-bottom: 2.5px;
+
+      font-size: 18px;
+    }
+    .comment-cont{
+    
+      font-size: 13px;
+    }
+  }
 }
+//
+// // POST PICTURE
+// .img-cont {
+//   float: left;
+//   width: 10%;
+// }
+//
+// // Text-Content & Author Content & Comment Content
+// .text-cont{
+//   float:left;
+//   width: 87%;
+//   margin-left:3%;
+// }
+//
+// // Title & Author
+// .title-cont{
+//   float:left;
+//   clear:right;
+//   width:70%;
+// }
+//
+// .title-cont .post-title{
+//   font-size:20px;
+//   font-weight:normal;
+//   text-transform:none;
+// }
+//
+// .title-cont .post-title:hover,
+// .title-cont .post-author:hover{
+//   color:#62769c;
+// }
+//
+// .title-cont .post-author{
+//   font-size:15px;
+//   font-weight:normal;
+//   text-transform:none;
+// }
+//
+// // this only styles the 'by' in 'by Author name'
+// .title-cont p{
+//   font-size:15px;
+//   font-weight:normal;
+//   text-transform:none;
+//   color:#7F7F7F;
+// }
+//
+// // Comment
+// .comment-cont{
+//   float: right;
+//   width:20%;
+//   text-align:right;
+// }
+//
+// .comment-cont p{
+//   font-size: 15px;
+//   font-weight:normal;
+// }

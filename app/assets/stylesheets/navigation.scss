@@ -2,20 +2,36 @@
 /*   NAVIGATION    */
 /*******************/
 
-header{
-  width:100%;
-  height:auto;
-  overflow:auto;
-}
+// header{
+//   width:100%;
+//   height:auto;
+//   overflow:auto;
+// }
 
 .nav-stick{
-  margin: 0 auto;
-  width: 100%;
-  position: fixed;
-  z-index:1;
-  background-color:#f3f3f3;
+
+  overflow: auto; /* <<<< Clearing the floats */
+  background-color:white;
+  height: 60px;
+  color: white;
+  padding: 0 30px;
 }
 
+#create-post{
+  margin: 0 50px;
+}
+
+.nav-list{
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.nav-item{
+  margin: 0 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 60px;
+}
 // .nav-stick-scroll {
 //     background:white;
 //     width: 100%;
@@ -36,11 +52,12 @@ header{
  width: 100%;
 }
 
-.nav-left h1{
+.logo{
   border: 2px solid #00B1CB;
   padding: 5px;
   text-align:center;
-  font-size:100%;
+  font-size: 1em;
+  float: left;
 }
 
 
