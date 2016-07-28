@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
 // LOGIN PAGE
-  $('.signin').on('click', function(event){
+  $('#signin').on('click', function(event){
     event.preventDefault();
     // modal will display on click
     $('.modal-signin')
@@ -26,8 +26,9 @@ $( document ).ready(function() {
   // });
 
   //signup modal
-  $('.signup').on('click', function(event){
+  $('#signup').on('click', function(event){
     event.preventDefault();
+    $('.modal-signin').css("display", "none");
     // modal will display on click
     $('.modal-signup').css("display","block");
   });
