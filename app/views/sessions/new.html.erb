@@ -12,16 +12,23 @@
     <p class="close">x</p>
     <h1>LOGIN</h1>
   </div>
+
   <!-- Login fields -->
   <div class="field">
-    <%= text_field_tag :email, nil, class:"session-input", :placeholder => "email"%><br> <!--input tag-->
+    <%if flash[:notice]%>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert]%>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
+    <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br> <!--input tag-->
   </div>
   <div class="field">
-    <%= password_field_tag :password, nil, class:"session-input", :placeholder => ".........." %> <!--input tag-->
+    <%= password_field_tag :password, "", class:"session-input", :placeholder => ".........." %> <!--input tag-->
   </div>
   <!-- Login Button -->
-  <div>
-    <%= submit_tag "LOG IN", class:"actions" %>
+  <div class="actions">
+    <%= submit_tag "LOG IN", class:"login-submit" %>
   </div>
   <!-- Forgot Password & Sign Up Button -->
   <div class="extra-login-stuff">
