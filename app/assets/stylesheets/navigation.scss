@@ -16,7 +16,16 @@
   padding: 0 30px;
 
 }
-
+.nav-list{
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.nav-item{
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 60px;
+}
 // .nav-stick-scroll {
 //     background:white;
 //     width: 100%;
@@ -37,11 +46,12 @@
  width: 100%;
 }
 
-.nav-left h1{
+.logo{
   border: 2px solid #00B1CB;
   padding: 5px;
   text-align:center;
-  font-size:100%;
+  font-size: 1em;
+  float: left;
 }
 
 
