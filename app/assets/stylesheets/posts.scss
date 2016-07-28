@@ -19,12 +19,15 @@ section{
 /*   Posts-index   */
 /*******************/
 
+// CONTAINER
+
 .posts-wrapper{
   width: 90%;
   overflow: auto;
   margin-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
+  background-color: yellow;
 }
 
 .post-cont{
@@ -32,68 +35,114 @@ section{
   // width: 100%;
   display: block;
   margin-top: 10px;
+  padding: 30px;
   border: 1px solid #e4e4e4;
   border-radius: 5px;
-  padding: 30px;
   box-shadow: 1px 1px 1px #cdcdcd;
+  background-color:orange;
 }
 
+// POST PICTURE
 .post-cont .img-cont {
-  margin-right: 10px;
-  display: inline-block;
   float: left;
   width: 10%;
-  // background-color:lime;
 }
 
-.post-cont .text-cont {
-  float: left;
-  // width: 88%;
-  // background-color:azure;
-}
-
-
-.post-cont .text-cont p {
-  margin: 0 0 5px 0;
-  float: left;
-  font-size: 17px;
-}
-
-.post-cont .text-cont .author-cont {
-  float: left;
-  width: 90%;
-}
-
-.post-cont .text-cont .author-cont a{
-  font-size:15px;
-  // color:#7F7F7F;
-  text-transform:none;
-}
-
-.author-cont p span.by{
-  font-size:15px;
-  color:#7F7F7F;
-  font-weight:normal;
-}
-
-.post-cont .text-cont .title-cont {
-  font-size: 22px;
-  float: left;
-  width: 90%;
-}
-
-.title-cont a{
-  // color: #7F7F7F;
-  text-transform: none;
-  font-weight: normal;
-}
-
-.title-cont a:hover,
-.post-cont .text-cont .author-cont a:hover{
-  color:#62769c;
-}
-
-
-.comment-cont{
+// Text-Content & Author Content & Comment Content
+.text-cont{
   float:left;
+  width: 90%;
 }
+
+// Title & Author
+.title-cont{
+  float:left;
+  clear:right;
+}
+
+.title-cont .post-title{
+  font-size:15px;
+  font-weight:normal;
+  text-transform:none;
+  color:green;
+}
+
+.title-cont p{
+  font-size:15px;
+  font-weight:normal;
+  text-transform:none;
+  color:green;
+}
+
+// Comment
+.comment-cont{
+  float:right;
+  border: 1px solid grey;
+  background-color:#333;
+  padding:15px;
+}
+
+//
+// .post-cont .img-cont {
+//   margin-right: 10px;
+//   display: inline-block;
+//   float: left;
+//   width: 10%;
+// }
+//
+// // TEXT CONTENT
+// .post-cont .text-cont {
+//   float: left;
+//   width: 88%;
+// }
+//
+//
+// .post-cont .text-cont p {
+//   margin: 0 0 5px 0;
+//   float: left;
+//   font-size: 17px;
+// }
+//
+//
+// // TITLE CONTENT
+// .title-cont a{
+//   // color: #7F7F7F;
+//   text-transform: none;
+//   font-weight: normal;
+// }
+//
+// .title-cont a:hover,
+// .post-cont .text-cont .author-cont a:hover{
+//   color:#62769c;
+// }
+//
+//
+// // AUTHOR CONTENT
+// .post-cont .text-cont .author-cont {
+//   float: left;
+//   width: 90%;
+// }
+//
+// .post-cont .text-cont .author-cont a{
+//   font-size:15px;
+//   // color:#7F7F7F;
+//   text-transform:none;
+// }
+//
+// .author-cont p span.by{
+//   font-size:15px;
+//   color:#7F7F7F;
+//   font-weight:normal;
+// }
+//
+// .post-cont .text-cont .title-cont {
+//   font-size: 22px;
+//   float: left;
+//   width: 90%;
+// }
+//
+//
+// // COMMENT CONTENT
+// .comment-cont{
+//   float:left;
+// }
