@@ -1,3 +1,112 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*******************/
+/* form container  */
+/*******************/
+// .modal-signin {
+//     display: none;
+// }
+
+.new_user   {
+    display: block;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(53, 52, 67, 0.8);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    border-radius: 20px;
+}
+/********************/
+/* form header part */
+/********************/
+
+
+// .login-header{
+//   width: 100%;
+//   position: relative;
+// }
+//
+// .login-header .close{
+//   border: none;
+//   border-radius: none;
+//   outline: none;
+//   height: 1em;
+//   position: relative;
+//   top: 0.25em;
+//   background-color: rgba(255,255,255,0);
+//   color: #c1c1c1;
+//   line-height: 0;
+//   display: block;
+//   margin-left: auto;
+//   font-size:15px;
+//   margin-right:15px;
+// }
+//
+// .login-header .close:hover{
+//   color: #00B1CB;
+// }
+//
+// .login-header h1{
+//   margin: 20px 0 30px 0;
+//   padding: 0;
+//   color: #c1c1c1;
+//   text-align: center;
+//   font-weight: lighter;
+//   display: block;
+//   font-size:20px;
+// }
+
+/********************/
+/* signup fields     */
+/********************/
+
+
+input#user_email,
+input#user_password,
+input#user_password_confirmation,
+input#user_name{
+  width: 49%;
+  border: none;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  outline:none;
+  border:none;
+}
+
+/********************/
+/* signup button     */
+/********************/
+
+// .actions{
+//   width: 46%;
+//   border: none;
+//   background: linear-gradient(141deg, #bdf6f2 0%, #43cede 51%, #38abd6 75%);
+//   color: white;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+//   border-radius:20px;
+//   font-weight:lighter;
+//   outline:none;
+// }
+//
+// .actions:active,
+// .actions:focus
+// {
+//   box-shadow: 0 0 0 2px #bc2a39;
+//  }
+//
+//
+// .session-input.error {
+//     box-shadow: 0 0 0 2px #bc2a39;
+// }
