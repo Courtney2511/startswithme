@@ -1,46 +1,51 @@
+<<<<<<< HEAD
 
   <!-- Latest Posts -->
   <section class="clearfix">
     <div class="sect-title">
-      <%= link_to "LATEST PHOTOS", posts_path %>
+      <!-- <%= link_to "LATEST PHOTOS", posts_path %> -->
+      <h1>All Posts</h1>
     </div>
-    <!-- photo 1 -->
-    <!-- <div class="sect-photos">
-      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
-      <div class="sect-text">
-        <p><span class="img-title">Title</span><br>caption gibberish content</p>
-      </div>
-      <a href="#"><p><span class="button">VIEW</p></a>
-    </div> -->
-    <!-- photo 2 -->
-    <!-- <div class="sect-photos">
-      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
-      <div class="sect-text">
-        <p><span class="img-title">Title</span><br>caption gibberish content</p>
-      </div>
-      <a href="#"><p><span class="button">VIEW</p></a>
-    </div> -->
-    <!-- photo 3  -->
-    <!-- <div class="sect-photos">
-      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
-      <div class="sect-text">
-        <p><span class="img-title">Title</span><br>caption gibberish content</p>
-      </div>
-      <a href="#"><p><span class="button">VIEW</p></a>
-    </div> -->
-    <!-- photo 4 -->
-    <!-- <div class="sect-photos">
-      <%= image_tag("friends.jpeg", :alt => "rss feed") %>
-      <div class="sect-text">
-        <p><span class="img-title">Title</span><br>caption gibberish content</p>
-      </div>
-      <a href="#"><p><span class="button">VIEW</p></a>
-    </div> -->
+    <div class="new-post-link">
+      <a href="#">New Post</a>
+    </div>
   </section>
 
 
 
 
+
+  <div class="posts-wrapper">
+    <% @posts.each do |post| %>
+    <div class="post-cont">
+      <!-- Picture -->
+      <% if post.image? %>
+        <div class="img-cont">
+          <%= image_tag(post.image.thumb) %>
+        </div>
+      <% else %>
+        <div class="img-cont">
+          <%= image_tag("03.RandomImagesO2-UWTB.PNG", :width => 75, :height => 75) %>
+        </div>
+      <% end %>
+      <!-- Text Content-->
+      <div class="text-cont">
+        <!-- Title -->
+        <div class="title-cont">
+          <!-- Post Title -->
+=======
+  <script>
+    $(document).ready (function () {
+      $(window).scroll (function () {
+        var scroll = $(this).scrollTop();
+          if (scroll >= 1100) {
+              $('.nav-stick').addClass('nav-stick-scroll')
+          }else {
+              $('.nav-stick').removeClass('nav-stick-scroll')
+          }
+      })
+    })
+  </script>
 
 <div class="posts-wrapper">
   <% @posts.each do |post| %>
@@ -64,28 +69,43 @@
         </p>
 
       </div>
+      <div class="submit-cont">
+        <p>
+          submitted <%= Time.now %>
+        </p>
+
+      </div>
         <div class="comment-cont">
+>>>>>>> 329e3dceeab9b7f2ffa2a3a2e62934d02831d161
           <p>
-            <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+            <%= link_to post.title, post_path(post), class:'post-title' %>
+          </p>
+          <!-- Post Author -->
+          <p>
+            <span class ="by">by</span> <%= link_to post.user.name, user_path(post.user), class:'post-author' %>
+           <% if post.user == current_user %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+           <% end %>
           </p>
         </div>
+<<<<<<< HEAD
+          <!-- Comment Count -->
+          <div class="comment-cont">
+            <p>
+              <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+            </p>
+          </div>
+      </div>
+  </div>
+  <% end %>
+</div>
+</section>
+=======
     </div>
 
 
 
-
-<section class="clearfix">
-  <div class="sect-container">
-    <% @posts.each do |post| %>
-        <div class ="sect-post">
-          <%= link_to post.body, post_path(post), class:"post_title_link" %><br>
-            <div class="post_author_link">
-            <%= link_to post.user.name, user_path(post.user) %>
-             <% if post.user == current_user %> <p>|<p> <%= link_to 'Edit', edit_post_path(post) %> <p>|</p> <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-             <% end %>
-           </div>
-        </div>
-    <% end %>
-
   </div>
-</section>
+
+  <% end %>
+</div>
+>>>>>>> 329e3dceeab9b7f2ffa2a3a2e62934d02831d161

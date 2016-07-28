@@ -8,7 +8,7 @@
   background-size: cover;
   background-attachment: fixed;
   width:100%;
-  height:1000px;
+  height:670px;
 }
 
 /*******************/
@@ -39,25 +39,72 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Marck Script', cursive;
-  font-size: 300%;
+  font-size: 200%;
   text-align: center;
   padding-top:75%;
   z-index:0;
 }
 
 /*******************/
+/*   Buttons       */
+/*******************/
+
+.on-screen-buttons{
+  width:100%;
+  overflow:auto;
+}
+
+.on-screen-buttons .about-button{
+  width:47%;
+  float:left;
+  // background-color:red;
+  text-align:right;
+  margin-right:3.5%;
+  padding:5px;
+  z-index:5000;
+}
+
+.on-screen-buttons .signup-button{
+
+  background-color:green;
+
+}
+
+
+.on-screen-buttons .signup-button,
+.on-screen-buttons .about-button{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:47%;
+  float:left;
+  padding:5px;
+}
+/*******************/
 /* login container */
 /*******************/
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(30,30,30,0.8);
-    z-index:2;
+.modal-signin,
+.modal-signup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.8);
+  z-index:2;
 }
+//
+// .modal-signin {
+//     display: none;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(30,30,30,0.8);
+//     z-index:2;
+// }
 
 /*******************/
 /* form container  */
@@ -96,22 +143,38 @@
   display: block;
   font-size:20px;
 }
-
-.login-header .close{
-  border: none;
+.login-header p{
+  /* border: none; */
   border-radius: none;
-  outline: none;
+  /* outline: none; */
   height: 1em;
   position: relative;
-  top: 0.25em;
-  background-color: rgba(255,255,255,0);
-  color: #c1c1c1;
+  /* top: 0.25em; */
+  /* background-color: red; */
+  /* color: #c1c1c1; */
   line-height: 0;
-  display: block;
-  margin-left: auto;
-  font-size:15px;
-  margin-right:15px;
+  /* display: block; */
+  /* margin-left: auto; */
+  font-size: 15px;
+  /* margin-right: 15px; */
+  padding-left: 92%;
 }
+
+// .login-header .close{
+//   border: none;
+//   border-radius: none;
+//   outline: none;
+//   height: 1em;
+//   position: relative;
+//   top: 0.25em;
+//   background-color: rgba(255,255,255,0);
+//   color: #c1c1c1;
+//   line-height: 0;
+//   display: block;
+//   margin-left: auto;
+//   font-size:15px;
+//   margin-right:15px;
+// }
 
 .login-header .close:hover{
   color: #00B1CB;
@@ -156,7 +219,7 @@ input#password{
 .actions:active,
 .actions:focus
 {
-  box-shadow: 0 0 0 2px #bc2a39;
+  box-shadow: 0 0 0px 2px #bdf6f2;
  }
 
 
@@ -184,50 +247,35 @@ input#password{
   color: #00B1CB;
 }
 
-// .login-container{
-//   max-width: 600px;
-//   margin: auto;
-//   top: 100px;
-//   position: relative;
+/********************/
+/* for sign up page */
+/********************/
+//
+// .new_user   {
+//     display: block;
+//     width: 300px;
+//     height: 500px;
+//     background-color: rgba(53, 52, 67, 0.8);
+//     position: absolute;
+//     margin: auto;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     overflow:hidden;
+//     border-radius: 20px;
 // }
 //
-// .login{
-//   width:100%;
-//   background-color:white;
-//   float:left;
-//   overflow: auto;
-//   border-radius:20px;
-//   text-align:center;
-//   max-height:600px;
-//   position:relative;
-// }
-//
-// .close-button{
-//   background-color: #00B1CB;
-//   position:absolute;
-//   width:100%;
-// }
-//
-// .close-button h1{
-//   width: 95%;
-//   color: white;
-//   height: 50px;
-//   padding-top: 25px;
-//   margin: 0px;
-//   border-radius: 20px 20px 0px 0px;
-//   float: left;
-// }
-//
-//
-//
-// .close-button p{
-//   color:white;
-//   float: left;
-//   width: 5%;
-//   text-align: right;
-// }
-//
-// form{
-//   position:relative;
-//   padding-top:100px;
+// input#user_email,
+// input#user_password,
+// input#user_password_confirmation,
+// input#user_name{
+//   width: 49%;
+//   border: none;
+//   border-radius: 20px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   text-align: center;
+//   outline:none;
+//   border:none;
 // }

@@ -5,11 +5,13 @@ class SessionsController < ApplicationController
 
 
   def new
+    @user = User.new
     if current_user
       redirect_to posts_path
     else
       render "new"
     end
+
   end
 
   def create

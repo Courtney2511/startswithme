@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:index, :new, :create]
+  skip_before_action :require_login, only: [:new, :create]
   # layout false
 
   # def index
@@ -26,13 +26,17 @@ class UsersController < ApplicationController
 
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      flash[:notice] = 'Your profile picture has been updated'
+    if @user.update_attributes(profile_params)
+      flash[:notice] = 'Your profile has been updated'
       redirect_to user_path
     else
-      flash[:notice] = 'Your profile picture was not updated successfully.'
+      flash[:notice] = 'Your profile was not updated successfully.'
       redirect_to user_path
     end
   end
@@ -44,4 +48,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :crypted_password, :password, :password_confirmation, :profile_picture)
   end
 
+  def profile_params
+    params.require(:user).permit(:profile_picture, :description)
+  end
 end
