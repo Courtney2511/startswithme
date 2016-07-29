@@ -39,57 +39,119 @@
         </a>
     </div>
     <% end %>
+
+  <div>
+    <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br> <!--input tag-->
+  </div>
+  <div class="field">
+    <%= password_field_tag :password, "", class:"session-input", :placeholder => ".........." %> <!--input tag-->
+  </div>
+  <!-- Login Button -->
+  <div class="actions">
+    <%= submit_tag "LOG IN", class:"login-submit" %>
+  </div>
+  <!-- Forgot Password & Sign Up Button -->
+  <div class="extra-login-stuff">
+    <%= link_to 'Forgot Password', new_password_reset_path %><br>
+    <%=link_to "Sign Up", new_user_path %>
+  </div>
+  <% end %>
 </div>
 
 <!-- signup modal -->
-<div class="modal-signup">
+<!-- <div class="modal-signup">
 
-    <%= form_for @user do |f| %>
-    <!-- notice if failure to input valid data -->
-    <% if @user.errors.any? %>
+<%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
     <div class="error_messages">
-        <!-- <h2>Form is invalid</h2> -->
-        <ul>
-            <% @user.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-        </ul>
+       <ul>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+     <% end %>
+      </ul>
     </div>
     <%end%>
+  <div class="error_messages"></div>
+  <div class="login-header">
+    <p class="close">x</p>
+    <h1>SIGN UP</h1>
+  </div>
 
-    <!-- Sign Up Header -->
-    <div class="login-header">
-        <p class="close">x</p>
-        <h1>SIGN UP</h1>
-    </div>
-    <!-- Sign Up Fields -->
-    <div class="field">
-        <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
-    </div>
-    <div class="field">
-        <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
-    </div>
-    <div class="field">
-        <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
-    </div>
-    <div class="field">
-        <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
-    </div>
-    <!-- Sign Up Button -->
-    <div class="button">
-        <%= f.submit 'SIGN UP', :class => 'actions' %>
-    </div>
-    <!-- </div> -->
-    <% end %>
-</div>
+  <div class="field">
+    <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
+  </div>
+
+  <div class="button">
+    <%= f.submit 'SIGN UP', :class => 'actions actions-signup' %>
+  </div>
+
+<% end %>
+</div> -->
 
 <!-- Banner -->
-<div class="top-screen">
-    <div class="clearfix">
-        <div class="banner">
-            <div class="banner-text">
-                <p>An online community aimed at fostering youth empowerment and support</p>
-            </div>
+<div class="top-screen"> <!--background image-->
+  <div class="clearfix">
+    <div class="banner"> <!--floats everthing right and 50%-->
+      <div class="banner-text"> <!--container for entire slider-->
+        <div class="slideshow-container"> <!--container for images & circles-->
+          <!-- this div contains slider messages-->
+          <div class="mySlides fade">
+
+            <p>Super stoked about sleep tonight. 	&#128170;</p>
+          </div>
+          <div class="mySlides fade">
+            <p>This week has been hell. Go Coffee!! &#128169;</p>
+          </div>
+          <div class="mySlides fade">
+            <p>Sad that Bitmaker is ending though :(</p>
+          </div>
+          <!--  this div contains the dots at bottom for slider -->
+          <div>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
+      </div>
     </div>
 </div>
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  }
+</script>
