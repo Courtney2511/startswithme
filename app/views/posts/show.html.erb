@@ -50,7 +50,7 @@
 
 <%= render({:partial => 'comments/comments', :locals => { :my_comments => @post.comments}}) %>
 
-<% if current_user %>
+
   <h4>New Comment</h4>
 
   <%= form_for([@post, @comment]) do |f| %>
@@ -75,10 +75,5 @@
     </div>
   <% end %>
 
-<% else %>
-  <p>
-    Please <%= link_to 'log in', new_session_path %> to add a comment.
-  </p>
-<% end %>
 
 <%= link_to 'Back', posts_path %>
