@@ -121,40 +121,60 @@ section{
 
 .page-container{
   margin: 0;
-  padding: 75px 14px 15px;
+  padding: 15px 14px 15px;
   width: auto;
-  max-width: 960px;
+  max-width: 860px;
 }
 
 .page-canvas{
   background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid;
+  padding: 15px 0;
   border-radius: 5px;
+
+
 }
 
 .create-container{
   margin: 0 auto 10px;
   display: block;
-  max-width: 900px;
-  width: auto;
+  max-width: 800px;
+
 }
 
 #post_title
 {
   width: 800px;
-  height: 40px;
+  height: 30px;
+  font-size: 20px;
+  color: #292f33;
+
 }
 
 #post_body
 {
   width: 800px;
   height: 90px;
+  font-size: 20px;
+  color: #292f33;
+
 }
 
 #post_link
 {
   width: 800px;
-  height: 20px;
+  height: 30px;
+  font-size: 20px;
+  color: #292f33;
+}
+
+.create-field{
+  font-size: 20px;
+  margin-bottom: 30px;
+
+  label{
+    margin-bottom: 5px;
+    color: #292f33;
+  }
 }
 
 

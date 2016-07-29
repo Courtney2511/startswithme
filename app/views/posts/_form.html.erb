@@ -1,28 +1,30 @@
 <div class="page-container">
   <div class="page-canvas">
     <div class="create-container">
-      <h1>New Post</h1>
-        <%= form_for @post do |f| %>
-          <div class="create-field">
-            <%= f.label :title  %>
-            <%= f.text_field :title %>
-          </div>
-          <div class="create-field">
-            <%= f.label "text(optional)"  %>
-            <%= f.text_field :body %>
-          </div>
-          <div class="create-field">
-            <%= f.label :link  %>
-            <%= f.text_field :link %>
-          </div>
-          <div class="create-field">
-            <%= f.label :image  %>
-            <%= f.file_field :image %>
-          </div>
-          <div class="action">
-            <%= f.submit %>
-          </div>
-        <% end %>
+      <%= form_for @post do |f| %>
+        <div class="create-field">
+          <%if flash[:notice]%>
+            <p id="notice"><%= flash[:notice] %></p>
+            <% end %>
+          <%= f.label "title (required)"  %>
+          <%= f.text_field :title %>
+        </div>
+        <div class="create-field">
+          <%= f.label "text"  %>
+          <%= f.text_area :body %>
+        </div>
+        <div class="create-field">
+          <%= f.label :link  %>
+          <%= f.text_field :link %>
+        </div>
+        <div class="create-field">
+          <%= f.label :image  %>
+          <%= f.file_field :image %>
+        </div>
+        <div class="action">
+          <%= f.submit class: "actions" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
