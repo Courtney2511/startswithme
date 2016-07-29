@@ -5,13 +5,53 @@
 
 .comment-container{
 
+  margin: 0;
+  padding: 15px 14px 15px;
+  width: auto;
+  max-width: 860px;
+}
+
+.comment-wrapper{
+  overflow: hidden;
+  height: auto;
+  padding: 20px 0 0 7px;
+  position: relative
+
 }
 
 .author-container{
-  font-size: 10px;
-  text-transform: capitalize;
+  font-size: 13px;
+
+}
+.comment-text-container{
+  float: left;
+  font-size: 18px;
+  width: 750px;
 }
 
 .time-container{
-  font-size: 10px;
+  font-size: 13px;
+  margin: 10px 0;
+  float: left;
+
+}
+.comment-comment-containter{
+  width: 750px;
+}
+.profile-container{
+  float: left;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  margin: 0 10px 10px 0;
+
+}
+
+.img-container{
+  margin-left: auto;
+  margin-right: auto;
+  align: middle;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
 }

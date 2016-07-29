@@ -41,10 +41,13 @@
           <%= link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
         <% end %>
       </div>
-      <%= render({:partial => 'comments/comments', :locals => { :my_comments => @post.comments}}) %>
     </div>
   </div>
 </div>
+  <h3>Comments (<%= @post.comments.length %>)</h3>
+
+  <%= render({:partial => 'comments/comments', :locals => { :my_comments => @post.comments}}) %>
+
 
 
 
