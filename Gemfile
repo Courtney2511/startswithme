@@ -7,6 +7,8 @@ gem 'rails', '~> 5.0.0'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+
+gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -54,7 +56,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # gem 'pry-rails'
   # gem 'pry-byebug'
-  gem 'letter_opener', group: :development 
+  gem 'letter_opener', group: :development
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
