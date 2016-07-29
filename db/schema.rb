@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20160728141503) do
     t.datetime "updated_at", null: false
     t.text     "body"
     t.string   "image"
-    t.string   "title"
+    t.text     "title"
     t.string   "link"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
