@@ -8,11 +8,6 @@
 
 require 'faker'
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 6dd7c327c63f958aac5dd9a1237051eabd08f535
 30.times do
   user_name = Faker::Name.name
   user_email = Faker::Internet.email
@@ -39,8 +34,6 @@ end
 end
 
 30.times do
-  user = User.order("RANDOM()").first
-  body_content = Faker::Lorem.paragraph
   image_number = Random.rand(3..70)
   post_number = Post.order("RANDOM()").first
   post = Post.find(post_number)
