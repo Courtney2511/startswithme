@@ -56,7 +56,6 @@ section{
 .posts-wrapper{
   width: 960px;
   margin: 0 auto;
-  // background-color: yellow;
 }
 
 .post-cont{
@@ -67,10 +66,11 @@ section{
   background-color: white;
   border: 1px solid #e4e4e4;
   box-shadow: 1px 1px 1px #cdcdcd;
-
+  a{
+    text-transform: none;
+  }
   // overflow: auto;
   // width: 100%;
-  //
   // display: block;
   // padding: 30px;
   // border: 1px solid #e4e4e4;
@@ -78,7 +78,6 @@ section{
   // box-shadow: 1px 1px 1px #cdcdcd;
   // background-color:white;
   .img-cont{
-
     display: inline-block;
     float: left;
     width: 75px;
@@ -92,12 +91,8 @@ section{
     margin-top: 10px;
     margin-bottom: 10px;
 
-
-
-    p {
-
+    p{
       margin: 0;
-
     }
 
     .author-cont{
@@ -107,14 +102,18 @@ section{
 
     .title-cont{
       margin-bottom: 2.5px;
-
       font-size: 18px;
     }
     .comment-cont{
-
       font-size: 13px;
     }
   }
+}
+.post-cont p{
+
+}
+.action-container{
+  font-size: 13px;
 }
 
 /* create post */
@@ -130,15 +129,12 @@ section{
   background-color: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   border-radius: 5px;
-
-
 }
 
 .create-container{
   margin: 0 auto 10px;
   display: block;
   max-width: 800px;
-
 }
 
 #post_title
@@ -147,7 +143,6 @@ section{
   height: 30px;
   font-size: 20px;
   color: #292f33;
-
 }
 
 #post_body
@@ -157,8 +152,6 @@ section{
   font-size: 20px;
   color: #292f33;
   border: 1px solid gray;
-
-
 }
 
 #post_link
@@ -177,6 +170,7 @@ section{
     margin-bottom: 5px;
     color: #292f33;
   }
+  
 }
 
 #error_explanation{
