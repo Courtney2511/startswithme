@@ -3,14 +3,16 @@
     <% if comment.user != nil %>
       <div class="comment-wrapper post-cont">
         <!-- Shows total comment count for post-->
+        <div class="profile-container">
+          <div class="img-container">
+            <%= image_tag(comment.user.profile_picture.thumb) %>
+          </div>
 
-        <div class="img-container">
-          <%= image_tag(comment.user.profile_picture.thumb) %>
+          <div class="author-container">
+            <%= link_to comment.user.name, user_path(comment.user) %>
+          </div>
         </div>
-        
-        <div class="author-container">
-          <%= link_to comment.user.name, user_path(comment.user) %>
-        </div>
+
 
         <div class="comment-containter">
           <%= comment.comment %>
