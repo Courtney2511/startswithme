@@ -2,6 +2,8 @@
     <% if comment.user != nil %>
 
 <div class="comment-wrapper post-cont">
+  <!-- Shows total comment count for post-->
+  <h3>Comments (<%= @post.comments.length %>)</h3>
 
     <div class="comment-containter">
       <%= comment.comment %>
