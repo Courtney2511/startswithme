@@ -1,19 +1,4 @@
-
-<script>
-   $(document).ready (function () {
-     $(window).scroll (function () {
-       var scroll = $(this).scrollTop();
-         if (scroll >= 1100) {
-             $('.nav-stick').addClass('nav-stick-scroll')
-         }else {
-             $('.nav-stick').removeClass('nav-stick-scroll')
-         }
-     })
-   })
- </script>
-
-
- <div class="posts-wrapper">
+<div class="posts-wrapper">
    <% @posts.each do |post| %>
     <div class="post-cont">
       <% if post.image? %>
