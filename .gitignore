@@ -23,3 +23,6 @@
 .DS_Store
 
 /public/uploads/tmp/*
+public/uploads/*
+public/uploads/user/*
+public/uploads/user/profile_picture/*/*

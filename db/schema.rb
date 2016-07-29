@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160728141503) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
     t.integer  "user_id"
@@ -39,9 +42,9 @@ ActiveRecord::Schema.define(version: 20160728141503) do
     t.datetime "updated_at", null: false
     t.text     "body"
     t.string   "image"
-    t.text     "title"
-    t.text     "link"
-    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.string   "title"
+    t.string   "link"
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,8 +62,9 @@ ActiveRecord::Schema.define(version: 20160728141503) do
     t.datetime "reset_password_email_sent_at"
     t.boolean  "admin"
     t.text     "description"
-    t.index ["email"], name: "index_users_on_email"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
+    t.index ["email"], name: "index_users_on_email", using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
   end
 
+  add_foreign_key "posts", "users"
 end
