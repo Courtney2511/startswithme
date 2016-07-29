@@ -1,25 +1,18 @@
-*{
+* {
   box-sizing: content-box;
 }
 
 body {
   background-color: #fff;
-  // color: #333;
-  // font-family: verdana, arial, helvetica, sans-serif;
-  // font-size: 13px;
-  // line-height: 18px;
-  // margin: 33px;
   width:100%;
   margin:0;
   background-color:#f3f3f3;
 }
 
-//newly added
 h1, h2, h3, p, a, label, input{
   font-family: helvetica, arial, cursive;
   color:#7F7F7F;
 }
-
 
 pre {
   background-color: #eee;
@@ -31,15 +24,6 @@ a {
   text-decoration: none;
   color: #00B1CB;
   text-transform:uppercase;
-
-  // &:visited {
-  //   color: #666;
-  // }
-  //
-  // &:hover {
-  //   color: #fff;
-  //   background-color: #000;
-  // }
 }
 
 th {
@@ -65,32 +49,9 @@ div {
   text-align: center;
 }
 
-
 #notice {
   color: green;
 }
-
-// .field_with_errors {
-//   padding: 2px;
-//   background-color: red;
-//   display: table;
-//   border-radius:20px;
-// }
-//
-// #error_explanation {
-//   width: 450px;
-//   border: 2px solid red;
-//   padding: 7px;
-//   padding-bottom: 0;
-//   margin-bottom: 20px;
-//   background-color: #f0f0f0;
-//
-//
-//   ul li {
-//     font-size: 12px;
-//     list-style: square;
-//   }
-// }
 
 label {
   display: block;
