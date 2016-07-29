@@ -111,10 +111,33 @@ section{
       font-size: 18px;
     }
     .comment-cont{
-    
+
       font-size: 13px;
     }
   }
+}
+
+/* create post */
+
+.page-container{
+  margin: 0 auto;
+  padding: 75px 14px 15px;
+  width: auto;
+  max-width: 500px;
+}
+
+.page-canvas{
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.create-container{
+  margin: 0 auto 10px;
+  display: block;
+  max-width: 400px;
+  width: auto;
+
 }
 //
 // // POST PICTURE
