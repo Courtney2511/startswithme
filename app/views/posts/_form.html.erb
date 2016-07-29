@@ -1,34 +1,37 @@
-<%= form_for @post do |f| %>
-  <div class="field">
-    <%= f.label :title  %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label "text(optional)"  %>
-    <%= f.text_field :body %>
-  </div>
-  <div class="field">
-    <%= f.label :link  %>
-    <%= f.text_field :link %>
-  </div>
-  <div class="field">
-    <%= f.label :image  %>
-    <%= f.file_field :image %>
-  </div>
-  <div class="action">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="page-container">
+  <div class="page-canvas">
+    <div class="create-container">
+      <%= form_for @post do |f| %>
+        <div class="create-field">
 
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@post.errors.count, 'error') %> prohibited this post from being saved:</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+          <%= f.label "title (required)"  %>
+          <% if @post.errors.any? %>
+          <div id="error_explanation">
+
+              <% @post.errors.full_messages.each do |msg| %>
+                <%= msg %>
+              <% end %>
+
+          </div>
+          <% end %>
+          <%= f.text_area :title %>
+        </div>
+        <div class="create-field">
+          <%= f.label "text"  %>
+          <%= f.text_area :body %>
+        </div>
+        <div class="create-field">
+          <%= f.label :link  %>
+          <%= f.text_area :link %>
+        </div>
+        <div class="create-field">
+          <%= f.label :image  %>
+          <%= f.file_field :image %>
+        </div>
+        <div class="action">
+          <%= f.submit class: "actions" %>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
-  <% end %>
-<% end %>
+</div>
