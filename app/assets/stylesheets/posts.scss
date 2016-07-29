@@ -166,7 +166,11 @@ section{
 .create-field{
   font-size: 20px;
   margin-bottom: 30px;
-
+  textarea{
+    border-radius: 5px;
+    border: 1px solid #e1e8ed !important;
+      background-color: #f5f8fa !important;
+  }
   label{
     margin-bottom: 5px;
     color: #292f33;
@@ -190,4 +194,8 @@ section{
 
 .post-title-container{
   font-size: 20px;
+}
+
+.back-container{
+  margin: 10px 0;
 }

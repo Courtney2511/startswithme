@@ -53,7 +53,7 @@
 
 <div class="new-comment-container">
 
-  <div class="comment-wrapper post-cont">
+  <div class="new-comment-wrapper">
 
 
     <%= form_for([@post, @comment]) do |f| %>
@@ -69,15 +69,15 @@
       <% end %>
 
       <div class="field">
-        <h3><%= f.label "New Comment" %></h3> 
-        <%= f.text_area :comment %>
+        <h3><%= f.label "New Comment" %></h3>
+        <%= f.text_area :comment  %>
       </div>
-      <div >
+      <div class="submit-button">
         <%= f.submit class: 'actions' %>
       </div>
     <% end %>
   </div>
+  <div class="back-link">
+    <%= link_to 'Back', posts_path %>
   </div>
-
-
-<%= link_to 'Back', posts_path %>
+  </div>
