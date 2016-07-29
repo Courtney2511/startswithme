@@ -1,28 +1,49 @@
-<h1> <%= @post.title %></h1>
+<div class="page-container">
+  <div class="page-canvas">
+    <div class="show-container">
 
-<!-- Displays body if it exists -->
-<% if @post.body %>
-<p><%= @post.body %></p><br>
-<% end %>
+      <div class="post-title-container">
+        <%= @post.title %>
+      </div>
 
-<!-- Displays image if it exists -->
-<% if @post.image %>
-  <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
-<p><%= image_tag(@post.image) %></p><br>
-<% end %>
+      <!-- Displays body if it exists -->
+      <% if @post.body %>
+        <div class="post-title-container">
+          <p><%= @post.body %></p>
+        </div>
+      <% end %>
 
-<!-- Displays link if it exists -->
-<% if @post.link %>
-<p><%= @post.link %></p>
-<% end %>
+      <!-- Displays image if it exists -->
+      <% if @post.image %>
+        <div class="post-image-container">
+          <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
+          <p><%= image_tag(@post.image) %></p>
+        </div>
+      <% end %>
 
-Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+      <!-- Displays link if it exists -->
+      <% if @post.link %>
+        <div class="post-link-container">
+          <p><%= @post.link %></p>
+        </div>
+      <% end %>
 
-<!-- if you're the owner of the post, you can delete or edit -->
-<% if @post.user == current_user %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
-<% end %>
+      <div class="post-show-author-container">
+        <p>
+          Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+        </p>
+      </div>
+
+      <!-- if you're the owner of the post, you can delete or edit -->
+      <div class="post-show-actions-container">
+        <% if @post.user == current_user %>
+          <%= link_to 'Edit', edit_post_path(@post) %> |
+          <%= link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Added total comment count for post-->
 <h3>Comments (<%= @post.comments.length %>)</h3>
