@@ -3,10 +3,17 @@
     <div class="create-container">
       <%= form_for @post do |f| %>
         <div class="create-field">
-          <%if flash[:notice]%>
-            <p id="notice"><%= flash[:notice] %></p>
-            <% end %>
+
           <%= f.label "title (required)"  %>
+          <% if @post.errors.any? %>
+          <div id="error_explanation">
+
+              <% @post.errors.full_messages.each do |msg| %>
+                <%= msg %>
+              <% end %>
+
+          </div>
+          <% end %>
           <%= f.text_field :title %>
         </div>
         <div class="create-field">
@@ -28,19 +35,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@post.errors.count, 'error') %> prohibited this post from being saved:</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-<% end %>
