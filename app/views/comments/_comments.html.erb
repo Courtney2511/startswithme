@@ -1,16 +1,31 @@
-<% my_comments.each do |comment| %>
-  <p>
-<%= comment.comment %><br>
-
+<% my_comments.reverse_each do |comment| %>
     <% if comment.user != nil %>
-    <%= image_tag(comment.user.profile_picture.thumb) %>
 
-      <em> <%= link_to comment.user.name, user_path(comment.user) %></em>
-      Added on: <%= comment.created_at %><br>
+<div class="comment-wrapper post-cont">
+
+    <div class="comment-containter">
+      <%= comment.comment %>
+    </div>
+
+    <div class="img-container">
+      <%= image_tag(comment.user.profile_picture.thumb) %>
+    </div>
+
+    <div class="author-container">
+      <%= link_to comment.user.name, user_path(comment.user) %>
+    </div>
+
+    <div class="time-container">
+        Added on: <%= comment.created_at %>
+    </div>
+
+    <div class="actions-container">
       <% if comment.user == current_user %>
-        <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
-        <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
+      <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
       <% end %>
-    <% end %>
-  </p>
+    </div>
+
+  <% end %>
+</div>
 <% end %>
