@@ -105,13 +105,27 @@ footer{
   padding-top: 25px;
 }
 
+.post_title {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.post_time {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 11px;
+}
+
 .blog-entry p {
   margin: 0;
   text-align: center;
 }
 
 .blog-entry {
-  float:left; width:33.33333%; margin-bottom:1em;
+  float:left;
+  width:30%;
+  margin-bottom:1em;
+
 }
 
 .blog-entry:nth-of-type(3n+1) {
