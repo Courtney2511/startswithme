@@ -44,34 +44,40 @@
     </div>
   </div>
 </div>
-  <h3>Comments (<%= @post.comments.length %>)</h3>
+
 
   <%= render({:partial => 'comments/comments', :locals => { :my_comments => @post.comments}}) %>
 
 
 
 
+<div class="new-comment-container">
 
-  <h4>New Comment</h4>
+  <div class="comment-wrapper post-cont">
 
-  <%= form_for([@post, @comment]) do |f| %>
-    <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this comment from being saved:</h2>
-        <ul>
-          <% @comment.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
+
+    <%= form_for([@post, @comment]) do |f| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@review.errors.count, "error") %> prohibited this comment from being saved:</h2>
+          <ul>
+            <% @comment.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <h3><%= f.label "New Comment" %></h3> 
+        <%= f.text_area :comment %>
+      </div>
+      <div >
+        <%= f.submit class: 'actions' %>
       </div>
     <% end %>
+  </div>
+  </div>
 
-    <div class="field">
-      <%= f.label :comment %>
-      <%= f.text_area :comment %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+
 <%= link_to 'Back', posts_path %>
