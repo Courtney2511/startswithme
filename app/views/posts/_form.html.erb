@@ -3,19 +3,19 @@
     <div class="create-container">
       <h1>New Post</h1>
         <%= form_for @post do |f| %>
-          <div class="field">
+          <div class="create-field">
             <%= f.label :title  %>
             <%= f.text_field :title %>
           </div>
-          <div class="field">
+          <div class="create-field">
             <%= f.label "text(optional)"  %>
             <%= f.text_field :body %>
           </div>
-          <div class="field">
+          <div class="create-field">
             <%= f.label :link  %>
             <%= f.text_field :link %>
           </div>
-          <div class="field">
+          <div class="create-field">
             <%= f.label :image  %>
             <%= f.file_field :image %>
           </div>

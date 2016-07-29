@@ -137,8 +137,27 @@ section{
   display: block;
   max-width: 900px;
   width: auto;
-
 }
+
+#post_title
+{
+  width: 800px;
+  height: 40px;
+}
+
+#post_body
+{
+  width: 800px;
+  height: 90px;
+}
+
+#post_link
+{
+  width: 800px;
+  height: 20px;
+}
+
+
 //
 // // POST PICTURE
 // .img-cont {
