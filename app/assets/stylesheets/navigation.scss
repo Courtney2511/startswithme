@@ -2,12 +2,6 @@
 /*   NAVIGATION    */
 /*******************/
 
-// header{
-//   width:100%;
-//   height:auto;
-//   overflow:auto;
-// }
-
 .nav-stick{
 
   overflow: auto; /* <<<< Clearing the floats */
@@ -32,12 +26,6 @@
   text-transform: uppercase;
   line-height: 60px;
 }
-// .nav-stick-scroll {
-//     background:white;
-//     width: 100%;
-//     z-index:1;
-// }
-
 
 /* Nav-Left Styles */
 
@@ -60,7 +48,6 @@
   float: left;
 }
 
-
 /* nav-right Styles */
 
 .nav-right {
@@ -77,7 +64,6 @@
   padding-right: 30px;
   color:#7f7f7f;
 }
-
 
 .nav-right span.button{
   background-color:#00B1CB;
@@ -108,15 +94,6 @@ footer{
   padding-right:5%;
 }
 
-/*.help,
-.information{
-  background-color: red;
-}
-
-.expressions{
-  background-color: blue;
-}*/
-
 footer h3,
 footer p,
 footer a{
@@ -126,7 +103,6 @@ footer a{
   line-height:25px;
   font-weight: lighter;
 }
-
 
 footer h3{
   margin-top:40px;
