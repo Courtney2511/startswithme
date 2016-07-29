@@ -3,10 +3,8 @@
 
 <div class="profile-top-screen">
 
-<<<<<<< HEAD
-</header>
-=======
->>>>>>> d70f3cf99b0361afa5e20575cbf42d71eed8b1fe
+
+
 
 
 <!-- Banner -->
@@ -41,14 +39,15 @@
 
   <h3 class="expression_title">Posts by <%= @user.name %></h3>
 
-  <article class="blog-entry">
     <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
     <% @user.posts.each do |post| %>
-      "<%= link_to post.title, post_path(post) %>"<br>
-       <%= image_tag(post.image.thumb) %><br>
-      posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %>
+      <article class="blog-entry">
+        <%= image_tag(post.image.thumb) %><br>
+        <div class="post_title"><%= link_to post.title, post_path(post) %><br></div class="post_title">
+        <div class="post_time">posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %></div class="post_time">
+      </article>
     <% end %>
-  </article>
+
 </section>
 
 </html>
