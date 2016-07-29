@@ -1,5 +1,5 @@
 <div class="posts-wrapper">
-   <% @posts.each do |post| %>
+   <% @posts.reverse_each do |post| %>
     <div class="post-cont">
       <% if post.image? %>
         <div class="img-cont">
