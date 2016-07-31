@@ -215,16 +215,18 @@ input#password {
 /********************/
 
 .actions{
-  width: 50%;
+  width: 48%;
   border: none;
   background: linear-gradient(141deg, #bdf6f2 0%, #43cede 51%, #38abd6 75%);
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
-  border-radius:20px;
-  font-weight:lighter;
-  outline:none;
+  border-radius: 20px;
+  font-weight: lighter;
+  outline: none;
+  text-align: Center;
+  margin: 0 auto;
 }
 .actions:active,
 .actions:focus {
