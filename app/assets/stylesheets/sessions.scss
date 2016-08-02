@@ -1,5 +1,7 @@
 
-// Containers
+/********************/
+/*   CONTAINER      */
+/********************/
 // this contains the bkg img
 .landing-container{
   width:100%;
@@ -24,7 +26,9 @@
   overflow:auto;
 }
 
-// left screen
+/********************/
+/*   LEFT SCREEN    */
+/********************/
 .landing-left{
   width:60%;
   height:100%;
@@ -36,7 +40,9 @@
   margin:0;
 }
 
-// right screen
+/********************/
+/* RIGHT SCREEN     */
+/********************/
 .landing-right{
   width: 40%;
   height: 100%;
@@ -68,10 +74,24 @@ form.getstarted {
     transform: translate(-50%, -50%);
 }
 
+
+
+/********************/
+/* form fields      */
+/********************/
+
 .login-header h1{
   margin: 0;
   font-weight: lighter;
   color: white;
+}
+
+// alert message on error
+p#alert {
+    color: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    font-weight: lighter;
+    background-color: rgba(255,255,255,0.5);
 }
 
 input#email,
@@ -95,11 +115,22 @@ input#password {
     background-color: lightblue;
 }
 
+// changes the placeholder text styles
 .login-fields ::-webkit-input-placeholder {
    color: white;
    font-weight:lighter;
    font-size:15px;
 }
+
+// this doesn't work for some reason... should make red border on fields inputted incorrectly
+.session-input.error {
+    box-shadow: 0 0 0 2px #bc2a39;
+}
+
+
+/********************/
+/* login button     */
+/********************/
 
 input.actions {
     border: none;
@@ -121,9 +152,9 @@ input.actions {
 }
 
 .extra-login-stuff a{
-  font-size:10px;
   color: white;
   font-weight: lighter;
+  line-height:30px;
 }
 
 .extra-login-stuff a:hover{
@@ -223,69 +254,18 @@ input.actions {
 /*******************/
 
 
-// .modal-signin {
-//   width: 40%;
-//   height: 100%;
-//   overflow: auto;
-//   position: relative;
-//   float: right;
-//   margin:30px;
-// }
-//
-// form.getstarted {
-//   float: right;
-//   background-color: rgba(0, 177, 203, 0.5);
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-// }
-//
-// .login-fields{
-//   margin-top:25%;
-// }
 
 
 /********************/
 /* form header part */
 /********************/
 
-// .login-header{
-//   width: 100%;
-//   position: relative;
-// }
-//
-// .login-header h1{
-//   margin: 20px 0 30px 0;
-//   padding: 0;
-//   color: #c1c1c1;
-//   text-align: center;
-//   font-weight: lighter;
-//   display: block;
-//   font-size:20px;
-// }
-// .login-header p{
-//   border-radius: none;
-//   height: 1em;
-//   position: relative;
-//   line-height: 0;
-//   font-size: 15px;
-//   padding-left: 92%;
-// }
+
 
 /********************/
 /* login fields     */
 /********************/
-// input#email,
-// input#password {
-//     width: 49%;
-//     border: none;
-//     border-radius: 20px;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     text-align: center;
-//     outline: none;
-//     border: none;
-// }
+
 /********************/
 /* login button     */
 /********************/
@@ -321,23 +301,4 @@ input.actions {
 //   outline:none;
 //   width:100%;
 //   padding:0;
-// }
-
-/********************/
-/* forgot & signup  */
-/********************/
-// .extra-login-stuff{
-//   width:100%;
-//   text-align:center;
-//   margin-top:10px;
-// }
-//
-// .extra-login-stuff a{
-//   font-size:10px;
-//   color: #c1c1c1;
-//   font-weight: lighter;
-// }
-//
-// .extra-login-stuff a:hover{
-//   color: #00B1CB;
 // }
