@@ -101,6 +101,35 @@ input#password {
    font-size:15px;
 }
 
+input.actions {
+    border: none;
+    width: 75%;
+    padding: 13px;
+    border-radius: 20px;
+    background-color: #1E7F8E;
+    color: white;
+    font-weight: lighter;
+}
+
+/********************/
+/* forgot & signup  */
+/********************/
+.extra-login-stuff{
+  width:100%;
+  text-align:center;
+  margin-top:10px;
+}
+
+.extra-login-stuff a{
+  font-size:10px;
+  color: white;
+  font-weight: lighter;
+}
+
+.extra-login-stuff a:hover{
+  color: #1E7F8E;
+}
+
 
 // .session-container{
 //   background-color: rgba(0, 0, 0, 0.5);
