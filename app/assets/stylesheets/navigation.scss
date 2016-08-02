@@ -3,12 +3,14 @@
 /*******************/
 
 .nav-stick{
-
+  position:fixed;
+  width:100%;
   overflow: auto; /* <<<< Clearing the floats */
   background-color:white;
   height: 60px;
   color: white;
   padding: 0 30px;
+  z-index:111111;
 }
 
 #create-post{
