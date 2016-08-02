@@ -24,6 +24,23 @@ class UsersController < ApplicationController
       render :new
     end
 
+    # @user = User.new(user_params)
+    # respond_to do |format|
+    #   if @user.save
+    #     auto_login(@user)
+    #     format.html { redirect_to user_path(@user), notice: 'Profile created!' }
+    #     format.json {
+    #       render json: {redirect: user_path(@user)}, status: 200
+    #     }
+    #   else
+    #     format.html { render :new }
+    #     format.json {
+    #       # render json: @user.errors, status: :unprocessable_entity
+    #       render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+    #     }
+    #   end
+    # end
+
   end
 
   def edit
