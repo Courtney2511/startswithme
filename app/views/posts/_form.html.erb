@@ -19,24 +19,27 @@
         </div>
         <div class="create-field">
           <div class="label">
-            <%= f.label "text"  %>
+            <%= f.label :link  %>
           </div>
-          <div class="textarea">
-            <%= f.text_area :body %>
+          <div class="">
+            <%= f.text_area :link %>
           </div>
         </div>
         <div class="create-field">
           <div class="label">
               <%= f.label :image  %>
           </div>
-          <%= f.file_field :image %>
+          <div class="image">
+            <%= f.file_field :image, class: "inputimage" %>
+          </div>
+
         </div>
         <div class="create-field">
           <div class="label">
-            <%= f.label :link  %>
+            <%= f.label "text"  %>
           </div>
-          <div class="">
-            <%= f.text_area :link %>
+          <div class="textarea">
+            <%= f.text_area :body %>
           </div>
         </div>
         <div class="action">
