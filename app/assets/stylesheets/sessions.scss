@@ -6,7 +6,7 @@
 .landing-container{
   width:100%;
   height:100%;
-  background-image: url('friends.jpeg');
+  background-image: url('body-bkg-img.jpg');
   background-size: cover;
   background-attachment: fixed;
   margin-top:60px;
@@ -36,9 +36,84 @@
   // background-color:pink;
 }
 
+.slideshow-container {
+  width: 100%;
+  height: 90%;
+  position:relative;
+}
+
+// TEXT CONTAINER
+.mySlides.fade {
+  // background-color: lightblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mySlides img{
+  width:100px;
+}
+
+// TEXT TITLE
+.mySlides h1{
+  font-weight: lighter;
+  color: white;
+  text-transform: uppercase;
+}
+
+// TEXT Paragraph
 .mySlides p{
   margin:0;
+  font-weight: lighter;
+  color: white;
 }
+
+
+/* The dots/bullets/indicators */
+.slider-dot {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 49%;
+  transform: translate(-70%, -49%);
+  text-align: center;
+}
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #46c6d9;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 
 /********************/
 /* RIGHT SCREEN     */
@@ -215,39 +290,6 @@ input.actions {
 //   background-color: rgba(0,0,0,0.8);
 // }
 
-/* The dots/bullets/indicators */
-// .dot {
-//   cursor:pointer;
-//   height: 13px;
-//   width: 13px;
-//   margin: 0 2px;
-//   background-color: #fff;
-//   border-radius: 50%;
-//   display: inline-block;
-//   transition: background-color 0.6s ease;
-// }
-//
-// .active, .dot:hover {
-//   background-color: #46c6d9;
-// }
-
-/* Fading animation */
-// .fade {
-//   -webkit-animation-name: fade;
-//   -webkit-animation-duration: 1.5s;
-//   animation-name: fade;
-//   animation-duration: 1.5s;
-// }
-//
-// @-webkit-keyframes fade {
-//   from {opacity: .4}
-//   to {opacity: 1}
-// }
-//
-// @keyframes fade {
-//   from {opacity: .4}
-//   to {opacity: 1}
-// }
 
 /*******************/
 /* login container */
