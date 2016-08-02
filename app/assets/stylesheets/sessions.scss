@@ -57,6 +57,7 @@ form.getstarted {
   text-align: center;
   position: relative;
   text-align: center;
+  margin:5%;
 }
 
 .login-fields {
@@ -68,7 +69,36 @@ form.getstarted {
 }
 
 .login-header h1{
-  margin:0;
+  margin: 0;
+  font-weight: lighter;
+  color: white;
+}
+
+input#email,
+input#password {
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 75%;
+    color:white;
+}
+
+.login-fields input[type="text"], textarea,
+.login-fields input[type="password"], textarea {
+  background-color: transparent;
+  font-size:15px;
+}
+
+.login-fields input[type=text]:focus,
+.login-fields input[type=password]:focus {
+    background-color: lightblue;
+}
+
+.login-fields ::-webkit-input-placeholder {
+   color: white;
+   font-weight:lighter;
+   font-size:15px;
 }
 
 
