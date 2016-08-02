@@ -122,7 +122,23 @@ section{
 .new-post-banner{
   width: 100%;
   height: 150px;
+  position: relative;
+      text-align: center;
+  #new-post-banner-section{
+    height: 100%;
+  }
+
+  h1{
+    position:absolute;
+    
+    width:100%;
+    bottom:0;
+    text-align:center;
+
+  }
 }
+
+
 
 .page-container{
   margin: 0 auto;
