@@ -100,6 +100,6 @@ $( document ).ready(function() {
   //     $('.session-input').on('click',function(){
   //        $(this).removeClass('error');
   //      });
-    });
-  });
+  
+
 });
