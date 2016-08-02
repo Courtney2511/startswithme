@@ -7,26 +7,26 @@
   background-image: url('friends.jpeg');
   background-size: cover;
   background-attachment: fixed;
+  margin-top:60px;
 }
 
 // this creates the gradient effect on bkg img
-.landing-bkg-black{
-  background: linear-gradient(black,#ffffff);
-  opacity:0.5;
-  width:100%;
-  height:100%;
-}
+// .landing-bkg-black{
+//   background: linear-gradient(black,#ffffff);
+//   opacity:0.5;
+//   width:100%;
+//   height:100%;
+// }
 
 .landing-content-container{
   width:100%;
-  height:90%;
+  height:100%;
   overflow:auto;
-  padding-top:10%;
 }
 
 // left screen
 .landing-left{
-  width:70%;
+  width:60%;
   height:100%;
   float:left;
   // background-color:pink;
@@ -38,16 +38,24 @@
 
 // right screen
 .landing-right{
-  width:30%;
-  height:100%;
-  float:right;
-  // background-color:orange;
+  width: 40%;
+  height: 100%;
+  float: right;
+  overflow: auto;
 }
 
 .modal-signin{
-  // background-color:green;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+
+form.getstarted {
+  height: 90%;
+  background-color: rgba(0, 177, 203, 0.5);
+  text-align: center;
+  margin: 5%
 }
 
 .login-header h1{
