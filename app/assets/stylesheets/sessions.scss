@@ -48,14 +48,19 @@
   height: 100%;
   width: 100%;
   overflow: auto;
+  position:relative;
 }
-
 
 form.getstarted {
   height: 90%;
+  width: 90%;
   background-color: rgba(0, 177, 203, 0.5);
   text-align: center;
-  margin: 5%
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-header h1{
