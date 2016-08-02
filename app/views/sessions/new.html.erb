@@ -1,69 +1,67 @@
 <!------------------>
 <!-- signin modal -->
 <!------------------>
-
-
-<!-- Banner -->
-
-  <div class="top-screen"> <!--background image-->
-    <div class="session-container">
-    <div class="clearfix">
-      <div class="banner"> <!--floats everything right and 50%-->
-        <div class="banner-text"> <!--container for entire slider-->
-          <div class="slideshow-container"> <!--container for images & circles-->
-            <!-- this div contains slider messages-->
-            <div class="mySlides fade">
-              <p>Super stoked about sleep tonight. 	&#128170;</p>
+<div class="landing-container">
+  <!-- <div class="landing-bkg-black"></div> -->
+  <div class="landing-bkg-img">
+    <!-- LEFT side of screen -->
+    <div class="landing-left">
+      <div class="slideshow-container"> <!--container for images & circles-->
+        <!-- this div contains slider messages-->
+        <div class="mySlides fade">
+          <p>Super stoked about sleep tonight. 	&#128170;</p>
+        </div>
+        <div class="mySlides fade">
+          <p>This week has been hell. Go Coffee!! &#128169;</p>
+        </div>
+        <div class="mySlides fade">
+          <p>Sad that Bitmaker is ending though :(</p>
+        </div>
+        <!--  this div contains the dots at bottom for slider -->
+        <div>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT side of screen -->
+    <div class="landing-right">
+      <div class="modal-signin">
+        <!-- Form -->
+        <%= form_tag sessions_path, class: "getstarted" do %>
+          <div class="login-fields">
+            <div class="login-header">
+                <h1>LOGIN</h1>
             </div>
-            <div class="mySlides fade">
-              <p>This week has been hell. Go Coffee!! &#128169;</p>
+            <div class="field">
+                <%if flash[:notice]%>
+                <p id="notice"><%= flash[:notice] %></p>
+                <% end %>
+                <% if flash[:alert]%>
+                <p id="alert"><%= flash[:alert] %></p>
+                <% end %>
+                <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br>
             </div>
-            <div class="mySlides fade">
-              <p>Sad that Bitmaker is ending though :(</p>
+            <div class="field">
+                <%= password_field_tag :password, "", class:"session-input", :placeholder => ".........." %>
             </div>
-            <!--  this div contains the dots at bottom for slider -->
             <div>
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
+                <%= submit_tag "LOG IN", class: "actions"  %>
+            </div>
+            <div class="extra-login-stuff">
+                <%= link_to 'Forgot Password', new_password_reset_path %><br>
+                <%=link_to "Sign Up", new_user_path %>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Container -->
-<div class="modal-signin">
-  <!-- Form -->
-  <%= form_tag sessions_path, class: "getstarted" do %>
-    <div class="login-fields">
-      <div class="login-header">
-          <h1>LOGIN</h1>
-      </div>
-      <div class="field">
-          <%if flash[:notice]%>
-          <p id="notice"><%= flash[:notice] %></p>
-          <% end %>
-          <% if flash[:alert]%>
-          <p id="alert"><%= flash[:alert] %></p>
-          <% end %>
-          <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br>
-      </div>
-      <div class="field">
-          <%= password_field_tag :password, "", class:"session-input", :placeholder => ".........." %>
-      </div>
-      <div>
-          <%= submit_tag "LOG IN", class: "actions"  %>
-      </div>
-      <div class="extra-login-stuff">
-          <%= link_to 'Forgot Password', new_password_reset_path %><br>
-          <%=link_to "Sign Up", new_user_path %>
-      </div>
-    </div>
-  <% end %>
-</div>
+
+
 
 
 
