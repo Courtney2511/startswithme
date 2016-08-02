@@ -9,31 +9,17 @@ body {
   background-color:#f3f3f3;
 }
 
-h1, h2, h3, p, a, label, input{
+h1, h2, h3, p, label, input{
   font-family: helvetica, arial, cursive;
   color:#7F7F7F;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
 
 a {
+  font-family: helvetica, arial, cursive;
   text-decoration: none;
   color: #00B1CB;
   text-transform:uppercase;
-}
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 div {
@@ -50,11 +36,15 @@ div {
 }
 
 #notice {
-  color: green;
+  color: #7F7F7F;
+  background-color: #CAFAAE;
+  font-family: helvetica, arial, cursive;
 }
 
 label {
   display: block;
+  font-family: helvetica, arial, cursive;
+  color: #7F7F7F;
 }
 
 .clearfix{
