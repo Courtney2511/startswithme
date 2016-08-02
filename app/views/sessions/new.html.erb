@@ -6,13 +6,10 @@
 <div class="modal-signin">
   <!-- Form -->
   <%= form_tag sessions_path, class: "getstarted" do %>
-  <!-- login Header -->
     <div class="login-fields">
       <div class="login-header">
-          <!-- <p class="close">x</p> -->
           <h1>LOGIN</h1>
       </div>
-      <!-- Login fields -->
       <div class="field">
           <%if flash[:notice]%>
           <p id="notice"><%= flash[:notice] %></p>
@@ -21,17 +18,13 @@
           <p id="alert"><%= flash[:alert] %></p>
           <% end %>
           <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br>
-          <!--input tag-->
       </div>
       <div class="field">
           <%= password_field_tag :password, "", class:"session-input", :placeholder => ".........." %>
-          <!--input tag-->
       </div>
-      <!-- Login Button -->
       <div>
           <%= submit_tag "LOG IN", class: "actions"  %>
       </div>
-      <!-- Forgot Password & Sign Up Button -->
       <div class="extra-login-stuff">
           <%= link_to 'Forgot Password', new_password_reset_path %><br>
           <%=link_to "Sign Up", new_user_path %>
@@ -70,49 +63,6 @@
     </div>
   </div>
 </div>
-
-<!-- signup modal -->
-<!-- <div class="modal-signup">
-
-<%= form_for @user do |f| %>
-
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-       <ul>
-        <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-     <% end %>
-      </ul>
-    </div>
-    <%end%>
-  <div class="error_messages"></div>
-  <div class="login-header">
-    <p class="close">x</p>
-    <h1>SIGN UP</h1>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
-  </div>
-
-  <div class="button">
-    <%= f.submit 'SIGN UP', :class => 'actions actions-signup' %>
-  </div>
-
-<% end %>
-</div> -->
-
-
-
 
 <script>
   var slideIndex = 1;
