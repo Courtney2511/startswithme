@@ -71,14 +71,7 @@ section{
   a{
     text-transform: none;
   }
-  // overflow: auto;
-  // width: 100%;
-  // display: block;
-  // padding: 30px;
-  // border: 1px solid #e4e4e4;
-  // border-radius: 5px;
-  // box-shadow: 1px 1px 1px #cdcdcd;
-  // background-color:white;
+
   .img-cont{
     display: inline-block;
     float: left;
@@ -116,20 +109,53 @@ section{
 .action-container{
   font-size: 13px;
 }
-
+/***************/
 /* create post */
+/***************/
+
+/* banner */
+.new-post-banner{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  text-align: center;
+
+  #new-post-banner-section{
+    height: 100%;
+    background-image: url('desktop-banner-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #post-page-icon{
+    width: 50px;
+    height: 50px;
+    display: block;
+    bottom: 50px;
+    text-align:center;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+  h1{
+    color: white;
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-align:center;
+  }
+}
 
 .page-container{
-  margin: 0;
-  padding: 15px 14px 15px;
+  margin: 10px auto 0;
   width: auto;
   max-width: 860px;
 }
 
 .page-canvas{
+  padding: 50px;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px 0;
-  border-radius: 5px;
 }
 
 .create-container{
@@ -138,40 +164,49 @@ section{
   max-width: 800px;
 }
 
-#post_title
-{
-  width: 800px;
-  height: 30px;
-  font-size: 20px;
-  color: #292f33;
-}
-
-#post_body
-{
-  width: 800px;
-  height: 90px;
-  font-size: 20px;
-  color: #292f33;
-  border: 1px solid gray;
-}
-
-#post_link
-{
-  width: 800px;
-  height: 30px;
-  font-size: 20px;
-  color: #292f33;
-}
-
 .create-field{
+  overflow: hidden;
   font-size: 20px;
   margin-bottom: 30px;
+  textarea{
+    border: 1px solid #e1e8ed !important;
+    height: 50px;
+    width: 600px;
+    font-size: 20px;
 
-  label{
-    margin-bottom: 5px;
-    color: #292f33;
   }
+  label{
+    padding: 10px 20px;
+    line-height: 35px;
+    color: white;
+    width: 80px;
+    background-color: #00B1CB
+  }
+  .label,
+  .textarea{
+    float: left;
+    display: inline;
+  }
+}
 
+#create-text,
+#create-image{
+  margin-right: 30px;
+}
+
+/* create-button */
+.create-action{
+  width: 560px;
+  margin-left: 150px;
+  color: white;
+  position: relative;
+  vertical-align: top;
+  height: 55px;
+  font-size: 22px;
+  text-align: center;
+  background: #00B1CB;
+  border: 0;
+  cursor: pointer;
 }
 
 #error_explanation{
@@ -190,4 +225,8 @@ section{
 
 .post-title-container{
   font-size: 20px;
+}
+
+.back-container{
+  margin: 10px 0;
 }

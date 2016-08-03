@@ -3,35 +3,51 @@
     <div class="create-container">
       <%= form_for @post do |f| %>
         <div class="create-field">
-
-          <%= f.label "title (required)"  %>
-          <% if @post.errors.any? %>
-          <div id="error_explanation">
-
+          <div class="label">
+            <%= f.label "title*"  %>
+          </div>
+          <div class="textarea">
+            <% if @post.errors.any? %>
+            <div id="error_explanation">
               <% @post.errors.full_messages.each do |msg| %>
                 <%= msg %>
               <% end %>
-
+            </div>
+            <% end %>
+            <%= f.text_area :title %>
           </div>
-          <% end %>
-          <%= f.text_area :title %>
         </div>
         <div class="create-field">
-          <%= f.label "text"  %>
-          <%= f.text_area :body %>
+          <div class="label">
+            <%= f.label :link  %>
+          </div>
+          <div class="">
+            <%= f.text_area :link %>
+          </div>
         </div>
         <div class="create-field">
-          <%= f.label :link  %>
-          <%= f.text_area :link %>
+          <div class="label" id="create-image">
+              <%= f.label :image  %>
+          </div>
+          <div class="image">
+            <%= f.file_field :image, size: "90" %>
+          </div>
         </div>
-        <div class="create-field">
-          <%= f.label :image  %>
-          <%= f.file_field :image %>
+        <div class="create-field" >
+          <div class="label" id="create-text">
+            <%= f.label "text"  %>
+          </div>
+          <div class="textarea"  >
+            <%= f.text_area :body %>
+          </div>
         </div>
         <div class="action">
-          <%= f.submit class: "actions" %>
+          <%= f.submit class: "create-action" %>
         </div>
       <% end %>
     </div>
+  </div>
+  <div class="back-container">
+    <%= link_to 'Back', posts_path %>
   </div>
 </div>

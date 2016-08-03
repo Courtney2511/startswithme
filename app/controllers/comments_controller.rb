@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      redirect_to post_path(@post), notice: 'Comment created successfully'
+      redirect_to post_path(@post)
     else
       render 'posts/show'
     end
