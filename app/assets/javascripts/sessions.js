@@ -1,31 +1,17 @@
-
 $( document ).ready(function() {
 // LOGIN PAGE
-//this event activates the modal on click
-  // $('#signin').on('click', function(event){
-  //   event.preventDefault();
-  //   console.log("hello");
-  //   // modal will display on click
-  //   $('.modal-signin')
-  //     .css("display","block");
-  // });
-    // modal will close when 'x' is clicked
-  $('.close').on('click', function(){
-    $('.modal-signin')
-      .css("display","none");
-  });
-
   // prevent default if user doesn't input anything into fields
-  $('.actions').on('click', function(){
+  // $('.actions').on('click', function(){
     // if there's no value in <input>, then prevent default on login
-    if($("#email").val() == "" || $("#password").val() == ""){
-      event.preventDefault();
-      $('.session-input').addClass("error");
-    }
-    $('.session-input').on('click',function(){
-      $(this).removeClass('error');
-    });
-  });
+  //   if($("#email").val() == "" || $("#password").val() == ""){
+  //     event.preventDefault();
+  //     $('.session-input').addClass("error");
+  //   }
+  //   $('.session-input').on('click',function(){
+  //     $(this).removeClass('error');
+  //   });
+  // });
+
 
 // signup modal
   // var signupVisible = false;
@@ -100,6 +86,6 @@ $( document ).ready(function() {
   //     $('.session-input').on('click',function(){
   //        $(this).removeClass('error');
   //      });
-    });
-  });
+  //   });
+  // });
 });

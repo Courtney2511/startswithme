@@ -204,11 +204,6 @@ input#password {
    font-size:15px;
 }
 
-// this doesn't work for some reason... should make red border on fields inputted incorrectly
-.session-input.error {
-    box-shadow: 0 0 0 2px #bc2a39;
-}
-
 
 /********************/
 /* login button     */
@@ -222,6 +217,7 @@ input.actions {
     background-color: #1E7F8E;
     color: white;
     font-weight: lighter;
+    font-size:15px
 }
 
 /********************/
@@ -237,6 +233,7 @@ input.actions {
   color: white;
   font-weight: lighter;
   line-height:30px;
+  font-size:15px;
 }
 
 .extra-login-stuff a:hover{
