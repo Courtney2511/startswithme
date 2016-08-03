@@ -1,41 +1,14 @@
-<!-- <div class="posts-wrapper">
-   <table>
-     <tbody>
-       <% @posts.reverse_each do |post| %>
-       <tr>
-         <% if post.image? %>
-          <th width="10%">
-
-              <%= image_tag(post.image.thumb) %>
-
-          </th>
-          <td>
-
-              <div class="title-cont">
-                <p>
-                  <%= link_to post.title, post_path(post) %>
-                </p>
-              </div>
-              <div class="author-cont">
-                <p>
-                  by <%= link_to post.user.name, user_path(post.user) %>
-                </p>
-              </div>
-              <div class="comment-cont">
-                <p>
-                  <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
-                </p>
-              </div>
-              <% if post.user == current_user %>
-                <div class="action-container">
-                  <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-                </div>
-              <% end %>
-
-          </td>
-          <% else %>
+<div class="posts-wrapper">
+  <table>
+    <tbody>
+      <% @posts.reverse_each do |post| %>
+        <% if post.image? %>
+          <tr>
             <th>
-              <div class="text-cont">
+              <%= image_tag(post.image.thumb) %>
+            </th>
+            <td>
+              <div class="text-cont" id="text-cont">
                 <div class="title-cont">
                   <p>
                     <%= link_to post.title, post_path(post) %>
@@ -57,42 +30,37 @@
                   </div>
                 <% end %>
               </div>
-            </th>
-            <% end %>
-
-       </tr>
-          <% end %>
-     </tbody>
-   </table>
-
-</div> -->
-<div class="posts-wrapper">
-
-
-<table>
-  <tbody>
-    <% @posts.reverse_each do |post| %>
-      <% if post.image? %>
-      <div class="sdf">
-        <tr>
-          <th>
-            <%= image_tag(post.image.thumb) %>
-          </th>
-          <td>
-            <%= link_to post.title, post_path(post) %>
-          </td>
-        </tr>
-        </div>
-      <% else %>
-      <div class="">
-        <tr>
-          <td colspan="2">
-            <%= link_to post.title, post_path(post) %>
-          </td>
-        </tr>
-      </div>
+            </td>
+          </tr>
+        <% else %>
+          <tr>
+            <td colspan="2">
+              <div class="text-cont" id="first-text-cont">
+                <div class="title-cont">
+                  <p>
+                    <%= link_to post.title, post_path(post) %>
+                  </p>
+                </div>
+                <div class="author-cont">
+                  <p>
+                    by <%= link_to post.user.name, user_path(post.user) %>
+                  </p>
+                </div>
+                <div class="comment-cont">
+                  <p>
+                    <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+                  </p>
+                </div>
+                <% if post.user == current_user %>
+                  <div class="action-container">
+                    <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+                  </div>
+                <% end %>
+              </div>
+             </td>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 </div>

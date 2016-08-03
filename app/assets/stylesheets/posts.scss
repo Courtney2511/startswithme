@@ -50,22 +50,47 @@ section{
 /*******************/
 /*   Posts-index   */
 /*******************/
-.text-cont{
+#text-cont{
   border-left: solid 1px #cdcdcd;
+}
+.text-cont{
+  width: 600px;
+  margin: 10px 0 10px 0px;
+  padding: 0 10px 0 20px;
+
+  p{
+    margin: 5px;
+  }
+
 }
 // CONTAINER
 
 .posts-wrapper{
+  a{
+    text-transform: none;
+  }
   width: 960px;
   margin: 0 auto;
   padding: 0;
   th{
-
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 30px 10px 10px;
+    img{
+      box-shadow: 3px 3px 5px #888888;
+    }
+  }
+  td{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 
   }
   table{
     border-spacing: 20px;
-
+    border-collapse: separate;
+    border-spacing: 0 10px;
   }
   tr{
     background-color: white;
@@ -94,7 +119,6 @@ section{
   }
 
   .text-cont{
-
     float: left;
     width: auto;
     margin-left: 15px;
