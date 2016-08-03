@@ -26,3 +26,16 @@ input#user_password_confirmation {
     width: 75%;
     color:white;
 }
+
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+input#user_name,
+input#user_email,
+input#user_password,
+input#user_password_confirmation {
+  padding: 8px;
+  width:50%;
+}
