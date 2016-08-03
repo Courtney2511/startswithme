@@ -50,12 +50,26 @@ section{
 /*******************/
 /*   Posts-index   */
 /*******************/
-
+.text-cont{
+  border-left: solid 1px #cdcdcd;
+}
 // CONTAINER
 
 .posts-wrapper{
   width: 960px;
   margin: 0 auto;
+  padding: 0;
+  th{
+
+
+  }
+  table{
+    border-spacing: 20px;
+
+  }
+  tr{
+    background-color: white;
+  }
 }
 
 .post-cont{
@@ -80,6 +94,7 @@ section{
   }
 
   .text-cont{
+
     float: left;
     width: auto;
     margin-left: 15px;

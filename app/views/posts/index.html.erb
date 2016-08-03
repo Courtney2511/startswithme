@@ -1,33 +1,98 @@
+<!-- <div class="posts-wrapper">
+   <table>
+     <tbody>
+       <% @posts.reverse_each do |post| %>
+       <tr>
+         <% if post.image? %>
+          <th width="10%">
+
+              <%= image_tag(post.image.thumb) %>
+
+          </th>
+          <td>
+
+              <div class="title-cont">
+                <p>
+                  <%= link_to post.title, post_path(post) %>
+                </p>
+              </div>
+              <div class="author-cont">
+                <p>
+                  by <%= link_to post.user.name, user_path(post.user) %>
+                </p>
+              </div>
+              <div class="comment-cont">
+                <p>
+                  <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+                </p>
+              </div>
+              <% if post.user == current_user %>
+                <div class="action-container">
+                  <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+                </div>
+              <% end %>
+
+          </td>
+          <% else %>
+            <th>
+              <div class="text-cont">
+                <div class="title-cont">
+                  <p>
+                    <%= link_to post.title, post_path(post) %>
+                  </p>
+                </div>
+                <div class="author-cont">
+                  <p>
+                    by <%= link_to post.user.name, user_path(post.user) %>
+                  </p>
+                </div>
+                <div class="comment-cont">
+                  <p>
+                    <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
+                  </p>
+                </div>
+                <% if post.user == current_user %>
+                  <div class="action-container">
+                    <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
+                  </div>
+                <% end %>
+              </div>
+            </th>
+            <% end %>
+
+       </tr>
+          <% end %>
+     </tbody>
+   </table>
+
+</div> -->
 <div class="posts-wrapper">
-   <% @posts.reverse_each do |post| %>
-    <div class="post-cont">
+
+
+<table>
+  <tbody>
+    <% @posts.reverse_each do |post| %>
       <% if post.image? %>
-        <div class="img-cont">
-          <%= image_tag(post.image.thumb) %>
-        </div>
-      <% end %>
-      <div class="text-cont">
-        <div class="title-cont">
-          <p>
+      <div class="sdf">
+        <tr>
+          <th>
+            <%= image_tag(post.image.thumb) %>
+          </th>
+          <td>
             <%= link_to post.title, post_path(post) %>
-          </p>
+          </td>
+        </tr>
         </div>
-        <div class="author-cont">
-          <p>
-            by <%= link_to post.user.name, user_path(post.user) %>
-          </p>
-        </div>
-        <div class="comment-cont">
-          <p>
-            <%= post.comments.length %> comment<% if post.comments.length > 1 %>s<% end %>
-          </p>
-        </div>
-        <% if post.user == current_user %>
-          <div class="action-container">
-            <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'} %>
-          </div>
-        <% end %>
+      <% else %>
+      <div class="">
+        <tr>
+          <td colspan="2">
+            <%= link_to post.title, post_path(post) %>
+          </td>
+        </tr>
       </div>
-    </div>
-  <% end %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
 </div>
