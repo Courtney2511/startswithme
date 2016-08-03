@@ -109,15 +109,16 @@ section{
 .action-container{
   font-size: 13px;
 }
-
+/***************/
 /* create post */
+/***************/
 
+/* banner */
 .new-post-banner{
   width: 100%;
   height: 400px;
   position: relative;
   text-align: center;
-
 
   #new-post-banner-section{
     height: 100%;
@@ -126,6 +127,7 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   #post-page-icon{
     width: 50px;
     height: 50px;
@@ -142,17 +144,7 @@ section{
     width:100%;
     bottom:0;
     text-align:center;
-
   }
-}
-.inputimage{
-
-}
-#post_image{
-  font-size: 15px;
-
-
-
 }
 
 .page-container{
@@ -180,10 +172,10 @@ section{
     border: 1px solid #e1e8ed !important;
     height: 50px;
     width: 600px;
+    font-size: 20px;
 
   }
   label{
-    margin-right: 10;
     padding: 10px 20px;
     line-height: 35px;
     color: white;
@@ -195,7 +187,26 @@ section{
     float: left;
     display: inline;
   }
+}
 
+#create-text,
+#create-image{
+  margin-right: 30px;
+}
+
+/* create-button */
+.create-action{
+  width: 560px;
+  margin-left: 150px;
+  color: white;
+  position: relative;
+  vertical-align: top;
+  height: 55px;
+  font-size: 22px;
+  text-align: center;
+  background: #00B1CB;
+  border: 0;
+  cursor: pointer;
 }
 
 #error_explanation{
