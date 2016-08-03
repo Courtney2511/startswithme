@@ -1,68 +1,98 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.spacing{
+  height:9%;
+  width:100%;
+}
 
 
-
-.top-screen{
-  background-image: url('friends.jpeg');
+/********************/
+/*   CONTAINER      */
+/********************/
+// this contains the bkg img
+.landing-container{
+  width:100%;
+  height:91%;
+  background-image: url('body-bkg-img.jpg');
   background-size: cover;
   background-attachment: fixed;
+}
+
+.landing-content-container{
   width:100%;
   height:100%;
-}
-/*******************/
-/*   Banner        */
-/*******************/
-.banner{
-  position: relative;
-  width: 50%;
-  float: right;
+  overflow:hidden;
 }
 
-.banner.banner-text{
-  position: absolute;
-  // top: 15px;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
-  width:100%;
+/********************/
+/*   LEFT SCREEN    */
+/********************/
+.landing-left{
+  width:60%;
+  height:100%;
+  float:left;
 }
 
-/* Slideshow container */
 .slideshow-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -300%);
-  text-align: center;
-  z-index: 0;
   width: 100%;
+  height: 90%;
+  position:relative;
 }
 
-.mySlides p{
-  position: absolute;
+// TEXT CONTAINER
+.mySlides.fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 10%;
+}
+
+.mySlides img{
+  width:100px;
+}
+
+// TEXT TITLE
+.mySlides h1{
+  font-weight: lighter;
   color: white;
-  font-family: 'Marck Script', cursive;
-  text-align: center;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  top: -2000%;
-  font-size:30px;
+  text-transform: uppercase;
+  width:50%;
+  padding-top: 20px;
+  margin: 0;
 }
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+
+.mySlides .title-line{
+  border-bottom: 2px solid #46c6d9;
+  width: 100px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
+
+// TEXT Paragraph
+.mySlides p{
+  margin:0;
+  font-weight: lighter;
+  color: white;
+  padding-right:25%;
+}
+
 
 /* The dots/bullets/indicators */
+.slider-dot {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 10%;
+}
+
 .dot {
   cursor:pointer;
   height: 13px;
   width: 13px;
   margin: 0 2px;
-  background-color: #fff;
+  border: 2px solid #46c6d9;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -90,161 +120,104 @@
   to {opacity: 1}
 }
 
-/*******************/
-/* login container */
-/*******************/
 
 
-.modal-signin {
-  width: 50%;
+/********************/
+/* RIGHT SCREEN     */
+/********************/
+.landing-right{
+  width: 40%;
   height: 100%;
+  float: right;
   overflow: auto;
-  position: relative;
-  float: left;
 }
 
-//these styles below styles the background color of screen when modal is clicked
-// .modal-signin,
-// .modal-signup{
-//   display: none;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(30,30,30,0.8);
-//   z-index:2;
-// }
-
-
-/*******************/
-/* form container  */
-/*******************/
-
-// this style is to make form look cool on pop-up
-// .getstarted {
-//     display: block;
-//     width: 300px;
-//     height: 20em;
-//     background-color: rgba(53, 52, 67, 0.8);
-//     position: absolute;
-//     margin: auto;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     overflow:hidden;
-// }
+.modal-signin{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 
 form.getstarted {
-  float: left;
-  background-color: rgba(0, 70, 111, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-
-}
-/********************/
-/* form header part */
-/********************/
-
-.login-header{
-  width: 100%;
+  height: 91%;
+  width: 90%;
+  background-color: rgba(0, 177, 203, 0.5);
+  text-align: center;
   position: relative;
+  text-align: center;
+  margin:5%;
 }
+
+.login-fields {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/********************/
+/* form fields      */
+/********************/
 
 .login-header h1{
-  margin: 20px 0 30px 0;
-  padding: 0;
-  color: #c1c1c1;
-  text-align: center;
+  margin: 0;
   font-weight: lighter;
-  display: block;
-  font-size:20px;
-}
-.login-header p{
-  border-radius: none;
-  height: 1em;
-  position: relative;
-  line-height: 0;
-  font-size: 15px;
-  padding-left: 92%;
-}
-// this style is for the the 'x' button to close modal
-// .login-header .close{
-//   border: none;
-//   border-radius: none;
-//   outline: none;
-//   height: 1em;
-//   position: relative;
-//   top: 0.25em;
-//   background-color: rgba(255,255,255,0);
-//   color: #c1c1c1;
-//   line-height: 0;
-//   display: block;
-//   margin-left: auto;
-//   font-size:15px;
-//   margin-right:15px;
-// }
-
-.login-header .close:hover{
-  color: #00B1CB;
+  color: white;
 }
 
-.login-header .close{
-  display:none;
+// alert message on error
+p#alert {
+    color: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    font-weight: lighter;
+    background-color: rgba(255,255,255,0.5);
 }
 
-
-/********************/
-/* login fields     */
-/********************/
 input#email,
 input#password {
-    width: 49%;
-    border: none;
+    border: 1px solid white;
     border-radius: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-align: center;
-    outline: none;
-    border: none;
+    padding: 10px;
+    width: 75%;
+    color:white;
 }
+
+.login-fields input[type="text"], textarea,
+.login-fields input[type="password"], textarea {
+  background-color: transparent;
+  font-size:15px;
+}
+
+.login-fields input[type=text]:focus,
+.login-fields input[type=password]:focus {
+    background-color: lightblue;
+}
+
+// changes the placeholder text styles
+.login-fields ::-webkit-input-placeholder {
+   color: white;
+   font-weight:lighter;
+   font-size:15px;
+}
+
+
 /********************/
 /* login button     */
 /********************/
 
-.actions{
-  width: 48%;
-  border: none;
-  background: linear-gradient(141deg, #bdf6f2 0%, #43cede 51%, #38abd6 75%);
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  border-radius: 20px;
-  font-weight: lighter;
-  outline: none;
-  text-align: Center;
-  margin: 0 auto;
-}
-.actions:active,
-.actions:focus {
-    box-shadow: 0 0 0 2px #bdf6f2;
-}
-.session-input.error {
-    box-shadow: 0 0 0 2px #bc2a39;
-}
-
-input.login-submit {
-  border: none;
-  text-align: center;
-  background-color: rgba(255,255,255,0);
-  color: white;
-  font-weight: lighter;
-  outline:none;
-  width:100%;
-  padding:0;
+input.actions {
+    border: none;
+    width: 75%;
+    padding: 13px;
+    border-radius: 20px;
+    background-color: #1E7F8E;
+    color: white;
+    font-weight: lighter;
+    font-size:15px
 }
 
 /********************/
@@ -257,14 +230,102 @@ input.login-submit {
 }
 
 .extra-login-stuff a{
-  font-size:10px;
-  color: #c1c1c1;
+  color: white;
   font-weight: lighter;
+  line-height:30px;
+  font-size:15px;
 }
 
 .extra-login-stuff a:hover{
-  color: #00B1CB;
+  color: #1E7F8E;
 }
-.extra-login-stuff a:hover {
-    color: #00B1CB;
+
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+
+// tablet view
+@media (max-width: 980px) {
+  .landing-content-container{
+    overflow:hidden;
+  }
+
+  // left side of screen
+  .landing-left{
+    width:100%;
+    height:40%;
+  }
+  .slideshow-container {
+    text-align:center;
+  }
+
+  .mySlides img {
+    width: 70px;
+  }
+  .mySlides h1{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+  }
+  .mySlides .title-line {
+    border-bottom: 2px solid #46c6d9;
+    width: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 45%;
+    margin-right: 45%;
 }
+  .mySlides p{
+    width:100%;
+    text-align:center;
+    padding-right:0;
+    font-size: 15px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  // right side of screen
+  .landing-right{
+    width: 100%;
+    height: 60%;
+  }
+  form.getstarted {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 177, 203, 1);
+    margin:0;
+  }
+  .login-header h1 {
+    margin: 0;
+    font-weight: lighter;
+    color: white;
+    font-size:20px;
+  }
+
+  .extra-login-stuff a {
+    font-size: 13px;
+  }
+
+  input.actions {
+    padding: 10px;
+    font-size:13px;
+    width:50%;
+  }
+
+  input#email, input#password {
+    padding: 8px;
+    width:50%;
+  }
+}
+
+// mobile view
+// @media (max-width: 565px) {
+//   .landing-right{
+//     display:none;
+//   }
+// }

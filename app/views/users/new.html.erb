@@ -1,41 +1,106 @@
 <!------------------>
 <!-- signup modal -->
 <!------------------>
-<!-- <div class="modal-signup"> -->
-<%= form_for @user do |f| %>
-  <!-- notice if failure to input valid data -->
-
-    <% if @user.errors.any? %>
-       <ul>
-        <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    <%end%>
+<div class="spacing"></div>
+  <div class="landing-container">
+    <div class="landing-content-container">
+      <!-- LEFT side of screen -->
+      <div class="landing-left">
+        <div class="slideshow-container"> <!--container for images & circles-->
+          <!-- this div contains slider messages-->
+          <div class="mySlides fade">
+            <%= image_tag("friends_icon.png") %>
+            <h1>Meet friends</h1>
+            <div class="title-line"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+          </div>
+          <div class="mySlides fade">
+            <%= image_tag("aliance_icon.png") %>
+            <h1>Connect through lived experiences</h1>
+            <div class="title-line"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+          </div>
+          <div class="mySlides fade">
+            <%= image_tag("friends_icon.png") %>
+            <h1>Meet friends</h1>
+            <div class="title-line"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+          </div>
+          <!--  this div contains the dots at bottom for slider -->
+          <div class="slider-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT side of container -->
+      <div class="landing-right">
+        <div class="modal-signin">
+          <%= form_for @user, :html => {:class => "getstarted"} do |f| %>
+            <div class="login-fields">
+              <div class="login-header">
+                <h1>SIGN UP</h1>
+              </div>
+              <div class="field">
+                <!-- notice if failure to input valid data -->
+                  <% if @user.errors.any? %>
+                     <ul>
+                      <% @user.errors.full_messages.each do |message| %>
+                      <li class="signup-alert"><%= message %></li>
+                      <% end %>
+                    </ul>
+                  <%end%>
+                <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
+              </div>
+              <div class="field">
+                <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
+              </div>
+              <div class="field">
+                <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
+              </div>
+              <div class="field">
+                <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
+              </div>
+              <!-- Sign Up Button -->
+              <div class="button">
+                <%= f.submit 'SIGN UP', :class => 'actions' %>
+              </div>
+              <div class="extra-login-stuff">
+                <%=link_to "login", new_session_path %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-  <!-- Sign Up Header -->
-  <div class="login-header">
-    <!-- <p class="close">x</p> -->
-    <h1>SIGN UP</h1>
-  </div>
-  <!-- Sign Up Fields -->
-  <div class="field">
-    <%= f.text_field :name, class:"session-input", :placeholder => "name" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :email, class:"session-input", :placeholder => "email" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password, class:"session-input", :placeholder => "password" %>
-  </div>
-  <div class="field">
-    <%= f.password_field :password_confirmation, class:"session-input", :placeholder => "confirm password" %>
-  </div>
-  <!-- Sign Up Button -->
-  <div class="button">
-    <%= f.submit 'SIGN UP', :class => 'actions actions-signup' %>
-  </div>
-<!-- </div> -->
-<% end %>
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+  </script>

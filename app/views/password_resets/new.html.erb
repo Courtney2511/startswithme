@@ -1,6 +1,91 @@
-<%= form_tag password_resets_path, method: :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %> <%= submit_tag "Reset my password!" %>
+<div class="spacing"></div>
+<div class="landing-container">
+  <div class="landing-content-container">
+    <!-- LEFT side of screen -->
+    <div class="landing-left">
+      <div class="slideshow-container"> <!--container for images & circles-->
+        <!-- this div contains slider messages-->
+        <div class="mySlides fade">
+          <%= image_tag("friends_icon.png") %>
+          <h1>Meet friends</h1>
+          <div class="title-line"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+        </div>
+        <div class="mySlides fade">
+          <%= image_tag("aliance_icon.png") %>
+          <h1>Connect through lived experiences</h1>
+          <div class="title-line"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+        </div>
+        <div class="mySlides fade">
+          <%= image_tag("friends_icon.png") %>
+          <h1>Meet friends</h1>
+          <div class="title-line"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque. Donec ante quam, fringilla et mi in, rutrum luctus turpis. Mauris facilisis viverra purus, quis ullamcorper nibh pharetra ac. Vestibulum a posuere est. Vivamus lacinia eros ut ex aliquam, et vulputate lectus volutpat.</p>
+        </div>
+        <!--  this div contains the dots at bottom for slider -->
+        <div class="slider-dot">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT side of screen -->
+    <div class="landing-right">
+      <div class="modal-signin">
+        <!-- Form -->
+        <%= form_tag password_resets_path, class: "getstarted", method: :post do %>
+          <div class="login-fields">
+            <div class="login-header">
+                <h1>FORGOT PASSWORD</h1>
+                <p> Forgot password? No problem!
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque enim nisl, placerat nec risus sit amet, rhoncus iaculis neque.
+                </p>
+            </div>
+            <div class="field">
+              <%= text_field_tag :email, params[:email], class:"session-input", :placeholder => "email"%><br>
+            </div>
+            <div>
+              <%= submit_tag "reset password", class: "actions" %><br>
+            </div>
+            <div class="extra-login-stuff">
+              <%=link_to "Login", new_session_path %><br>
+              <%=link_to "Sign Up", new_user_path %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  }
+</script>

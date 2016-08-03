@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       render :new
     end
 
+# this is only used for the SIGN UP modal
     # @user = User.new(user_params)
     # respond_to do |format|
     #   if @user.save
