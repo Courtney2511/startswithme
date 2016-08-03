@@ -32,10 +32,13 @@ input#user_password_confirmation {
 /*  Media Queries   */
 /********************/
 
-input#user_name,
-input#user_email,
-input#user_password,
-input#user_password_confirmation {
-  padding: 8px;
-  width:50%;
+// tablet view
+@media (max-width: 980px) {
+  input#user_name,
+  input#user_email,
+  input#user_password,
+  input#user_password_confirmation {
+    padding: 8px;
+    width:50%;
+  }
 }
