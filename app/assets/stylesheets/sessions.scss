@@ -239,3 +239,49 @@ input.actions {
 .extra-login-stuff a:hover{
   color: #1E7F8E;
 }
+
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+
+
+@media (max-width: 760px) {
+  // left side of screen
+  .landing-left{
+    width:100%;
+    height:70%;
+  }
+  .slideshow-container {
+    text-align:center;
+  }
+  .mySlides h1{
+    width:100%;
+    text-align:center;
+  }
+  .mySlides .title-line {
+    border-bottom: 2px solid #46c6d9;
+    width: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+  .mySlides p{
+    width:100%;
+    text-align:center;
+  }
+
+  // right side of screen
+  .landing-right{
+    width: 100%;
+    height: 70%;
+  }
+  form.getstarted {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 177, 203, 1);
+    margin:0;
+  }
+}
