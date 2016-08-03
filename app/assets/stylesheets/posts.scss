@@ -148,7 +148,7 @@ section{
 }
 
 .page-container{
-  margin: 10px auto 10px;
+  margin: 30px auto 30px;
   width: auto;
   max-width: 860px;
 }
@@ -181,7 +181,8 @@ section{
     line-height: 15px;
     color: white;
     // width: 80px;
-    background-color: #00B1CB;
+    // background-color: #00B1CB;
+        background: linear-gradient(to right, #00B1C0, rgba(0, 177, 203, 0.5) 75%);
     font-weight: lighter;
     text-transform: uppercase;
     font-size:15px;
@@ -225,6 +226,8 @@ section{
   cursor: pointer;
   width: 98%;
   border-radius:20px;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 #error_explanation{
