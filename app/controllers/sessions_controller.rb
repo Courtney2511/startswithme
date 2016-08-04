@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
       redirect_to posts_path
     else
       @user = User.new
-      flash.now[:alert] = "Invalid email or apssword"
+      flash.now[:alert] = "Invalid email or password"
       render "new"
     end
   end
