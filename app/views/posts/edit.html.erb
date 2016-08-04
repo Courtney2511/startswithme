@@ -1,3 +1,7 @@
-<h1>Edit Post#<%= @post.user_id %></h1>
-
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <img src= <%=image_path('post-page-icon.png')  %> id='post-page-icon'/>
+    <h1>EDIT A POST</h1>
+  </section>
+</div>
 <%= render 'form' %>
