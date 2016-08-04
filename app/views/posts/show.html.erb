@@ -1,3 +1,4 @@
+<div class="spacing"></div>
 <div class="page-container">
   <div class="page-canvas">
     <div class="show-container">
@@ -17,7 +18,7 @@
       <% if @post.image %>
         <div class="post-image-container">
           <!-- Displaying the uplaoded image (in the "public/uploads/post/image" directory)-->
-          <p><%= image_tag(@post.image) %></p>
+          <p style="text-align: center;"><%= image_tag(@post.image) %></p>
         </div>
       <% end %>
 
