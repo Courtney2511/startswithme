@@ -73,6 +73,7 @@ section{
   margin: 0 auto;
   padding: 0;
   th{
+    width: 75px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 10px 30px 10px 10px;
@@ -88,6 +89,7 @@ section{
 
   }
   table{
+    width: 100%;
     border-spacing: 20px;
     border-collapse: separate;
     border-spacing: 0 10px;
