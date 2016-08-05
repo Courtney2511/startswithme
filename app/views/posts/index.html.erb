@@ -18,7 +18,7 @@
                 </div>
                 <div class="author-cont">
                   <p>
-                    posted <%= post.time_passed(Time.now) %> by <%= link_to post.user.name, user_path(post.user) %>
+                    posted <%= post.convert_hours %> <%= post.min_hour_day.pluralize(post.convert_hours) %> ago by <%= link_to post.user.name, user_path(post.user) %>
                   </p>
                 </div>
                 <div class="comment-cont">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="author-cont">
                   <p>
-                    posted <%= post.time_passed(Time.now) %> by <%= link_to post.user.name, user_path(post.user) %>
+                    posted <%= post.convert_hours %> <%= post.min_hour_day.pluralize(post.convert_hours) %> ago by <%= link_to post.user.name, user_path(post.user) %>
                   </p>
                 </div>
                 <div class="comment-cont">
