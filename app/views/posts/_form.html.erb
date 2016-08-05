@@ -1,10 +1,10 @@
-<div class="page-container">
+<div class="page-container animated fadeInUp">
   <div class="page-canvas">
     <div class="create-container">
       <%= form_for @post do |f| %>
         <div class="create-field">
           <div class="label">
-            <%= f.label "title*"  %>
+            <%= f.label "title*" %>
           </div>
           <div class="textarea">
             <% if @post.errors.any? %>
