@@ -1,35 +1,47 @@
 
 
 <%= form_for @user do |f| %>
-  <% if @user == current_user %>
-    <div class="field">
-  <%= image_tag(@user.profile_picture) %>
-      <%= f.label :change_your_profile_picture %>
-      <%= f.file_field :profile_picture %>
-    </div>
-    <div class="field">
-    <h4><%= @user.description %></h4>
-
-      <%= f.label :edit_your_description %>
-      <%= f.text_area :description, class: "description-text-box" %>
-    </div>
-    <div class="action" id="update-user">
-      <%= f.submit class: "create-action update-user-button"%>
-    </div>
+<table class="user-edit-table">
+  <tbody>
+    <% if @user == current_user %>
+      <tr>
+        <th>
+          <div class="field" id="user-image-container">
+            <%= image_tag(@user.profile_picture) %>
+            <%= f.label :change_your_profile_picture %>
+            <%= f.file_field :profile_picture %>
+          </div>
+        </th>
+        <td valign="top">
+          <div class="field" id="main">
+            <h4><%= f.label :description %></h4>
+            <%= f.text_area :description, class: "description-text-box" %>
+          </div>
+        </td>
+      </tr>
     <% else %>
 
-  <% end %>
-
-  <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
     <% end %>
+
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this image from being uploaded:</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+    <% end %>
+
+
+
+
+  </tbody>
+</table>
+<div class="action" id="update-user">
+  <%= f.submit class: "create-action update-user-button"%>
+</div>
   <% end %>
-<% end %>

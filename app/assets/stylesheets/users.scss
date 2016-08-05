@@ -44,6 +44,22 @@ input#user_password_confirmation {
 }
 
 /* EDIT USER PAGE */
+.user-edit-table{
+  border-spacing: 40px 0;
+  td{
+
+    padding-top: 20px;
+  }
+}
+#main{
+  margin: 0;
+  h4{
+
+    text-align: left;
+    margin: 10px 0;
+  }
+}
+
 #update-user {
   text-align: center;
 }
