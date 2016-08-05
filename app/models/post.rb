@@ -9,7 +9,14 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
 
-  def posted_hours_ago(time)
-    ((time - created_at)/1.hour).round
+  def time_passed(time)
+    hours_passed = ((time - created_at)/1.hour)
+    if hours_passed < 1
+      return "#{(hours_passed * 60).round} minutes ago"
+    elsif hours_passed > 24
+      return "#{(hours_passed / 24).round} days ago"
+    else
+      return "#{hours_passed.round} hours ago"
+    end
   end
 end
