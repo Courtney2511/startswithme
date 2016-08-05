@@ -9,4 +9,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
 
+  def posted_hours_ago(time)
+    ((time - created_at)/1.hour).round
+  end
 end
