@@ -25,7 +25,7 @@
       <!-- Displays link if it exists -->
       <% if @post.link %>
         <div class="post-link-container">
-          <p><%= @post.link %></p>
+          <div class="embed-container"><%= embed(@post.link) %></div>
         </div>
       <% end %>
 
