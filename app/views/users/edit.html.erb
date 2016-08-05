@@ -1,7 +1,14 @@
+
+<div class="spacing"></div>
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
-    <img src=<%=image_path('post-page-icon.png') %> id='post-page-icon'/>
-    <h1>EDIT A PROFILE</h1>
+    <img src= <%=image_path('post-page-icon.png')  %> id='post-page-icon'/>
+    <h1>EDIT YOUR PROFILE</h1>
   </section>
 </div>
-<%= render 'user_form' %>
+
+<div class="page-container">
+    <div class="page-canvas">
+        <%= render 'user_form' %>
+    </div>
+</div>
