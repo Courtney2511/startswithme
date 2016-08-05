@@ -42,3 +42,19 @@ input#user_password_confirmation {
     width:50%;
   }
 }
+
+/* EDIT USER PAGE */
+#update-user {
+  text-align: center;
+}
+
+.update-user-button {
+  width: 300px;
+  margin: 0;
+}
+
+.description-text-box {
+  min-height: 150px;
+  width: 400px;
+  overflow: auto;
+}
