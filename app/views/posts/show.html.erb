@@ -56,8 +56,8 @@
       <!-- if you're the owner of the post, you can delete or edit -->
       <div class="post-show-actions-container">
         <% if @post.user == current_user %>
-          <%= link_to 'Edit', edit_post_path(@post) %> |
-          <%= link_to 'Delete', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
+          <%= link_to 'EDIT', edit_post_path(@post) %> |
+          <%= link_to 'DELETE', @post, method: :delete, data: {confirm: 'Are you sure?'} %>
         <% end %>
       </div>
     </div>
