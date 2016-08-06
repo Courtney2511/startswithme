@@ -1,14 +1,41 @@
 $( document ).ready(function() {
 // LOGIN PAGE
+
+
+// creates a pulse effect when either input fields are clicked
+ $('input#email').on('click',function(){
+    $('input#email').addClass('animated pulse');
+    if ($('input#email').hasClass('animated pulse')){
+      $('input#password').removeClass('animated pulse');
+    }
+  })
+
+$('input#password').on('click',function(){
+  $('input#password').addClass('animated pulse');
+  if ($('input#password').hasClass('animated pulse')){
+    $('input#email').removeClass('animated pulse');
+  }
+})
+
+$('.actions').on('click',function(){
+  $('.actions').addClass('animated pulse');
+});
+
+
+
+
+
+
+
   // prevent default if user doesn't input anything into fields
   // $('.actions').on('click', function(){
-    // if there's no value in <input>, then prevent default on login
+  // //   if there's no value in <input>, then prevent default on login
   //   if($("#email").val() == "" || $("#password").val() == ""){
   //     event.preventDefault();
-  //     $('.session-input').addClass("error");
+  //     $('.session-input').addClass('animated pulse');
   //   }
   //   $('.session-input').on('click',function(){
-  //     $(this).removeClass('error');
+  //     $(this).removeClass('animated pulse');
   //   });
   // });
 
