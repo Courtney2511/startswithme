@@ -168,18 +168,36 @@ section{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    width:100%;
   }
 
-  #post-page-icon{
-    width: 50px;
-    height: 50px;
-    display: block;
-    bottom: 50px;
-    text-align:center;
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%,-50%)
+  .banner-heading-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: #1E7F8E; */
+    position: relative;
+    opacity: 0.5;
+    background: linear-gradient(#000000, #46c6d9);
   }
+  .banner-heading{
+    position: absolute;
+    font-size: 1000%;
+    margin: 0;
+    top: 50%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  // #post-page-icon{
+  //   width: 50px;
+  //   height: 50px;
+  //   display: block;
+  //   bottom: 50px;
+  //   text-align:center;
+  //   position:absolute;
+  //   left: 50%;
+  //   transform: translate(-50%,-50%)
+  // }
   h1{
     color: white;
     position:absolute;

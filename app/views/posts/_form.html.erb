@@ -3,17 +3,17 @@
     <div class="create-container">
       <%= form_for @post do |f| %>
         <div class="create-field">
+          <% if @post.errors.any? %>
+          <div id="error_explanation">
+            <% @post.errors.full_messages.each do |msg| %>
+              <%= msg %>
+            <% end %>
+          </div>
+          <% end %>
           <div class="label">
             <%= f.label "title*" %>
           </div>
           <div class="textarea">
-            <% if @post.errors.any? %>
-            <div id="error_explanation">
-              <% @post.errors.full_messages.each do |msg| %>
-                <%= msg %>
-              <% end %>
-            </div>
-            <% end %>
             <%= f.text_area :title %>
           </div>
         </div>

@@ -17,6 +17,7 @@ $('input#password').on('click',function(){
   }
 })
 
+// if form is filled out correctly, the
 $('.actions').on('click',function(){
   $('.actions').addClass('animated pulse');
 });
@@ -25,14 +26,11 @@ $('.actions').on('click',function(){
 
 
 
-
-
   // prevent default if user doesn't input anything into fields
   // $('.actions').on('click', function(){
-  // //   if there's no value in <input>, then prevent default on login
+  // if there's no value in <input>, then prevent default on login
   //   if($("#email").val() == "" || $("#password").val() == ""){
   //     event.preventDefault();
-  //     $('.session-input').addClass('animated pulse');
   //   }
   //   $('.session-input').on('click',function(){
   //     $(this).removeClass('animated pulse');
