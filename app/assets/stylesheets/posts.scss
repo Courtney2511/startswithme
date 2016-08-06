@@ -165,8 +165,11 @@ section{
   width:100%;
   position:fixed;
   z-index:1;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 
   #new-post-banner-section{
     height: 431px;
@@ -190,8 +193,11 @@ section{
     margin: 0;
     width: 100%;
     color: rgba(255, 255, 255, 0.5);
-    -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
   }
 
   // #post-page-icon{
@@ -223,11 +229,12 @@ section{
 .new-post-banner.smaller h1{
   top: 0%;
   font-size: 300%;
-  background: linear-gradient(#46c6d9, #000000);
+  // background: linear-gradient(#46c6d9, #000000);
 }
 
 
 // Page Container
+
 .page-container{
   margin: 30px auto 30px;
   width: auto;
