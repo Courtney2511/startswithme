@@ -163,13 +163,21 @@ section{
   text-align: center;
 
   #new-post-banner-section{
-    height: 100%;
+    height: 431px;
     background-image: url('desktop-banner-img.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
   }
+
+  .smaller {
+    height: 75px;
+}
 
   .banner-heading-container{
     width: 100%;
