@@ -11,7 +11,7 @@
 <div class="page-container">
   <div class="page-canvas">
     <div class="show-container">
-
+      <!--  Post title -->
       <div class="post-title-container">
         <%= @post.title %>
       </div>
@@ -38,10 +38,16 @@
         </div>
       <% end %>
 
-      <div class="post-show-author-container">
-        <p>
-          Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
-        </p>
+      <!-- Displays author name  -->
+      <div class="author-info-container">
+        <div class="user_profile_pic">
+          <img src="https://openclipart.org/image/2400px/svg_to_png/223797/IwanPigSVG.png" id='post-page-user-pic'/>
+        </div>
+        <div class="post-show-author-container">
+          <p>
+            Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+          </p>
+        </div>
       </div>
 
       <!-- if you're the owner of the post, you can delete or edit -->
@@ -87,7 +93,4 @@
       </div>
     <% end %>
   </div>
-  <div class="back-link">
-    <%= link_to 'Back', posts_path %>
-  </div>
-  </div>
+</div>
