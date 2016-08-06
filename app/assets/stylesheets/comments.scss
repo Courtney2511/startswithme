@@ -31,12 +31,25 @@
       text-align: left;
     }
 }
-.submit-button{
-  text-align: center;
+
+.new-comment-send-button{
+  width: 99%;
+  padding-left: 0;
+  padding-right: 0;
+  color: white;
+  height: 31px;
+  font-size: 15px;
+  background: #00B1CB;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
+
 #comment_comment{
   font-size: 18px;
-  width: 800px;
+  width: 98%;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #e1e8ed !important;

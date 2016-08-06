@@ -1,3 +1,4 @@
+<!-- banner -->
 <div class="spacing"></div>
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
@@ -7,7 +8,9 @@
     <h1 class="banner-heading animated-title fadeIn">EXPLORE</h1>
   </section>
 </div>
+<!-- div not in use - only need it is wanting to use with post.js -->
 <div class="spacing-under-banner"></div>
+<!-- page content -->
 <div class="page-container">
   <div class="page-canvas">
     <div class="show-container">
@@ -66,12 +69,9 @@
 
 
 
-
+<!-- Post comments -->
 <div class="new-comment-container">
-
   <div class="new-comment-wrapper">
-
-
     <%= form_for([@post, @comment]) do |f| %>
       <% if @post.errors.any? %>
         <div id="error_explanation">
@@ -88,9 +88,7 @@
         <h3><%= f.label "New Comment" %></h3>
         <%= f.text_area :comment  %>
       </div>
-      <div class="submit-button">
-        <%= f.submit class: 'actions' %>
-      </div>
+      <%= f.submit class: 'new-comment-send-button' %>
     <% end %>
   </div>
 </div>
