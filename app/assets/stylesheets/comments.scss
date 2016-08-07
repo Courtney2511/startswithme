@@ -91,10 +91,13 @@
   font-size: 13px;
   margin: 5px 0;
   float: left;
+  color: #7f7f7f;
+  font-weight:lighter;
 
 }
 .comment-comment-containter{
   width: 750px;
+  color: #7f7f7f;
 }
 .profile-container{
   float: left;
@@ -117,4 +120,10 @@
   margin-bottom: 5px;
   width: 50px;
   height: 50px;
+}
+
+.post-cont a {
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size: 15px;
 }

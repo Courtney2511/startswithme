@@ -113,7 +113,11 @@ section{
   box-shadow: 1px 1px 1px #cdcdcd;
 
   a{
-    text-transform: none;
+    .post-cont a {
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size: 15px;
+    }
   }
 
   .img-cont{
