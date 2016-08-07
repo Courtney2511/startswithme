@@ -75,15 +75,14 @@
   }
 }
 
-// .author-container{
-//   font-size: 13px;
-// }
 .comment-text-container{
   float: left;
   font-size: 18px;
   width: 70%;
   font-weight: lighter;
   padding-left: 30px;
+  padding-bottom: 15px;
+  // border-left: 1px solid #d4d4d4;
 }
 
 .time-container{
@@ -97,11 +96,14 @@
 .comment-comment-containter{
   width: 100%;
   color: #7f7f7f;
+  border-left: 1px solid #d4d4d4;
+  padding-left: 30px;
 }
 
 .comment-comment-containter p{
   margin: 0;
   margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .profile-container{
@@ -110,8 +112,6 @@
   width: 10%;
   text-align: center;
   margin: 0 10px 10px 0;
-  border-right: 1px solid #d4d4d4;
-  padding-right: 30px;
 
 }
 

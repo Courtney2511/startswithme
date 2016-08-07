@@ -17,20 +17,19 @@
         <div class="comment-text-container">
           <div class="comment-comment-containter">
             <p><%= comment.comment %></p>
-          </div>
-
-          <div class="actions-container">
+            <br>
             <% if comment.user == current_user %>
             <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
             <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
             <br>
-            Added on: <%= comment.created_at %>
+            <p>Added on: <%= comment.created_at %></p>
           </div>
+
+          <!-- <div class="actions-container">
+
+          </div> -->
         </div>
-        <!-- <div class="time-container">
-            Added on: <%= comment.created_at %>
-        </div> -->
       </div>
     <% end %>
   <% end %>
