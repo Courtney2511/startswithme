@@ -64,9 +64,7 @@ footer{
 
 
 .description {
-  padding-left: 20px;
   padding-right: 20px;
-  padding: none;
   float: left;
 }
 
@@ -124,6 +122,11 @@ footer{
   padding-top: 10px;
 }
 
+.post_title a{
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
 .post_time {
   text-align: center;
   padding-bottom: 20px;
@@ -138,30 +141,31 @@ footer{
 .blog-entry {
   float:left;
   width:30%;
-  margin-bottom:1em;
-
+  margin: 5% 0;
 }
 
 .blog-entry:nth-of-type(3n+1) {
   padding-right:1%;
+  text-align: center;
 }
 
 .blog-entry:nth-of-type(3n+2) {
   padding:0 .5%;
+  text-align: center;
 }
 .blog-entry:nth-of-type(3n+3) {
   padding-left:1%;
+  text-align: center;
 }
 
 .blog-entry img {
-  width:100%;
-  height:auto;
+  width:50%;
   margin:0;
 }
 
-.blog-entry img:hover {
-  color: #7E97C8;
-}
+// .blog-entry img:hover {
+//   color: #7E97C8;
+// }
 
 .blog-entry:nth-of-type(3n+4) {
   clear:left;
