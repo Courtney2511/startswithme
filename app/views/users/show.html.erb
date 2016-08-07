@@ -9,8 +9,6 @@
 
 
 <section class="container">
-
-
     <div class="profile_pic">
       <%= image_tag(@user.profile_picture) %>
     </div>
@@ -24,7 +22,7 @@
 
 <section class="expression_container">
 
-  <h3 class="expression_title">Posts by <%= @user.name %></h3>
+  <h4 class="expression_title">Posts by <%= @user.name %></h4>
 
     <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
     <% @user.posts.each do |post| %>

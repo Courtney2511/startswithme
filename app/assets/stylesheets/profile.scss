@@ -107,14 +107,16 @@ footer{
 }
 
 .expression_container {
-  float: right;
+  float: left;
   width: 48%;
   overflow: auto;
-  padding-right: 20px;
+  padding: 5%;
 }
 
 .expression_title {
-  padding-top: 25px;
+  font-size: 40px;
+  font-weight: lighter;
+  margin:0;
 }
 
 .post_title {
