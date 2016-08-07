@@ -84,10 +84,7 @@ footer{
 }
 
 .profile_pic img {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  width: 100%;
 }
 
 .edit-button {
@@ -103,8 +100,10 @@ footer{
 
 .container {
   float: left;
-  width: 48%;
+  width: 30%;
   overflow: hidden;
+  border-right: 1px solid #d4d4d4;
+  padding: 5%;
 }
 
 .expression_container {
