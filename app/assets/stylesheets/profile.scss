@@ -61,18 +61,25 @@ footer{
 /*   content      */
 /*******************/
 
-.description h2 {
-  color: #00B1CB;
-  float: left;
-  padding-top: 0px;
-  width: 100%;
-}
+
 
 .description {
   padding-left: 20px;
   padding-right: 20px;
   padding: none;
   float: left;
+}
+
+.description h2 {
+  float: left;
+  width: 100%;
+  font-weight: lighter;
+  font-size: 40px;
+  margin:0 0 0 20px;
+}
+
+.description h4 {
+    font-weight: lighter;
 }
 
 .profile_pic img {
