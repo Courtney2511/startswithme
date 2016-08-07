@@ -1,9 +1,16 @@
 
-<div class="spacing"></div>
-<div class="new-post-banner">
+
+<!-- <div class="new-post-banner">
   <section id='new-post-banner-section'>
     <img src= <%=image_path('post-page-icon.png')  %> id='post-page-icon'/>
     <h1>EDIT YOUR PROFILE</h1>
+  </section>
+</div> -->
+<div class="spacing"></div>
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <div class="banner-heading-container"></div>
+    <h1 class="banner-heading animated-title fadeIn"><%= @user.name %></h1>
   </section>
 </div>
 
