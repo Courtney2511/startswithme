@@ -9,14 +9,14 @@
             <%= image_tag(comment.user.profile_picture.thumb) %>
           </div>
 
-          <div class="author-container">
+          <!-- <div class="author-container"> -->
             <%= link_to comment.user.name, user_path(comment.user) %>
-          </div>
+          <!-- </div> -->
         </div>
 
         <div class="comment-text-container">
           <div class="comment-comment-containter">
-            <%= comment.comment %>
+            <p><%= comment.comment %></p>
           </div>
 
           <div class="actions-container">
@@ -24,11 +24,13 @@
             <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
             <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
+            <br>
+            Added on: <%= comment.created_at %>
           </div>
         </div>
-        <div class="time-container">
+        <!-- <div class="time-container">
             Added on: <%= comment.created_at %>
-        </div>
+        </div> -->
       </div>
     <% end %>
   <% end %>
