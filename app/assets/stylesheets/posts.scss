@@ -103,6 +103,15 @@ section{
   }
 }
 
+.hideme
+{
+    opacity:0;
+}
+
+.hideme:nth-child(-n+5) {
+  opacity:1;
+}
+
 .post-cont{
   overflow: hidden;
   width: 100%;
