@@ -1,28 +1,15 @@
-<!-- Nav -->
-
-
-<div class="profile-top-screen">
-
-
-
-
-
 <!-- Banner -->
-<div class="clearfix">
-  <div class="banner">
-    <div class="profile-banner-text">
-      <p>My Profile Page</p>
-    </div>
-  </div>
+<div class="spacing"></div>
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <div class="banner-heading-container"></div>
+    <h1 class="banner-heading animated-title fadeIn"><%= @user.name %></h1>
+  </section>
 </div>
-</div>
+
 
 <section class="container">
 
-  <!-- <#% if @user == current_user %>
-    <h1>Hey <%#= @user.name %>, welcome to your profile!</h1>
-    <h3><%#= @user.email %></h3>
-  <#% end %> -->
 
     <div class="profile_pic">
       <%= image_tag(@user.profile_picture) %>
