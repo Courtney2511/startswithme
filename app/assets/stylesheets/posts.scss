@@ -13,7 +13,6 @@ section{
 .sect-title{
   width:70%;
   float:left;
-  // background-color:pink;
   margin-top:100px;
   margin-bottom:0;
   padding-left: 5%;
@@ -27,7 +26,6 @@ section{
   margin-top: 100px;
   width: 20%;
   float: left;
-  /* background-color: red; */
   padding-top: 25px;
   text-align: right;
   margin-right: 5%;
@@ -61,10 +59,7 @@ section{
   }
 
 }
-// CONTAINER
-// .spacing-under-banner{
-//   height:230px;
-// }
+
 .posts-wrapper{
   a{
     text-transform: none;
@@ -183,12 +178,6 @@ section{
   -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-  // these styles only work when posts.js is active
-  // height: 100%;
-  // top:0;
-  // left:0;
-  // position:fixed;
-  // z-index:1;
 
   #new-post-banner-section{
     height: 300px;
@@ -219,16 +208,6 @@ section{
     transition: all 1s;
   }
 
-  // #post-page-icon{
-  //   width: 50px;
-  //   height: 50px;
-  //   display: block;
-  //   bottom: 50px;
-  //   text-align:center;
-  //   position:absolute;
-  //   left: 50%;
-  //   transform: translate(-50%,-50%)
-  // }
   h1{
     color: white;
     position:absolute;
@@ -367,6 +346,7 @@ section{
     line-height: 22px;
     color: #424242;
     text-align:left;
+    font-size: 15px;
   }
 }
 
