@@ -100,7 +100,7 @@
   display: block;
   padding: 2%;
   overflow:auto;
-  height: 75px;
+  height: auto;
   border-bottom:1px solid #d4d4d4;
 
   p {
@@ -112,6 +112,7 @@
     float:left;
     padding-right: 10px;
     border-right: 1px solid #d4d4d4;
+    width:15%
   }
 }
 
@@ -127,6 +128,7 @@
   float:left;
   text-align:left;
   padding-left:10px;
+  width:80%;
   p{
     text-align:left;
   }
