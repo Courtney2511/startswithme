@@ -74,16 +74,15 @@
 <div class="new-comment-container">
   <div class="new-comment-wrapper">
     <%= form_for([@post, @comment]) do |f| %>
-      <% if @comment.errors.any? %>
-        <div id="error_explanation">
-          <% @comment.errors.full_messages.each do |msg| %>
-            <%= msg %>
-          <% end %>
-        </div>
-      <% end %>
-
       <div class="field">
         <h3><%= f.label "New Comment" %></h3>
+        <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <% @comment.errors.full_messages.each do |msg| %>
+              <%= msg %>
+            <% end %>
+          </div>
+        <% end %>
         <%= f.text_area :comment  %>
       </div>
       <%= f.submit class: 'new-comment-send-button' %>
