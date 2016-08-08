@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   #requires that users be logged in to perform actions, unless expections are noted on the proper controllers
   before_action :require_login
 
+
+
   private
 
   def current_user
