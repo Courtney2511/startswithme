@@ -108,7 +108,7 @@ footer{
 .expression_container {
   width: 48%;
   overflow: auto;
-  height: 400px;
+  height: 420px;
   float: left;
   padding: 30px 15px 15px 5%;
 }
@@ -141,8 +141,11 @@ footer{
 // User's Posts
 
 .expression-inner-container {
-    width: 100%;
-    overflow: auto;
+  width: 95%;
+  height:400px;
+  overflow: auto;
+  padding: 10px;
+  background-color: white;
 }
 
 .blog-entry {
