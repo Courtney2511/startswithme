@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   validates :title, presence: true
-  validates_length_of :title, :maximum => 140, :message => "Title should be less than 140 characters"
+  validates_length_of :title, :maximum => 140, :message => "should be less than 140 characters"
 
   def hours
     ((Time.now - created_at)/1.hour).round
