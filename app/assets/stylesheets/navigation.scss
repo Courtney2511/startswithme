@@ -27,6 +27,11 @@
   display: inline-block;
   text-transform: uppercase;
   line-height: 60px;
+
+  a:hover,
+  a:active{
+    border-bottom:1px solid #00B1CB;
+  }
 }
 
 /* Nav-Left Styles */
