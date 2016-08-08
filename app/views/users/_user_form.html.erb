@@ -8,7 +8,7 @@
         <th>
           <div class="field" id="user-image-container">
             <%= image_tag(@user.profile_picture) %>
-            <%= f.label :change_your_profile_picture %>
+            <%= f.label :change_your_profile_picture, class:"change_profile_pic"  %>
             <%= f.file_field :profile_picture %>
           </div>
         </th>

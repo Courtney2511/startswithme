@@ -47,10 +47,16 @@ input#user_password_confirmation {
 .user-edit-table{
   border-spacing: 40px 0;
   td{
-
     padding-top: 20px;
   }
 }
+
+.change_profile_pic{
+  margin: 15px 0;
+  text-transform:none;
+  font-weight:lighter;
+}
+
 #main{
   margin: 0;
   h4{
