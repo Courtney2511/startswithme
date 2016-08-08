@@ -30,28 +30,24 @@
 
 <section class="expression_container">
   <h4 class="expression_title">Posts by <%= @user.name %></h4>
-    <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
-    <!-- <% @user.posts.each do |post| %>
-      <article class="blog-entry">
-        <%= image_tag(post.image.thumb) %><br>
-        <div class="post_title"><%= link_to post.title, post_path(post) %><br></div class="post_title">
-        <div class="post_time">posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %></div class="post_time">
-      </article>
-    <% end %> -->
     <% @user.posts.each do |post| %>
+    <!-- if post has an image, show it -->
       <% if post.image? %>
         <article class="blog-entry">
           <%= image_tag(post.image.thumb) %>
-          <div class="post_title"><%= link_to post.title, post_path(post) %><br></div class="post_title">
-          <div class="post_time">posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %></div class="post_time">
+          <div class="post_details">
+            <p><%= link_to post.title, post_path(post) %></p>
+            <p>posted on <%= post.created_at.strftime('%b %e, %l:%M %p')%></p>
+          </div>
         </article>
+      <!--  if post doesn't have an image, do not show image -->
       <% else %>
         <article class="blog-entry">
-          <div class="post_title"><%= link_to post.title, post_path(post) %><br></div class="post_title">
-          <div class="post_time">posted on <%= post.created_at.strftime('%b %e, %l:%M %p')  %></div class="post_time">
+          <div class="post_details">
+            <p><%= link_to post.title, post_path(post) %></p>
+            <p>posted on <%= post.created_at.strftime('%b %e, %l:%M %p')%></p>
+          </div>
         </article>
       <% end %>
     <% end %>
 </section>
-
-</html>

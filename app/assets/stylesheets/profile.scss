@@ -137,39 +137,54 @@ footer{
   color: #7f7f7f;
 }
 
+// User's Posts
+
 .blog-entry p {
   margin: 0;
   text-align: center;
 }
 
 .blog-entry {
-  float:left;
-  width:30%;
-  margin: 5% 0;
+  width: 100%;
+  margin: 15px 0;
+  display: block;
+  background-color: white;
+  padding: 5%;
+  overflow:auto;
+
+  img{
+    float:left;
+  }
 }
 
-.blog-entry:nth-of-type(3n+1) {
-  padding-right:1%;
-  text-align: center;
+.post_details{
+  p{
+    text-align:left;
+  }
 }
 
-.blog-entry:nth-of-type(3n+2) {
-  padding:0 .5%;
-  text-align: center;
-}
-.blog-entry:nth-of-type(3n+3) {
-  padding-left:1%;
-  text-align: center;
-}
+// .blog-entry:nth-of-type(3n+1) {
+//   padding-right:1%;
+//   text-align: center;
+// }
+//
+// .blog-entry:nth-of-type(3n+2) {
+//   padding:0 .5%;
+//   text-align: center;
+// }
+// .blog-entry:nth-of-type(3n+3) {
+//   padding-left:1%;
+//   text-align: center;
+// }
 
-.blog-entry img {
-  width:50%;
-  margin:0;
-}
-
-.blog-entry:nth-of-type(3n+4) {
-  clear:left;
-}
+// .blog-entry img {
+//   width:50%;
+//   margin:0;
+// }
+//
+// .blog-entry:nth-of-type(3n+4) {
+//   clear:left;
+// }
 
 
 // Profile Update notice
