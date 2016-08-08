@@ -83,10 +83,8 @@ section{
     }
   }
   td{
-    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
 
   }
   table{
@@ -98,6 +96,10 @@ section{
   tr{
     background-color: white;
   }
+}
+
+#first-text-cont{
+  border-radius:5px;
 }
 
 .hideme
