@@ -23,7 +23,9 @@
 
   <div class="description">
     <h2> <%= @user.name %></h2><br>
-    <div class="edit-button"><%= link_to 'Edit Your Profile', edit_user_path(@user) %></div>
+    <% if @user == current_user %>
+      <div class="edit-button"><%= link_to 'Edit Your Profile', edit_user_path(@user) %></div>
+    <% end %>
     <p><%= @user.description %></p>
   </div>
 </section>
