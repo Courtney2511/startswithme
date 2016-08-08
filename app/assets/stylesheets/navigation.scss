@@ -13,9 +13,6 @@
   z-index:1111;
 }
 
-// #create-post{
-//   margin: 0 50px;
-// }
 
 .nav-list{
   float: right;
@@ -28,11 +25,19 @@
   text-transform: uppercase;
   line-height: 60px;
 
-  a:hover,
-  a:active{
+  a:hover{
     border-bottom:1px solid #00B1CB;
   }
 }
+// 
+// .create-link,
+// .user-link,
+// .logout-link,
+// .login-link,
+// .signup-link{
+//   border-bottom:1px solid #00B1CB;
+// }
+
 
 /* Nav-Left Styles */
 
