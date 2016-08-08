@@ -27,7 +27,7 @@
               <% end %>
 
             <br>
-            <p class="comment-created-msg">Added on: <%= comment.created_at %></p>
+            <p class="comment-created-msg">Submitted <%= comment.convert_hours %> <%= comment.min_hour_day.pluralize(comment.convert_hours) %> ago</p>
           </div>
         </div>
       </div>
