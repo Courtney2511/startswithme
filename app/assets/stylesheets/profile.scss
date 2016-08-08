@@ -102,6 +102,8 @@ footer{
   overflow: hidden;
   border-right: 1px solid #d4d4d4;
   padding: 5%;
+  // height: 100%;
+  // background-color: red;
 }
 
 .expression_container {
@@ -164,10 +166,35 @@ footer{
   margin:0;
 }
 
-// .blog-entry img:hover {
-//   color: #7E97C8;
-// }
-
 .blog-entry:nth-of-type(3n+4) {
   clear:left;
+}
+
+
+// Profile Update notice
+.notice-alert{
+  width:93%;
+  padding:10px;
+  background-color: rgba(124, 218, 95, 0.5);
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
+#notice{
+  float:left;
+  font-weight:lighter;
+  color:#7f7f7f;
+  width:90%;
+}
+
+.close{
+  float:left;
+  width:10%;
+  color:#7f7f7f;
+  font-weight:lighter;
+  text-align: right;
+}
+
+.close:hover{
+  color: #00b1cc;
 }
