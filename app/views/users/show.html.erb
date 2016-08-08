@@ -1,43 +1,28 @@
-<!-- Nav -->
-
-
-<div class="profile-top-screen">
-
-
-
-
-
 <!-- Banner -->
-<div class="clearfix">
-  <div class="banner">
-    <div class="profile-banner-text">
-      <p>My Profile Page</p>
-    </div>
-  </div>
+<div class="spacing"></div>
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <div class="banner-heading-container"></div>
+    <h1 class="banner-heading animated-title fadeIn"><%= @user.name %></h1>
+  </section>
 </div>
-</div>
+
 
 <section class="container">
-
-  <!-- <#% if @user == current_user %>
-    <h1>Hey <%#= @user.name %>, welcome to your profile!</h1>
-    <h3><%#= @user.email %></h3>
-  <#% end %> -->
-
     <div class="profile_pic">
       <%= image_tag(@user.profile_picture) %>
     </div>
 
     <div class="description">
       <h2> <%= @user.name %></h2><br>
-      <h4><%= @user.description %></h4>
       <div class="edit-button"><%= link_to 'Edit Your Profile', edit_user_path(@user) %></div>
+      <p><%= @user.description %></p>
     </div>
 </section>
 
 <section class="expression_container">
 
-  <h3 class="expression_title">Posts by <%= @user.name %></h3>
+  <h4 class="expression_title">Posts by <%= @user.name %></h4>
 
     <!-- Displaying a list of posts by the current user including a link to the post and the thumbnail image for that post-->
     <% @user.posts.each do |post| %>

@@ -1,19 +1,17 @@
 <div class="spacing"></div>
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
-    <!-- <img src="../assets/post-page-icon.png" id='post-page-icon'/>
-    <h1>CREATE A NEW POST</h1> -->
     <div class="banner-heading-container"></div>
     <h1 class="banner-heading animated-title fadeIn">POSTS</h1>
   </section>
 </div>
 <div class="spacing-under-banner"></div>
-<div class="posts-wrapper">
+<div  class="posts-wrapper">
   <table>
     <tbody>
       <% @posts.reverse_each do |post| %>
         <% if post.image? %>
-          <tr>
+          <tr class="hideme">
             <th>
               <%= image_tag(post.image.thumb) %>
             </th>
@@ -43,7 +41,7 @@
             </td>
           </tr>
         <% else %>
-          <tr>
+          <tr class="hideme">
             <td colspan="2">
               <div class="text-cont" id="first-text-cont">
                 <div class="title-cont">

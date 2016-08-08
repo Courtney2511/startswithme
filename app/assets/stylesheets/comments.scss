@@ -75,27 +75,35 @@
   }
 }
 
-.author-container{
-  font-size: 13px;
-
-}
 .comment-text-container{
   float: left;
   font-size: 18px;
-  width: 88%;
-  font-color:#7f7f7f;
-  font-weight:lighter;
+  width: 70%;
+  font-weight: lighter;
+  padding-bottom: 15px;
 }
 
 .time-container{
   font-size: 13px;
   margin: 5px 0;
   float: left;
+  color: #7f7f7f;
+  font-weight:lighter;
 
 }
 .comment-comment-containter{
-  width: 750px;
+  width: 100%;
+  color: #7f7f7f;
+  border-left: 1px solid #d4d4d4;
+  padding-left: 30px;
 }
+
+.comment-comment-containter p{
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
 .profile-container{
   float: left;
   display: inline-block;
@@ -117,4 +125,10 @@
   margin-bottom: 5px;
   width: 50px;
   height: 50px;
+}
+
+.post-cont a {
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size: 15px;
 }

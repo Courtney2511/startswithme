@@ -60,6 +60,7 @@ section{
 
   p{
     margin: 5px;
+    font-weight:lighter;
   }
 
 }
@@ -102,6 +103,15 @@ section{
   }
 }
 
+.hideme
+{
+    opacity:0;
+}
+
+.hideme:nth-child(-n+5) {
+  opacity:1;
+}
+
 .post-cont{
   overflow: hidden;
   width: 100%;
@@ -113,7 +123,11 @@ section{
   box-shadow: 1px 1px 1px #cdcdcd;
 
   a{
-    text-transform: none;
+    .post-cont a {
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size: 15px;
+    }
   }
 
   .img-cont{
@@ -270,7 +284,7 @@ section{
   textarea{
     border: 1px solid #e1e8ed !important;
     height: 29px;
-    width: 98%;
+    width: 99%;
     font-size: 12px;
     font-weight:lighter;
     border-radius: 0 5px 5px 0;
@@ -318,7 +332,7 @@ section{
   background: #00B1CB;
   border: 0;
   cursor: pointer;
-  width: 97%;
+  width: 100%;
   border-radius:5px;
   text-transform: uppercase;
   font-weight: lighter;
@@ -345,6 +359,7 @@ section{
 .post-title-container{
   font-size: 20px;
   color:#7F7F7F;
+  font-weight:bolder;
 }
 
 .back-container{
@@ -355,6 +370,7 @@ section{
   width: 67%;
   overflow: auto;
   border-top: 1px solid #D4D4D4;
+  border-bottom: 1px solid #d4d4d4;
   margin: 0 auto;
 }
 
@@ -380,4 +396,8 @@ section{
   padding: 30px 0 30px 15px;
   /* background-color: orange; */
   text-align: left;
+}
+
+.post-show-actions-container {
+    margin-top: 20px;
 }
