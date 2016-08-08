@@ -28,8 +28,8 @@
   </div>
 </section>
 
+<h4 class="expression_title">Posts by <%= @user.name %></h4>
 <section class="expression_container">
-  <h4 class="expression_title">Posts by <%= @user.name %></h4>
     <% @user.posts.each do |post| %>
     <!-- if post has an image, show it -->
       <% if post.image? %>

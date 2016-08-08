@@ -103,21 +103,21 @@ footer{
   overflow: hidden;
   border-right: 1px solid #d4d4d4;
   padding: 5%;
-  // height: 100%;
-  // background-color: red;
 }
 
 .expression_container {
   float: left;
   width: 48%;
   overflow: auto;
-  padding: 5%;
+  padding: 15px 15px 15px 5%;
 }
 
 .expression_title {
   font-size: 40px;
   font-weight: lighter;
   margin:0;
+  padding: 5% 0 0 5%;
+  float:left;
 }
 
 .post_title {
@@ -146,11 +146,12 @@ footer{
 
 .blog-entry {
   width: 100%;
-  margin: 15px 0;
+  margin: 10px 0;
   display: block;
   background-color: white;
-  padding: 5%;
+  padding: 2%;
   overflow:auto;
+  height: 75px;
 
   img{
     float:left;
