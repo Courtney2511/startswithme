@@ -106,10 +106,11 @@ footer{
 }
 
 .expression_container {
-  float: left;
   width: 48%;
   overflow: auto;
-  padding: 15px 15px 15px 5%;
+  height: 400px;
+  float: left;
+  padding: 30px 15px 15px 5%;
 }
 
 .expression_title {
@@ -139,19 +140,25 @@ footer{
 
 // User's Posts
 
-.blog-entry p {
-  margin: 0;
-  text-align: center;
+.expression-inner-container {
+    width: 100%;
+    overflow: auto;
 }
 
 .blog-entry {
-  width: 100%;
+  // width: 88%;
   margin: 10px 0;
   display: block;
-  background-color: white;
+  // background-color: white;
   padding: 2%;
   overflow:auto;
   height: 75px;
+  border-bottom:1px solid #d4d4d4;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
 
   img{
     float:left;

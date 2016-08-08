@@ -30,6 +30,7 @@
 
 <h4 class="expression_title">Posts by <%= @user.name %></h4>
 <section class="expression_container">
+  <div class="expression-inner-container">
     <% @user.posts.each do |post| %>
     <!-- if post has an image, show it -->
       <% if post.image? %>
@@ -50,4 +51,5 @@
         </article>
       <% end %>
     <% end %>
+  </div>
 </section>
