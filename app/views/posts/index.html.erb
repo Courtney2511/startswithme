@@ -10,6 +10,7 @@
   <table>
     <tbody>
       <% @posts.reverse_each do |post| %>
+        <!-- if post has an image, display the bottom things -->
         <% if post.image? %>
           <tr class="hideme">
             <th>
@@ -40,6 +41,7 @@
               </div>
             </td>
           </tr>
+          <!-- if post does not have image -->
         <% else %>
           <tr class="hideme">
             <td colspan="2">
