@@ -40,7 +40,7 @@
         <% if post.image? %>
           <article class="blog-entry">
             <%= image_tag(post.image.thumb) %>
-            <div class="post_details">
+            <div class="post_details_with_image">
               <p><%= link_to post.title, post_path(post) %></p>
               <p>posted on <%= post.created_at.strftime('%b %e, %l:%M %p')%></p>
               <% if post.user == current_user %>
