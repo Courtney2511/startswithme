@@ -23,12 +23,8 @@
             <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
             <br>
-            <p>Added on: <%= comment.created_at %></p>
+            <p class="comment-created-msg">Added on: <%= comment.created_at %></p>
           </div>
-
-          <!-- <div class="actions-container">
-
-          </div> -->
         </div>
       </div>
     <% end %>
