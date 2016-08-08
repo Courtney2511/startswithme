@@ -22,12 +22,15 @@
       <%= image_tag(@user.profile_picture) %>
     </div>
 
-    <div class="description">
-      <h2> <%= @user.name %></h2><br>
+  <div class="description">
+    <h2> <%= @user.name %></h2><br>
+    <% if @user == current_user %>
       <div class="edit-button"><%= link_to 'Edit Your Profile', edit_user_path(@user) %></div>
-      <p><%= @user.description %></p>
-    </div>
-  </section>
+    <% end %>
+    <p><%= @user.description %></p>
+  </div>
+</section>
+
 
   <h4 class="expression_title">Posts by <%= @user.name %></h4>
   <section class="expression_container">

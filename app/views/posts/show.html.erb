@@ -45,11 +45,14 @@
       <div class="author-info-container">
         <div class="user_profile_pic">
           <!-- <img src="https://openclipart.org/image/2400px/svg_to_png/223797/IwanPigSVG.png" id='post-page-user-pic'/> -->
-          <%= image_tag('default_user.png') %>
+          <%= image_tag(@post.user.profile_picture.thumb) %>
         </div>
         <div class="post-show-author-container">
           <p>
-            Posted by: <%= link_to @post.user.name, user_path(@post.user) %>
+            <%= link_to @post.user.name, user_path(@post.user) %>
+          </p>
+          <p>
+            Posted <%= @post.convert_hours %> <%= @post.min_hour_day.pluralize(@post.convert_hours) %> ago
           </p>
         </div>
       </div>
@@ -74,19 +77,15 @@
 <div class="new-comment-container">
   <div class="new-comment-wrapper">
     <%= form_for([@post, @comment]) do |f| %>
-      <% if @post.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@review.errors.count, "error") %> prohibited this comment from being saved:</h2>
-          <ul>
-            <% @comment.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-
       <div class="field">
         <h3><%= f.label "New Comment" %></h3>
+        <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <% @comment.errors.full_messages.each do |msg| %>
+              <%= msg %>
+            <% end %>
+          </div>
+        <% end %>
         <%= f.text_area :comment  %>
       </div>
       <%= f.submit class: 'new-comment-send-button' %>

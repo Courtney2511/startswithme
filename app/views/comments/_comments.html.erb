@@ -1,6 +1,8 @@
 <div class="comment-container">
   <h3>Comments (<%= (@post.comments.length - 1) %>)</h3>
+
   <% my_comments.each do |comment| %>
+  <% if comment.id != nil %>
     <% if comment.user != nil %>
       <div class="comment-wrapper post-cont">
         <!-- Shows total comment count for post-->
@@ -16,17 +18,20 @@
 
         <div class="comment-text-container">
           <div class="comment-comment-containter">
-            <p><%= comment.comment %></p>
+
+              <p><%= comment.comment %></p>
+              <br>
+              <% if comment.user == current_user %>
+              <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
+              <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
+              <% end %>
+
             <br>
-            <% if comment.user == current_user %>
-            <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
-            <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
-            <% end %>
-            <br>
-            <p class="comment-created-msg">Added on: <%= comment.created_at %></p>
+            <p class="comment-created-msg">Submitted <%= comment.convert_hours %> <%= comment.min_hour_day.pluralize(comment.convert_hours) %> ago</p>
           </div>
         </div>
       </div>
+    <% end %>
     <% end %>
   <% end %>
 </div>
