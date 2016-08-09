@@ -1,26 +1,32 @@
 /*******************/
 /*   NAVIGATION    */
 /*******************/
+nav {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
 
-.nav-stick{
+nav{
   overflow: auto;
   background-color: white;
   height: 60px;
-  color: white;
   padding: 0 5%;
   position: fixed;
   width: 90%;
   z-index:1111;
 }
 
-.nav-list {
+nav ul {
     float: right;
     overflow: hidden;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-
 
 .nav-item {
   float:left;
@@ -38,7 +44,24 @@
   }
 }
 
+// hamburger menu
+.navicon {
+  display: none;
+  padding: .35em;
+    &:hover {
+    cursor: pointer;
+  }
+}
 
+.show {
+  height: auto;
+  display: block;
+  float: right;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 /* Nav-Left Styles */
 
@@ -85,6 +108,7 @@
   padding:10px;
   color:white;
 }
+
 
 /*******************/
 /*   Footer        */
@@ -152,7 +176,7 @@ footer p{
 /*  Media Queries   */
 /********************/
 
-// tablet view
+// small desktop view view
 @media (max-width: 980px) {
   .expressions{
     float:none;
@@ -193,10 +217,34 @@ footer p{
   }
 }
 
-
 // mobile view
-
 @media (max-width:620px) {
+//navigation
+  .navicon {
+    display: block;
+    float: right;
+    color: green;
+    background-color:red;
+    font-size: 2em;
+    padding: 0;
+  }
+
+  //do not show <ul>
+  nav ul {
+    display: none;
+  }
+
+  .nav-item{
+  background: blue;
+  width: 100%;
+  border-bottom: 1px solid blue;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+
+// footer
   .footer-info{
     width:99%;
     display:block;
@@ -212,5 +260,9 @@ footer p{
   .help,
   .information{
     padding-bottom:20px;
+  }
+
+  .information{
+    border-left:none;
   }
 }
