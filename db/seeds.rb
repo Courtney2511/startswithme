@@ -54,5 +54,3 @@ Post.all.each do |post|
   post.created_at = (rand*10).days.ago
   post.save!
 end
-
-Post.all.sort_by(&:created_at)
