@@ -7,20 +7,29 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+User.delete_all
+Post.delete_all
+Comment.delete_all
 
-30.times do
+8.times do |i|
   user_name = Faker::Name.name
   user_email = Faker::Internet.email
-  User.create!({ name: user_name, email: user_email, password: 'jiji', password_confirmation: 'jiji' })
+  User.create!({ name: user_name, email: user_email, password: 'jiji', password_confirmation: 'jiji', profile_picture: Rails.root.join("app/assets/images/#{i}_profile_image.jpg").open })
 end
 
-User.all.each do |user|
-  image_number = Random.rand(3..70)
-  user.profile_picture = Rails.root.join("app/assets/images/#{"%02d" % image_number}.RandomImagesO2-UWTB.PNG").open
-  user.save
+10.times do
+  user_name = Faker::Name.name
+  user_email = Faker::Internet.email
+  User.create!({ name: user_name, email: user_email, password: 'jiji', password_confirmation: 'jiji', profile_picture: Rails.root.join("app/assets/images/default_user.PNG").open})
 end
 
-40.times do
+# User.all.each do |user|
+#   image_number = Random.rand(3..70)
+#   user.profile_picture = Rails.root.join("app/assets/images/#{"%02d" % image_number}.RandomImagesO2-UWTB.PNG").open
+#   user.save
+# end
+
+25.times do
   title_sentence = Faker::Lorem.sentence
   random_user = User.order("RANDOM()").first
   post = Post.create({ user: random_user, title: title_sentence, body: nil })
@@ -33,10 +42,17 @@ end
   Comment.create({ user: user, comment: comment_comment, post: post })
 end
 
-30.times do
+20.times do
   image_number = Random.rand(3..70)
   post_number = Post.order("RANDOM()").first
   post = Post.find(post_number)
   post.image = Rails.root.join("app/assets/images/#{"%02d" % image_number}.RandomImagesO2-UWTB.PNG").open
   post.save!
 end
+
+Post.all.each do |post|
+  post.created_at = (rand*10).days.ago
+  post.save!
+end
+
+Post.all.sort_by(&:created_at)
