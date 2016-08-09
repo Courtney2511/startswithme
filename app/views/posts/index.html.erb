@@ -9,7 +9,7 @@
 <div  class="posts-wrapper">
   <table>
     <tbody>
-      <% @posts.reverse_each do |post| %>
+      <% @posts.sort_by(&:created_at).reverse.each do |post| %>
         <!-- if post has an image, display the bottom things -->
         <% if post.image? %>
           <tr class="hideme">
