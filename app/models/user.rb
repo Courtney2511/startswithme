@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
+  validates_format_of :email, :with => /@/, :message => "address is invalid"
 
   validates :name, :email, presence: true
 
