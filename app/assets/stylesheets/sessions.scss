@@ -344,5 +344,11 @@ input.actions {
 
 // mobile view
 @media (max-width: 620px) {
+  .landing-left {
+    height: 50%;
+  }
 
+  form.getstarted {
+    height: 90%;
+  }
 }
