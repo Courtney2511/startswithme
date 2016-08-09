@@ -1,28 +1,3 @@
-// This script will ensure that when user scrolls past 500px of screen, the banner will resize to become smaller
-// $( document ).ready(function() {
-//     $(window).scroll(function() {
-//         var scroll = $(window).scrollTop();
-//         if (scroll >= 500) {
-//             $(".new-post-banner").addClass('smaller');
-//         } else {
-//             $(".new-post-banner").removeClass('smaller');
-//         }
-//     });
-//
-// });
-
-// Creating Scroll Animations with Waypoints and Animate.css
-//  $(document).ready(function(){
-//
-// 	$('.element-to-animate').waypoint(function() {
-// 		$('.element-to-animate').addClass( 'animated fadeInLeft' );
-// 	},
-// 	{
-// 		offset: '100%'
-// 	});
-//
-// });
-
 
 $(document).ready(function() {
 
