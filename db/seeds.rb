@@ -7,20 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+User.delete_all
+Post.delete_all
+Comment.delete_all
 
-30.times do
+9.times do |i|
   user_name = Faker::Name.name
   user_email = Faker::Internet.email
-  User.create!({ name: user_name, email: user_email, password: 'jiji', password_confirmation: 'jiji' })
+  User.create!({ name: user_name, email: user_email, password: 'jiji', password_confirmation: 'jiji', profile_picture: Rails.root.join("app/assets/images/#{"%02d" % i}.RandomImagesO2-UWTB.PNG").open })
 end
 
-User.all.each do |user|
-  image_number = Random.rand(3..70)
-  user.profile_picture = Rails.root.join("app/assets/images/#{"%02d" % image_number}.RandomImagesO2-UWTB.PNG").open
-  user.save
-end
+# User.all.each do |user|
+#   image_number = Random.rand(3..70)
+#   user.profile_picture = Rails.root.join("app/assets/images/#{"%02d" % image_number}.RandomImagesO2-UWTB.PNG").open
+#   user.save
+# end
 
-40.times do
+50.times do
   title_sentence = Faker::Lorem.sentence
   random_user = User.order("RANDOM()").first
   post = Post.create({ user: random_user, title: title_sentence, body: nil })
