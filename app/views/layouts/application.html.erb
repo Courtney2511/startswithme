@@ -22,7 +22,7 @@
                         <%= link_to 'CREATE', new_post_path %>
                     </li>
                     <li class='nav-item'>
-                        <%=link_to current_user.name, user_path(current_user) %>
+                        <%=link_to 'PROFILE', user_path(current_user) %>
                     </li>
                     <li class='nav-item'>
                         <%= link_to "Log Out", session_path("current"), :method => :delete %>
