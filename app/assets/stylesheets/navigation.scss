@@ -53,6 +53,10 @@ nav ul {
   }
 }
 
+.navicon:hover{
+  color:#1E7F8E;
+}
+
 .show {
   height: auto;
   display: block;
@@ -224,6 +228,7 @@ footer p{
 
   nav{
     height: auto;
+    background-color:white;
   }
 
   .navicon {
@@ -243,7 +248,7 @@ footer p{
 
   .nav-item{
   width: 100%;
-  border-bottom: 1px solid #d4d4d4;
+  // border-bottom: 1px solid #d4d4d4;
     &:last-child {
       border-bottom: none;
     }
