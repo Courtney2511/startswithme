@@ -46,27 +46,33 @@
 
   <footer>
     <div class="footer-info expressions">
-      <h3>NAVIGATION</h3>
-      <% if current_user %>
+      <h3>ABOUT</h3>
+      <!-- <% if current_user %>
         <%= link_to 'CREATE', new_post_path %>
         <%=link_to current_user.name, user_path(current_user) %>
       <% else %>
         <%= link_to "Log In", new_session_path %>
         <%=link_to "Sign Up", new_user_path %>
-      <% end %>
+      <% end %> -->
+      <p>State of Our Mind is a safe online community that practices
+        mindfulness. On here, youths are encouraged to use online media
+        to express their feelings and emotions. Connect with youth with
+        similar lived experiences.
+      </p>
     </div>
     <div class="footer-info help">
       <h3>HELP AND SUPPORT</h3>
       <%=link_to "Helpful links", static_pages_links_path %>
-      <a href="https://startswithme.ca/">Starts With Me</a>
-      <a href="https://www.facebook.com/mike.startswithme">Facebook</a>
-      <a href="https://twitter.com/StartsWithMe_">Twitter</a>
-    </div>
-    <div class="footer-info information">
-      <h3>ABOUT</h3>
-      <%=link_to "ABOUT", static_pages_about_path %>
       <%=link_to "PRIVACY POLICIES", static_pages_privacy_path %>
       <%=link_to "Terms and Conditions", static_pages_terms_path %>
+    </div>
+    <div class="footer-info information">
+      <h3>CONNECT</h3>
+      <a href="https://startswithme.ca/">Starts With Me</a>
+      <a href="https://www.instagram.com/startswithme_/">Instragram</a>
+      <a href="https://www.facebook.com/mike.startswithme">Facebook</a>
+      <a href="https://twitter.com/StartsWithMe_">Twitter</a>
+
     </div>
   </footer>
 </html>
