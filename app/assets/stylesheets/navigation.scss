@@ -5,7 +5,7 @@
 .nav-stick{
   overflow: auto;
   background-color: white;
-  height: 9%;
+  height: 60px;
   color: white;
   padding: 0 5%;
   position: fixed;
@@ -13,30 +13,31 @@
   z-index:1111;
 }
 
-
-.nav-list{
-  float: right;
-  margin: 0;
-  padding: 0;
+.nav-list {
+    float: right;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
-.nav-item{
-  margin: 0 5px;
-  display: inline-block;
-  text-transform: uppercase;
-  line-height: 60px;
+
+
+.nav-item {
+  float:left;
+
+  a{
+    display: block;
+    text-align: center;
+    padding: 21px 16px;
+    text-decoration: none;
+  }
 
   a:hover{
-    border-bottom:1px solid #00B1CB;
+    background-color: #A3D5FF;
+    color:#FFFAFF;
   }
 }
-//
-// .create-link,
-// .user-link,
-// .logout-link,
-// .login-link,
-// .signup-link{
-//   border-bottom:1px solid #00B1CB;
-// }
+
 
 
 /* Nav-Left Styles */
@@ -59,6 +60,7 @@
   font-size: 1em;
   float: left;
 }
+
 
 /* nav-right Styles */
 
