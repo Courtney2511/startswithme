@@ -61,13 +61,15 @@ section{
 }
 
 .posts-wrapper{
-  a{
-    text-transform: none;
-  }
   width: 960px;
   margin: 0 auto;
   padding: 0;
   margin-top:30px;
+
+  a{
+    text-transform: none;
+  }
+
   th{
     width: 75px;
     border-top-left-radius: 5px;
@@ -271,7 +273,6 @@ section{
     padding: 10px 20px;
     line-height: 15px;
     color: white;
-    // background-color: #00B1CB;
     background: linear-gradient(to right, #00B1C0, rgba(0, 177, 203, 0.5) 75%);
     font-weight: lighter;
     text-transform: uppercase;
@@ -368,13 +369,11 @@ section{
   float: left;
   width: 30%;
   padding: 15px 10px;
-  /* background-color: red; */
   text-align: right;
 }
 
 .user_profile_pic img{
   width: 75px;
-  /* background-color: green; */
   border-right: 1px solid #D4D4D4;
   padding-right: 30px;
   text-align: right;
@@ -383,9 +382,8 @@ section{
 .post-show-author-container{
   float: left;
   width: 60%;
-  padding: 30px 0 30px 15px;
-  /* background-color: orange; */
   text-align: left;
+  padding-left:15px;
 }
 
 .post-show-actions-container {
