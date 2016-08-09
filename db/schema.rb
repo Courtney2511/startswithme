@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160808202611) do
     t.text     "body"
     t.string   "image"
     t.text     "title"
-    t.text     "link"
+    t.string   "link"
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
@@ -54,4 +54,5 @@ ActiveRecord::Schema.define(version: 20160808202611) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
   end
 
+  add_foreign_key "posts", "users"
 end
