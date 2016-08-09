@@ -154,10 +154,30 @@ footer p{
 
 // tablet view
 @media (max-width: 980px) {
-  .footer-info{
+  .expressions{
     float:none;
     display:block;
     width: 90%;
+    border-bottom:1px solid #d4d4d4;
+  }
+
+  .help,
+  .information{
+    width:39%;
+  }
+
+  .information{
+    border-left:1px solid #d4d4d4;
+  }
+
+  .help,
+  .information{
+    padding-bottom:20px;
+  }
+
+  .information h3,
+  .help h3{
+    margin-top:20px;
   }
 
   footer h3{
@@ -170,15 +190,5 @@ footer p{
     margin:0;
     font-size:12px;
     line-height:17px;
-  }
-
-  .help,
-  .information{
-    padding-bottom:20px;
-  }
-
-  .information h3,
-  .help h3{
-    margin-top:20px;
   }
 }
