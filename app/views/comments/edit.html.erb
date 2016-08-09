@@ -1,0 +1,28 @@
+<div class="spacing"></div>
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <!-- <img src="../assets/post-page-icon.png" id='post-page-icon'/>
+    <h1>CREATE A NEW POST</h1> -->
+    <div class="banner-heading-container"></div>
+    <h1 class="banner-heading animated-title fadeIn">EDIT</h1>
+  </section>
+</div>
+<div class="spacing-under-banner"></div>
+<div class="new-comment-container">
+  <div class="new-comment-wrapper">
+    <%= form_for([@post, @comment]) do |f| %>
+      <div class="field">
+        <h3><%= f.label "Comment" %></h3>
+        <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <% @comment.errors.full_messages.each do |msg| %>
+              <%= msg %>
+            <% end %>
+          </div>
+        <% end %>
+        <%= f.text_area :comment  %>
+      </div>
+      <%= f.submit class: 'new-comment-send-button' %>
+    <% end %>
+  </div>
+</div>

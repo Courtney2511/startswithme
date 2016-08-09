@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728141503) do
+ActiveRecord::Schema.define(version: 20160808202611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,21 +18,9 @@ ActiveRecord::Schema.define(version: 20160728141503) do
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
     t.integer  "user_id"
-    t.integer  "text_id"
-    t.integer  "photo_id"
-    t.integer  "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "post_id"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.string   "photo"
-    t.string   "caption"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "image"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -42,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160728141503) do
     t.datetime "updated_at", null: false
     t.text     "body"
     t.string   "image"
-    t.string   "title"
+    t.text     "title"
     t.string   "link"
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
