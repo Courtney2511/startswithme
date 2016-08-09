@@ -34,7 +34,7 @@
 
       <!-- Displays link if it exists -->
       <% if @post.link != '' && @post.link != nil%>
-        <div class="post-link-container">
+        <div class="post-link-container hideme2">
           <div class="embed-container"><%= embed(@post.link) %></div>
         </div>
       <% end %>
