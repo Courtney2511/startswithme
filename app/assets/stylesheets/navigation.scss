@@ -61,6 +61,7 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width:100%;
 }
 
 /* Nav-Left Styles */
@@ -220,13 +221,19 @@ footer p{
 // mobile view
 @media (max-width:620px) {
 //navigation
+
+  nav{
+    height: auto;
+  }
+
   .navicon {
     display: block;
     float: right;
-    color: green;
-    background-color:red;
+    color:#00B1CB;
     font-size: 2em;
     padding: 0;
+    width: 50%;
+    text-align: right;
   }
 
   //do not show <ul>
@@ -235,9 +242,8 @@ footer p{
   }
 
   .nav-item{
-  background: blue;
   width: 100%;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid #d4d4d4;
     &:last-child {
       border-bottom: none;
     }
