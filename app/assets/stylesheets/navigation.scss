@@ -197,5 +197,20 @@ footer p{
 // mobile view
 
 @media (max-width:620px) {
+  .footer-info{
+    width:99%;
+    display:block;
+    padding:0;
+  }
 
+  .expressions,
+  .help,
+  .information{
+    border-bottom:1px solid #d4d4d4;
+  }
+
+  .help,
+  .information{
+    padding-bottom:20px;
+  }
 }
