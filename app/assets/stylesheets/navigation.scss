@@ -93,8 +93,9 @@
 footer{
   // background-color: #374A67;
   width:100%;
-  height:250px;
+  height:auto;
   background: linear-gradient(141deg,#474350 0%, #374A67 75%);
+  overflow:auto;
 }
 
 .footer-info{
@@ -121,7 +122,7 @@ footer a{
 
 footer h3{
   margin-top:40px;
-  margin-bottom:0;
+  margin-bottom:20px;
   color:white;
 }
 
@@ -137,10 +138,12 @@ footer a:hover{
 footer p,
 footer a{
   color:#c2c2c2;
+  margin-bottom:10px;
 }
 
 footer p{
   text-align:center;
   padding:0;
   margin:0;
+  padding-bottom:20px;
 }
