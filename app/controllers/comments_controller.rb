@@ -17,7 +17,20 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    if @comment.update_attributes(comment_params)
+      flash[:notice] = 'The comment has been updated.'
+      redirect_to post_path(@post)
+    else
+      flash[:notice] = 'The comment was not updated successfully.'
+      redirect_to post_path
+    end
   end
 
   def destroy
@@ -29,7 +42,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:comment, :post_id, :profile_picture)
+    params.require(:comment).permit(:comment)
   end
 
   def load_post
