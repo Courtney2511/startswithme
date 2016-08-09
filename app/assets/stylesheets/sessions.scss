@@ -245,7 +245,7 @@ input.actions {
 /********************/
 
 
-// tablet view
+// Small Desktop view
 @media (max-width: 980px) {
   .landing-content-container{
     overflow:hidden;
@@ -255,6 +255,9 @@ input.actions {
   .landing-left{
     width:100%;
     height:40%;
+    background-image: url('small-desktop-banner-img.png');
+    background-size: cover;
+    background-size: 100%;
   }
   .slideshow-container {
     text-align:center;
@@ -328,9 +331,21 @@ input.actions {
 
 }
 
+// tablet view
+@media (max-width: 720px) {
+  // left side of screen
+  .landing-left{
+    width:100%;
+    height:40%;
+    background-image: url('tablet-banner-img.png');
+    background-size: cover;
+  }
+}
+
 // mobile view
-// @media (max-width: 565px) {
-//   .landing-right{
-//     display:none;
-//   }
-// }
+@media (max-width: 620px) {
+  // .landing-container{
+  //   width:100%;
+  //   height:91%;
+  // }
+}
