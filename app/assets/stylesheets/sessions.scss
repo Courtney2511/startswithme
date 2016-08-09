@@ -266,7 +266,7 @@ input.actions {
   .mySlides h1{
     width:100%;
     text-align:center;
-    font-size:20px;
+    font-size:15px;
   }
   .mySlides .title-line {
     border-bottom: 2px solid #46c6d9;
@@ -280,12 +280,12 @@ input.actions {
     width:100%;
     text-align:center;
     padding-right:0;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .dot {
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
   }
 
   // right side of screen
@@ -303,23 +303,29 @@ input.actions {
     margin: 0;
     font-weight: lighter;
     color: white;
-    font-size:20px;
+    font-size:15px;
   }
-
-  .extra-login-stuff a {
-    font-size: 13px;
-  }
-
   input.actions {
     padding: 10px;
-    font-size:13px;
+    font-size:12px;
     width:50%;
   }
 
   input#email, input#password {
     padding: 8px;
     width:50%;
+    font-size:10px;
   }
+
+  div.field, div.actions {
+    margin: 10px auto;
+  }
+
+
+  .extra-login-stuff a {
+    font-size: 12px;
+  }
+
 }
 
 // mobile view

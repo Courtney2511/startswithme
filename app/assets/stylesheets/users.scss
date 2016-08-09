@@ -27,22 +27,6 @@ input#user_password_confirmation {
     color:white;
 }
 
-
-/********************/
-/*  Media Queries   */
-/********************/
-
-// tablet view
-@media (max-width: 980px) {
-  input#user_name,
-  input#user_email,
-  input#user_password,
-  input#user_password_confirmation {
-    padding: 8px;
-    width:50%;
-  }
-}
-
 /* EDIT USER PAGE */
 .user-edit-table{
   border-spacing: 40px 0;
@@ -61,7 +45,6 @@ input#user_password_confirmation {
 #main{
   margin: 0;
   h4{
-
     text-align: left;
     margin: 10px 0;
   }
@@ -82,4 +65,21 @@ input#user_password_confirmation {
   overflow: auto;
   border: 1px solid #e1e8ed !important;
   border-radius: 5px;
+}
+
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+// tablet view
+@media (max-width: 980px) {
+  input#user_name,
+  input#user_email,
+  input#user_password,
+  input#user_password_confirmation {
+    padding: 8px;
+    width:50%;
+    font-size:10px;
+  }
 }
