@@ -1,37 +1,28 @@
-<div class="comment-container">
-  <h3>Comments (<%= (@post.comments.length - 1) %>)</h3>
-
-  <% my_comments.each do |comment| %>
-  <% if comment.id != nil %>
-    <% if comment.user != nil %>
-      <div class="comment-wrapper post-cont">
-        <!-- Shows total comment count for post-->
-        <div class="profile-container">
-          <div class="img-container">
-            <%= image_tag(comment.user.profile_picture.thumb) %>
+<div class="spacing"></div>
+<div class="new-post-banner">
+  <section id='new-post-banner-section'>
+    <!-- <img src="../assets/post-page-icon.png" id='post-page-icon'/>
+    <h1>CREATE A NEW POST</h1> -->
+    <div class="banner-heading-container"></div>
+    <h1 class="banner-heading animated-title fadeIn">EDIT</h1>
+  </section>
+</div>
+<div class="spacing-under-banner"></div>
+<div class="new-comment-container">
+  <div class="new-comment-wrapper">
+    <%= form_for([@post, @comment]) do |f| %>
+      <div class="field">
+        <h3><%= f.label "Comment" %></h3>
+        <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <% @comment.errors.full_messages.each do |msg| %>
+              <%= msg %>
+            <% end %>
           </div>
-
-          <!-- <div class="author-container"> -->
-            <%= link_to comment.user.name, user_path(comment.user) %>
-          <!-- </div> -->
-        </div>
-
-        <div class="comment-text-container">
-          <div class="comment-comment-containter">
-
-              <p><%= comment.comment %></p>
-              <br>
-              <% if comment.user == current_user %>
-              <%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |
-              <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: 'Are you sure?'} %>
-              <% end %>
-
-            <br>
-            <p class="comment-created-msg">Added on: <%= comment.created_at %></p>
-          </div>
-        </div>
+        <% end %>
+        <%= f.text_area :comment  %>
       </div>
+      <%= f.submit class: 'new-comment-send-button' %>
     <% end %>
-    <% end %>
-  <% end %>
+  </div>
 </div>
