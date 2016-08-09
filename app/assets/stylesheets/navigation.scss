@@ -147,3 +147,39 @@ footer p{
   margin:0;
   padding-bottom:20px;
 }
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+// tablet view
+@media (max-width: 980px) {
+  .footer-info{
+    float:none;
+    display:block;
+    width: 90%;
+  }
+
+  footer h3{
+    margin-bottom:5px;
+  }
+
+  footer a{
+    margin:0;
+  }
+
+  .expressions,
+  .help {
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .help,
+  .information{
+    padding-bottom:20px;
+  }
+  
+  .information h3,
+  .help h3{
+    margin-top:20px;
+  }
+}
