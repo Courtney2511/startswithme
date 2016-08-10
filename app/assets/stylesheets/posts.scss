@@ -304,6 +304,7 @@ section{
   font-weight: lighter;
 }
 
+// error messages
 
 #error_explanation{
   font-size: 15px;
@@ -312,6 +313,13 @@ section{
   padding-bottom: 15px;
 }
 
+.notice-alert {
+    padding: 10px;
+    background-color: rgba(124, 218, 95, 0.5);
+    overflow: auto;
+    margin: 30px auto 30px;
+    max-width: 840px;
+}
 
 /* show */
 

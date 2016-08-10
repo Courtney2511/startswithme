@@ -66,8 +66,13 @@
 </div>
 
 
+  <%if flash[:notice]%>
+    <div class="notice-alert">
+    <p id="notice"><%= flash[:notice] %></p>
+    <p class="close">x</p>
+    </div>
+  <% end %>
   <%= render({:partial => 'comments/comments', :locals => { :my_comments => @post.comments}}) %>
-
 
 
 <!-- Post comments -->
