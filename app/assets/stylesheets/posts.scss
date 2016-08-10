@@ -384,3 +384,41 @@ section{
 .post-show-actions-container {
     margin-top: 20px;
 }
+
+/********************/
+/*  Media Queries   */
+/********************/
+
+// small desktop view view
+@media (max-width: 980px) {
+  .posts-wrapper {
+    width: 80%;
+    overflow: auto;
+  }
+  .text-cont {
+    width: 100%;
+  }
+
+  .hideme:nth-child(-n+5) {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width:620px) {
+  #text-cont {
+    font-size: 13px;
+    width:80%;
+  }
+  .text-cont {
+    font-size: 13px;
+    width:80%;
+  }
+  .posts-wrapper th {
+    width: 75px;
+    padding: 10px 15px 5px 10px;
+  }
+  .posts-wrapper th img {
+      width: 80%;
+  }
+}
