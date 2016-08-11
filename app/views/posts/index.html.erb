@@ -1,11 +1,20 @@
 <div class="spacing"></div>
+<!-- this is the banner when on mobile view -->
+<div class="mobile-banner-container">
+  <section class="mobile-banner-section">
+    <div class="banner-heading-container"></div>
+    <h1 class="mobile-banner-heading animated-title fadeIn">hello</h1>
+  </section>
+</div>
+<!-- this is the banner when on desktop and tablet view -->
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
     <div class="banner-heading-container"></div>
     <h1 class="banner-heading animated-title fadeIn">POSTS</h1>
   </section>
 </div>
-<div class="spacing-under-banner"></div>
+
+<!-- the posts -->
 <div  class="posts-wrapper">
   <table>
     <tbody>
@@ -74,3 +83,22 @@
     </tbody>
   </table>
 </div>
+
+<script>
+var $window = $(window);
+
+function changeWindowSize (){
+  var windowSize = $window.width();
+  if (windowSize < 520){
+    $('#new-post-banner-section').css('display', 'none');
+    $('.mobile-banner-section').css('color','red');
+  } else if (windowSize > 521){
+    $('#new-post-banner-section').css('display',"");
+    // $('.mobile-banner-section').removeProp('display');
+  }
+}
+
+changeWindowSize();
+
+$(window).resize(changeWindowSize);
+</script>

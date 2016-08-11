@@ -170,6 +170,17 @@ section{
 
 /* banner */
 
+//mobile banner
+  .mobile-banner-container{
+    height: 300px;
+    display:none;
+  }
+
+  .mobile-banner-section{
+    // display:none;
+  }
+
+// desktop & tablet banner
 .new-post-banner{
   width: 100%;
   position: relative;
@@ -402,6 +413,13 @@ section{
   .hideme:nth-child(-n+5) {
     opacity: 1;
     width: 100%;
+  }
+
+  #text-cont {
+    width:90%;
+  }
+  .text-cont {
+    width:90%;
   }
 }
 
