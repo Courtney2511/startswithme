@@ -462,7 +462,16 @@ section{
   }
 }
 
+// mobile view
 @media (max-width:620px) {
+  #new-post-banner-section{
+    display:none;
+  }
+
+  .mobile-banner-container{
+    display:block;
+  }
+
   #text-cont {
     font-size: 13px;
     width:80%;

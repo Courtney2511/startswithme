@@ -5,14 +5,14 @@
 <div class="mobile-banner-container">
   <section class="mobile-banner-section">
     <div class="banner-heading-container"></div>
-    <h1 class="mobile-banner-heading animated-title fadeIn">POSTS</h1>
+    <h1 class="mobile-banner-heading animated-title fadeIn"><%= @user.name %></h1>
   </section>
 </div>
 <!-- this is the banner when on desktop and tablet view -->
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
     <div class="banner-heading-container"></div>
-    <h1 class="banner-heading animated-title fadeIn">POSTS</h1>
+    <h1 class="banner-heading animated-title fadeIn"><%= @user.name %></h1>
   </section>
 </div>
 
@@ -77,23 +77,3 @@
     </div>
   </section>
 </div>
-
-<script>
-/* when on mobile view, show a different banner */
-var $window = $(window);
-
-function changeWindowSize (){
-  var windowSize = $window.width();
-  if (windowSize < 520){
-    $('#new-post-banner-section').css('display', 'none');
-    $('.mobile-banner-container').css('display','block');
-  } else if (windowSize > 521){
-    $('#new-post-banner-section').css('display',"");
-    $('.mobile-banner-container').css('display','none');
-  }
-}
-
-changeWindowSize();
-
-$(window).resize(changeWindowSize);
-</script>
