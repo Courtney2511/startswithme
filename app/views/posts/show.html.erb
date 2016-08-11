@@ -1,14 +1,23 @@
-<!-- banner -->
+<!-- this creates spacing underneath the navigation so there's no overlap -->
 <div class="spacing"></div>
+
+<!-- banner -->
+<!-- this is the banner when on mobile view -->
+<div class="mobile-banner-container">
+  <section class="mobile-banner-section">
+    <div class="banner-heading-container"></div>
+    <h1 class="mobile-banner-heading animated-title fadeIn">POSTS</h1>
+  </section>
+</div>
+<!-- this is the banner when on desktop and tablet view -->
 <div class="new-post-banner">
   <section id='new-post-banner-section'>
     <div class="banner-heading-container"></div>
-    <h1 class="banner-heading animated-title fadeIn">EXPLORE</h1>
-  </section>
-  <section class="mobile-banner-section">
-    <h1 class="banner-heading animated-title fadeIn">EXPLORE</h1>
+    <h1 class="banner-heading animated-title fadeIn">POSTS</h1>
   </section>
 </div>
+
+
 <!-- page content -->
 <div class="page-container">
   <div class="page-canvas">
@@ -97,24 +106,21 @@
 </div>
 
 <script>
+/* when on mobile view, show a different banner */
+var $window = $(window);
 
+function changeWindowSize (){
+  var windowSize = $window.width();
+  if (windowSize < 520){
+    $('#new-post-banner-section').css('display', 'none');
+    $('.mobile-banner-container').css('display','block');
+  } else if (windowSize > 521){
+    $('#new-post-banner-section').css('display',"");
+    $('.mobile-banner-container').css('display','none');
+  }
+}
 
-  alert("hi");
-    // var window = $(window);
-    //
-    // function mobileBanner (){
-    //   var windowSize = window.width();
-    //   if (windowSize <= 520){
-    //   alert("Smaller than 520");
-    // } else{
-    //   alert("bigger than 520");
-    //   }
-    // }
-    //
-    // mobileBanner();
-    //
-    // $(window).resize(mobileBanner);
+changeWindowSize();
 
-
-  
+$(window).resize(changeWindowSize);
 </script>
