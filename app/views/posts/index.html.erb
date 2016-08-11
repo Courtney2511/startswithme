@@ -91,10 +91,10 @@ function changeWindowSize (){
   var windowSize = $window.width();
   if (windowSize < 520){
     $('#new-post-banner-section').css('display', 'none');
-    $('.mobile-banner-section').css('color','red');
+    $('.mobile-banner-container').css('display','block');
   } else if (windowSize > 521){
     $('#new-post-banner-section').css('display',"");
-    // $('.mobile-banner-section').removeProp('display');
+    $('.mobile-banner-container').css('display','none');
   }
 }
 

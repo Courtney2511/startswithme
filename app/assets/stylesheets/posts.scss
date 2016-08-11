@@ -172,13 +172,52 @@ section{
 
 //mobile banner
   .mobile-banner-container{
+    width:100%;
     height: 300px;
+    text-align:center;
     display:none;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+
+    .mobile-banner-section{
+      height:300px;
+      position:relative;
+    }
+
+    .banner-heading-container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      opacity: 0.5;
+      background: linear-gradient(#000000, #46c6d9);
+    }
+
+    .mobile-banner-heading{
+      position: absolute;
+      font-size: 500%;
+      margin: 0;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.7);
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    h1{
+      color: white;
+      position:absolute;
+      width:100%;
+      bottom:0;
+      text-align:center;
+    }
   }
 
-  .mobile-banner-section{
-    // display:none;
-  }
+
 
 // desktop & tablet banner
 .new-post-banner{
