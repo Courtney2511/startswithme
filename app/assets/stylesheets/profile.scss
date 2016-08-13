@@ -168,3 +168,29 @@
   color: #41862b;
   cursor:pointer;
 }
+
+// Mobile Phone
+@media (max-width:620px) {
+  .container {
+    width: 90%;
+    text-align: center;
+    border-bottom:1px solid #d4d4d4;
+  }
+  .description {
+  padding:0;
+  }
+
+  // user's posts
+  .expression_container {
+    width: 91%;
+    overflow: auto;
+    float: left;
+  }
+
+  .expression_title {
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+  }
+}
