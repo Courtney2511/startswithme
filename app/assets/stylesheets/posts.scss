@@ -285,6 +285,8 @@ section{
 .page-canvas{
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e4e4e4;
+  box-shadow: 1px 1px 1px #cdcdcd;
 }
 
 .create-container{
@@ -460,6 +462,55 @@ section{
   .text-cont {
     width:90%;
   }
+
+
+  // edit user profile
+  .page-container {
+    margin: 30px 0;
+    max-width: 100%;
+  }
+
+  .page-canvas {
+    overflow: auto;
+    width:87;
+    padding:40px;
+  }
+
+  form.edit_user {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .user-edit-table {
+    border-spacing: 40px 0;
+    width: 100%;
+    overflow: auto;
+
+    tbody {
+    width: 100%;
+    overflow: auto;
+    }
+
+    th {
+    float: left;
+    text-align: center;
+    width: 100%;
+    }
+  }
+
+  //edit description
+  #main {
+    background-color: skyblue;
+    float: left;
+    width: 100%;
+  ``  padding-bottom: 30px;
+  }
+
+  .user-edit-table td {
+  float: left;
+  width: 100%;
+  }
+
 }
 
 // mobile view
