@@ -195,4 +195,19 @@
     width: 100%;
     padding-left: 0;
   }
+
+  .blog-entry img {
+    width: 12%;
+  }
+
+  .post_details_with_image p,
+  .post_details p {
+    font-size: 14px;
+  }
+
+  .post_details_with_image .action-container, .post_details .action-container {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 11px;
+}
 }

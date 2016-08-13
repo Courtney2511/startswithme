@@ -120,7 +120,6 @@ nav ul {
 /*******************/
 
 footer{
-  // background-color: #374A67;
   width:100%;
   height:auto;
   background: linear-gradient(141deg,#474350 0%, #374A67 75%);
@@ -219,6 +218,10 @@ footer p{
     margin:0;
     font-size:12px;
     line-height:17px;
+  }
+
+  footer p{
+    padding: 15px;
   }
 }
 
