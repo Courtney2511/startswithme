@@ -169,12 +169,14 @@
   cursor:pointer;
 }
 
-// Mobile Phone
-@media (max-width:620px) {
+// Tablet View & Mobile
+@media (max-width:880px) {
   .container {
     width: 90%;
     text-align: center;
     border-bottom:1px solid #d4d4d4;
+    padding: 5%;
+    border-right: none;
   }
   .description {
   padding:0;
@@ -182,7 +184,7 @@
 
   // user's posts
   .expression_container {
-    width: 91%;
+    width: 89%;
     overflow: auto;
     float: left;
   }
