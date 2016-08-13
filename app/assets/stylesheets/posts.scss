@@ -110,13 +110,14 @@ section{
 
 .post-cont{
   overflow: hidden;
-  width: 100%;
+  width: 99.5%;
   margin-bottom: 10px;
   display: block;
   background-color: white;
   border-radius: 5px;
   border: 1px solid #e4e4e4;
   box-shadow: 1px 1px 1px #cdcdcd;
+  padding-left:0;
 
   a{
     .post-cont a {
@@ -463,11 +464,42 @@ section{
     width:90%;
   }
 
+  // show post
+
+  .user_profile_pic {
+    width: 37%;
+    overflow: auto;
+  }
+
+  .user_profile_pic img {
+    padding-right: 22px;
+    width:66px;
+  }
+
+  .author-info-container {
+    width: 100%;
+  }
+
+  .post-show-author-container {
+    width: 49%;
+  }
+
+  .post-show-actions-container {
+    font-size: 13px;
+  }
+
+  // post comments
+
+  // .comment-container, .new-comment-container {
+  //     margin: 30px auto;
+  //     max-width: 96%;
+  // }
+
 
   // edit user profile
   .page-container {
       margin: 30px auto;
-      max-width: 96%;
+      max-width: 90%;
   }
 
   .page-canvas {
@@ -555,4 +587,8 @@ section{
     position: absolute;
     padding-top: 9px;
   }
+
+  // .post-cont {
+  //   width: 96%;
+  // }
 }

@@ -5,18 +5,16 @@
 
 .comment-container,
 .new-comment-container{
-
-  margin: 0 auto;
-  padding: 0px 14px 15px;
-  width: auto;
-  max-width: 860px;
+  margin: 30px auto;
+  max-width: 90%;
+  overflow:auto;
   h3{
     margin: 20px 0;
     font-weight:lighter;
   }
 }
 .new-comment-wrapper{
-  width: 91%;
+  width: 94.5%;
   margin-bottom: 10px;
   margin-top: 20px;
   display: block;
@@ -24,7 +22,7 @@
   border-radius: 5px;
   border: 1px solid #e4e4e4;
   box-shadow: 1px 1px 1px #cdcdcd;
-  padding: 5%;
+  padding: 2.5%;
     .field{
       text-align: left;
     }
@@ -109,7 +107,7 @@
 .profile-container{
   float: left;
   display: inline-block;
-  width: 10%;
+  width: 15%;
   text-align: center;
   margin: 0 10px 10px 0;
 
@@ -133,4 +131,17 @@
     text-transform: lowercase;
     font-weight: lighter;
     font-size: 15px;
+}
+
+@media (max-width:620px) {
+  .profile-container {
+    padding-right: 30px;
+    margin: 0;
+    overflow: auto;
+    width:20%;
+  }
+
+  .comment-comment-containter{
+    width: 90%;
+  }
 }
