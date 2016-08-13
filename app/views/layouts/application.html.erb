@@ -16,7 +16,7 @@
           <nav class="nav-stick">
             <div class="navicon">&#9776;</div>
             <h1 class='logo'><%= link_to 'State of Our Mind', posts_path %></h1>
-            <ul>
+            <ul class="hamburgerMenu">
                 <% if current_user %>
                 <li class='nav-item' id='create-post'>
                     <%= link_to 'CREATE', new_post_path %>
@@ -69,7 +69,16 @@
     </div>
   </footer>
 
-  <script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log("load");
+      // var navIcon = $('.navicon'),
+      //     ul = $('nav ul');
+      $(".navicon").click(function(e){
+        console.log("click");
+      $(".hamburgerMenu").toggleClass('show');
+      });
+    });
 
   </script>
 </html>

@@ -487,4 +487,17 @@ section{
   .posts-wrapper th img {
       width: 80%;
   }
+
+  .create-field .label {
+    width: 28%;
+  }
+
+  .create-field .textarea {
+    width: 70%;
+  }
+
+  #post_image {
+    position: absolute;
+    padding-top: 9px;
+  }
 }
