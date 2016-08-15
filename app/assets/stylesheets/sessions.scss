@@ -11,7 +11,7 @@
 .landing-container{
   width:100%;
   height:91%;
-  background-image: url('body-bkg-img.jpg');
+  background-image: image-url('body-bkg-img.jpg');
   background-size: cover;
   background-attachment: fixed;
 
@@ -268,7 +268,7 @@ input.actions {
   .landing-left{
     width:100%;
     height:40%;
-    background-image: url('small-desktop-banner-img.png');
+    background-image: image-url('small-desktop-banner-img.png');
     background-color: rgba(0, 0, 0, 0.3);
     background-size: cover;
     background-size: 100%;
@@ -355,7 +355,7 @@ input.actions {
   .landing-left{
     width:100%;
     height:40%;
-    background-image: url('tablet-banner-img.png');
+    background-image: image-url('tablet-banner-img.png');
     background-size: cover;
   }
 
@@ -367,7 +367,7 @@ input.actions {
 // mobile view
 @media (max-width: 522px) {
   .landing-left {
-    background-image: url('mobile-banner-img.jpg');
+    background-image: image-url('mobile-banner-img.jpg');
     background-size: cover;
     height: 50%;
   }
