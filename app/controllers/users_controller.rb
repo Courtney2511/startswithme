@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.profile_picture = Rails.root.join("app/assets/images/default_user.PNG").open
+    @user.profile_picture = Rails.root.join("assets/images/default_user.PNG").open
     if @user.save
       redirect_to(user_path(@user), notice: 'Profile created!') #root_path is protected to logged in users only.
       # send the user a welcome email
