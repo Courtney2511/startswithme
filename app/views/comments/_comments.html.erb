@@ -8,9 +8,12 @@
         <!-- Shows total comment count for post-->
         <div class="profile-container">
           <div class="img-container">
-            <%= image_tag(comment.user.profile_picture.thumb) %>
+            <% if comment.user.profile_picture.file %>
+              <%= image_tag(comment.user.profile_picture.thumb) %>
+            <% else %>
+              <%= image_tag('thumb_default_user.PNG') %>
+            <% end %>
           </div>
-
           <!-- <div class="author-container"> -->
             <%= link_to comment.user.name, user_path(comment.user) %>
           <!-- </div> -->

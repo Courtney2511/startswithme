@@ -28,7 +28,11 @@
     <% end %>
 
     <div class="profile_pic">
-      <%= image_tag(@user.profile_picture) %>
+      <% if @user.profile_picture.file %>
+        <%= image_tag(@user.profile_picture) %>
+      <% else %>
+        <%= image_tag('default_user.PNG') %>
+      <% end %>
     </div>
 
   <div class="description">
