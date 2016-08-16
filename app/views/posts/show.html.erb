@@ -52,7 +52,11 @@
       <!-- Displays author name  -->
       <div class="author-info-container">
         <div class="user_profile_pic">
-          <%= image_tag(@post.user.profile_picture.thumb) %>
+          <% if @post.user.profile_picture.file %>
+            <%= image_tag(@post.user.profile_picture.thumb) %>
+          <% else %>
+            <%= image_tag('thumb_default_user.PNG') %>
+          <% end %>
         </div>
         <div class="post-show-author-container">
           <p>
